@@ -39,38 +39,38 @@ class ContainerSizedBoxLearning extends StatelessWidget {
 }
 
 //Dekorasyon tasarımının class içierisine aktararak tekrarlı kod yazmayı kolaylaştırabiliriz.
-//Bunun için aşağıdaki gibi class tanımları yapabilr ve yukarıdaki gibi bu özellikleri kullanabiliriz.
+//Bunun için aşağıdaki gibi class tanımları yapabilr ve yukarıdaki gibi bu özellikleri kullanabilriz.
 
-class ProjectUtility{
+class ProjectUtility {
   static BoxDecoration boxDecoration = BoxDecoration(
-              //kutu dekorasyonu
-              //shape: BoxShape.circle, //yuvarlak
-              //color: Colors.red, //kutu rengi
-              gradient: const LinearGradient(
-                colors: [Colors.red, Colors.amber],
-              ),
-              boxShadow: const [
-                BoxShadow(
-                    color: Colors.black, offset: Offset(0.1, 1), blurRadius: 12)
-              ],
-              borderRadius: BorderRadius.circular(10),
-              //border: Border.all(width: 5)
-            );
+    //kutu dekorasyonu
+    //shape: BoxShape.circle, //yuvarlak
+    //color: Colors.red, //kutu rengi
+    gradient: const LinearGradient(
+      colors: [Colors.red, Colors.amber],
+    ),
+    boxShadow: const [
+      BoxShadow(color: Colors.black, offset: Offset(0.1, 1), blurRadius: 12)
+    ],
+    borderRadius: BorderRadius.circular(10),
+    //border: Border.all(width: 5)
+  );
 }
 
-class ProjectContainerDecoration extends BoxDecoration{
-    ProjectContainerDecoration():super(
-      //kutu dekorasyonu
-              //shape: BoxShape.circle, //yuvarlak
-              //color: Colors.red, //kutu rengi
-              gradient: const LinearGradient(
-                colors: [Colors.red, Colors.amber],
-              ),
-              boxShadow: const [
-                BoxShadow(
-                    color: Colors.black, offset: Offset(0.1, 1), blurRadius: 12)
-              ],
-              borderRadius: BorderRadius.circular(10),
-              //border: Border.all(width: 5)
-    )
+class ProjectContainerDecoration extends BoxDecoration {
+  ProjectContainerDecoration()
+      : super(
+          //kutu dekorasyonu
+          //shape: BoxShape.circle, //yuvarlak
+          //color: Colors.red, //kutu rengi
+          gradient: const LinearGradient(
+            colors: [Colors.red, Colors.amber],
+          ),
+          boxShadow: const [
+            BoxShadow(
+                color: Colors.black, offset: Offset(0.1, 1), blurRadius: 12)
+          ],
+          borderRadius: BorderRadius.circular(10),
+          //border: Border.all(width: 5)
+        );
 }

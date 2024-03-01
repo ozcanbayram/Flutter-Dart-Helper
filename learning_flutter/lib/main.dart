@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_full_learn_one/lesson_one/container_sized_box_learn.dart';
-import 'package:flutter_full_learn_one/lesson_one/text_learn_view.dart';
+//import 'package:flutter_full_learn_one/lesson_one/container_sized_box_learn.dart';
+import 'package:flutter_full_learn_one/lesson_one/scaffold_learn.dart';
+//import 'package:flutter_full_learn_one/lesson_one/text_learn_view.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -16,7 +17,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.light(),
-      home: ContainerSizedBoxLearning(),
+      home: ScaffoldLearnView(),
     );
   }
 }
