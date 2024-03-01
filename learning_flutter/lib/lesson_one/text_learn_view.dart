@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class TextLearningView extends StatelessWidget {
@@ -12,7 +13,9 @@ class TextLearningView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(
+            CupertinoButton(child: Text('Cupertino Button (IOS)'), onPressed: () {}), //Genellikle ios'a  uygun. MaterialApp yerine kullanılabilir. (Optional Alternatif)
+            TextButton(onPressed: () {}, child: Text('TextButton (General & ANDROID)')), //Genellikle genel ya da android için uygun.
+            Text( //Basit text tasarımı (Aşama1)
               'Hello $name ${name.length}',
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
@@ -26,14 +29,14 @@ class TextLearningView extends StatelessWidget {
                 //decoration: TextDecoration.underline
               ),
             ),
-            Text(
+            Text( //Text tasarımı aşama 2
               'Welcome',
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
               style: ProjectStyles.welcomeStyle,
             ),
-            Text(
+            Text( //Gelişmiş Text tasarımı (Aşama3)
               'Theme ile yazı stili',
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
@@ -43,7 +46,8 @@ class TextLearningView extends StatelessWidget {
                   ),
             ),
             Text(userName ?? ''), //Controlling Nullable
-            Text(keys.welcome), //class ile belirlendi yukarıda keys'e atandı ve yazdırıldı.
+            Text(keys
+                .welcome), //class ile belirlendi yukarıda keys'e atandı ve yazdırıldı.
           ],
         ),
       ),
