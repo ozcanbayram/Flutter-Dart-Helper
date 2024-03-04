@@ -6,6 +6,7 @@ import 'package:flutter_full_learn_one/101/scaffold_learn.dart';
 
 import '101/app_bar.dart';
 import '101/color_learn.dart';
+import '101/statless_learn.dart';
 //import 'package:flutter_full_learn_one/lesson_one/text_learn_view.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: ColorsLearnView(),
+      home: StatlessLearn(),
     );
   }
 }
