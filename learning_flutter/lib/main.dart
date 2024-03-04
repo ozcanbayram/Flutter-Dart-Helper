@@ -5,6 +5,7 @@ import 'package:flutter_full_learn_one/101/icon_learn.dart';
 import 'package:flutter_full_learn_one/101/scaffold_learn.dart';
 
 import '101/app_bar.dart';
+import '101/color_learn.dart';
 //import 'package:flutter_full_learn_one/lesson_one/text_learn_view.dart';
 //import 'package:google_fonts/google_fonts.dart';
 
@@ -21,12 +22,14 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
+          errorColor: ItemsColor
+              .renk1, //color_learn sayfasında belirlediğimiz renk sınıfındaki rengi, error rengi olarak thema içerisinde belirledik.
           appBarTheme: AppBarTheme(
               // Burada temalar kullanılara projenin tamamında aynı appBar'ın olması sağlanır.
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: IconLearnView(),
+      home: ColorsLearnView(),
     );
   }
 }
