@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn_one/101/button_learn.dart';
+import 'package:flutter_full_learn_one/101/card_learn.dart';
 import 'package:flutter_full_learn_one/101/icon_learn.dart';
 //import 'package:flutter_full_learn_one/lesson_one/container_sized_box_learn.dart';
 import 'package:flutter_full_learn_one/101/scaffold_learn.dart';
@@ -24,6 +25,10 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
+          cardTheme: CardTheme(
+            // Kart tasarımları için tema tasarlama
+            shape: RoundedRectangleBorder(),
+          ),
           errorColor: ItemsColor
               .renk1, //color_learn sayfasında belirlediğimiz renk sınıfındaki rengi, error rengi olarak thema içerisinde belirledik.
           appBarTheme: AppBarTheme(
@@ -31,7 +36,7 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: PaddingLearn(),
+      home: CardLearn(),
     );
   }
 }
