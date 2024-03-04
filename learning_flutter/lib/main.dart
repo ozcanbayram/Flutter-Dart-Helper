@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn_one/101/button_learn.dart';
+import 'package:flutter_full_learn_one/101/icon_learn.dart';
 //import 'package:flutter_full_learn_one/lesson_one/container_sized_box_learn.dart';
 import 'package:flutter_full_learn_one/101/scaffold_learn.dart';
 
@@ -19,10 +20,13 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(appBarTheme: AppBarTheme( // Burada temalar kullanılara projenin tamamında aynı appBar'ın olması sağlanır. 
-        centerTitle: true,
-      )),
-      home: AppBarLearnView(),
+      theme: ThemeData.dark().copyWith(
+          appBarTheme: AppBarTheme(
+              // Burada temalar kullanılara projenin tamamında aynı appBar'ın olması sağlanır.
+              centerTitle: true,
+              backgroundColor: Colors.transparent,
+              elevation: 0)),
+      home: IconLearnView(),
     );
   }
 }
