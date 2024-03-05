@@ -13,6 +13,7 @@ class RandomImage extends StatelessWidget {
       body: Image.network(
         imageUrl,
         height: height,
+        width: MediaQuery.of(context).size.width,
         fit: BoxFit.cover,
       ),
     );
