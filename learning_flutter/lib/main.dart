@@ -10,6 +10,7 @@ import 'package:flutter_full_learn_one/demos/note_demos_view.dart';
 
 import '101/app_bar.dart';
 import '101/color_learn.dart';
+import '101/indicator_learn.dart';
 import '101/padding_learn.dart';
 import '101/statless_learn.dart';
 //import 'package:flutter_full_learn_one/lesson_one/text_learn_view.dart';
@@ -28,6 +29,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
+          progressIndicatorTheme:
+              ProgressIndicatorThemeData(color: Colors.amber),
           cardTheme: CardTheme(
             // Kart tasarımları için tema tasarlama
             shape: RoundedRectangleBorder(),
@@ -39,7 +42,7 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: CustomWidgetLearn(),
+      home: IndicatorLearn(),
     );
   }
 }
