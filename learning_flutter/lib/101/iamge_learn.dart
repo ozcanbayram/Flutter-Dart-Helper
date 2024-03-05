@@ -41,7 +41,11 @@ class PngImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.asset(_nameWithPath, fit: BoxFit.cover);
+    return Image.asset(
+      _nameWithPath,
+      fit: BoxFit.contain,
+      height: 300,
+    );
   }
 
   String get _nameWithPath =>

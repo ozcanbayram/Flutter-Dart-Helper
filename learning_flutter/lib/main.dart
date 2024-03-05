@@ -5,6 +5,7 @@ import 'package:flutter_full_learn_one/101/iamge_learn.dart';
 import 'package:flutter_full_learn_one/101/icon_learn.dart';
 //import 'package:flutter_full_learn_one/lesson_one/container_sized_box_learn.dart';
 import 'package:flutter_full_learn_one/101/scaffold_learn.dart';
+import 'package:flutter_full_learn_one/demos/note_demos_view.dart';
 
 import '101/app_bar.dart';
 import '101/color_learn.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
+      theme: ThemeData.light().copyWith(
           cardTheme: CardTheme(
             // Kart tasarımları için tema tasarlama
             shape: RoundedRectangleBorder(),
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: ImageLearn(),
+      home: NoteDemos(),
     );
   }
 }
