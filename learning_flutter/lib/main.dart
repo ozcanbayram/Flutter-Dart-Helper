@@ -17,6 +17,7 @@ import '101/indicator_learn.dart';
 import '101/padding_learn.dart';
 import '101/page_view_learn.dart';
 import '101/stateful_learn.dart';
+import '101/stateful_life_cycle_learn.dart';
 import '101/statless_learn.dart';
 import 'demos/stack_demo.dart';
 //import 'package:flutter_full_learn_one/lesson_one/text_learn_view.dart';
@@ -49,7 +50,7 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: PageViewLearn(),
+      home: StatefulLifeCycleLearn(message: 'Ozcan'),
     );
   }
 }
