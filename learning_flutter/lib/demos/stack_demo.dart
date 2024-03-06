@@ -13,7 +13,7 @@ class StackDemoView extends StatelessWidget {
       body: Column(children: [
         Expanded(
           flex: 4,
-          child: Stack(
+          child: Stack( 
             alignment: Alignment.center, //card'ı ortalar
             children: [
               Positioned.fill(
