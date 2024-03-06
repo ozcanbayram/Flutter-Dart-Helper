@@ -19,6 +19,7 @@ import '101/page_view_learn.dart';
 import '101/stateful_learn.dart';
 import '101/stateful_life_cycle_learn.dart';
 import '101/statless_learn.dart';
+import '101/text_filed_learn.dart';
 import 'demos/stack_demo.dart';
 //import 'package:flutter_full_learn_one/lesson_one/text_learn_view.dart';
 //import 'package:google_fonts/google_fonts.dart';
@@ -36,6 +37,8 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
+          inputDecorationTheme:
+              InputDecorationTheme(), //burada inputları stillendirebiliriz.
           listTileTheme: ListTileThemeData(contentPadding: EdgeInsets.zero),
           progressIndicatorTheme:
               ProgressIndicatorThemeData(color: Colors.amber),
@@ -50,7 +53,7 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: StatefulLifeCycleLearn(message: 'Ozcan'),
+      home: TextFieldLearn(),
     );
   }
 }
