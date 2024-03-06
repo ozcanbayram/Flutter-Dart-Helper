@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn_one/product/counter_hello_button.dart';
+import 'package:flutter_full_learn_one/product/language/language_items.dart';
 
 class StatefulLearn extends StatefulWidget {
   //calss1
@@ -21,13 +22,11 @@ class _StatefulLearnState extends State<StatefulLearn> {
   int _countValue = 0;
 
   /* void incrementValue() {
-
     setState(() {
       //setState Build'i tekrar tetikler ve değişiklikler ekrana yansır.
       countValue = countValue + 1;
     });
   }
-
   void deincrementValue() {
     setState(() {
       countValue = countValue - 1;
@@ -49,7 +48,10 @@ class _StatefulLearnState extends State<StatefulLearn> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar: AppBar(
+        title: Text(LanguageItems
+            .welcomeTitle), //Buradaki appBar metnini hazırladığım yer: product/language/language_items.dart
+      ),
       floatingActionButton: Row(
         //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         mainAxisSize: MainAxisSize.min,
