@@ -6,8 +6,8 @@
 import 'package:flutter/material.dart';
 
 class ColorDemos extends StatefulWidget {
-  const ColorDemos({super.key});
-
+  const ColorDemos({super.key, required this.initialColor});
+  final Color? initialColor;
   @override
   State<ColorDemos> createState() => _ColorDemosState();
 }

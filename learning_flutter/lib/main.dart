@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: ColorDemos(),
+      home: ColorDemos(initialColor: Colors.black),
     );
   }
 }
