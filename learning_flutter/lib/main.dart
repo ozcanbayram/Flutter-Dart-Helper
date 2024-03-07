@@ -9,7 +9,6 @@ import 'package:flutter_full_learn_one/101/list_tile_learn.dart';
 import 'package:flutter_full_learn_one/101/scaffold_learn.dart';
 import 'package:flutter_full_learn_one/101/stack_learn.dart';
 import 'package:flutter_full_learn_one/demos/note_demos_view.dart';
-
 import '101/app_bar.dart';
 import '101/color_learn.dart';
 import '101/column_row_learn.dart';
@@ -20,6 +19,7 @@ import '101/stateful_learn.dart';
 import '101/stateful_life_cycle_learn.dart';
 import '101/statless_learn.dart';
 import '101/text_filed_learn.dart';
+import 'demos/color_demos_view.dart';
 import 'demos/stack_demo.dart';
 //import 'package:flutter_full_learn_one/lesson_one/text_learn_view.dart';
 //import 'package:google_fonts/google_fonts.dart';
@@ -53,7 +53,7 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: TextFieldLearn(),
+      home: ColorDemos(),
     );
   }
 }
