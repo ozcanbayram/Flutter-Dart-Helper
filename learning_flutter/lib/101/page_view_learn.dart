@@ -76,6 +76,6 @@ class _PageViewLearnState extends State<PageViewLearn> {
 
 //Sayfa geçiş sürelerini aşağıda sınıf olarak tanımlayalım:
 class _DurationUtility {
-  static const _durationLow = Duration(seconds: 1); //Yavaş geçiş
+  //static const _durationLow = Duration(seconds: 1); //Yavaş geçiş
   static const _durationFast = Duration(milliseconds: 500);
 }

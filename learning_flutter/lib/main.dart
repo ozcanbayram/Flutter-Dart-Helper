@@ -13,6 +13,7 @@ import '101/app_bar.dart';
 import '101/color_learn.dart';
 import '101/column_row_learn.dart';
 import '101/indicator_learn.dart';
+import '101/list_view_learn.dart';
 import '101/padding_learn.dart';
 import '101/page_view_learn.dart';
 import '101/stateful_learn.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light().copyWith(
+      theme: ThemeData.dark().copyWith(
           inputDecorationTheme:
               InputDecorationTheme(), //burada inputları stillendirebiliriz.
           listTileTheme: ListTileThemeData(
@@ -57,7 +58,7 @@ class MyApp extends StatelessWidget {
               centerTitle: false,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: ChatsScreen(),
+      home: ListViewLearn(),
     );
   }
 }
