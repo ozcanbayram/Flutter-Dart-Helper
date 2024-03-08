@@ -23,6 +23,7 @@ import '101/statless_learn.dart';
 import '101/text_filed_learn.dart';
 import 'demos/chats_screen_demos.dart';
 import 'demos/color_demos_view.dart';
+import 'demos/my_collections_demos.dart';
 import 'demos/stack_demo.dart';
 //import 'package:flutter_full_learn_one/lesson_one/text_learn_view.dart';
 //import 'package:google_fonts/google_fonts.dart';
@@ -41,25 +42,25 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData.dark().copyWith(
           inputDecorationTheme:
-              InputDecorationTheme(), //burada inputları stillendirebiliriz.
-          listTileTheme: ListTileThemeData(
+              const InputDecorationTheme(), //burada inputları stillendirebiliriz.
+          listTileTheme: const ListTileThemeData(
             contentPadding: EdgeInsets.zero,
             iconColor: Colors.black,
           ),
           progressIndicatorTheme:
-              ProgressIndicatorThemeData(color: Colors.amber),
-          cardTheme: CardTheme(
+              const ProgressIndicatorThemeData(color: Colors.amber),
+          cardTheme: const CardTheme(
             // Kart tasarımları için tema tasarlama
             shape: RoundedRectangleBorder(),
           ),
           errorColor: ItemsColor
               .renk1, //color_learn sayfasında belirlediğimiz renk sınıfındaki rengi, error rengi olarak thema içerisinde belirledik.
-          appBarTheme: AppBarTheme(
+          appBarTheme: const AppBarTheme(
               // Burada temalar kullanılara projenin tamamında aynı appBar'ın olması sağlanır.
-              centerTitle: false,
+              centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: ListViewBuilderLEarn(),
+      home: MyCollectionsDemos(),
     );
   }
 }
