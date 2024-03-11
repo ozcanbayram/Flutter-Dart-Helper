@@ -12,7 +12,10 @@ class _AudioBookDemosState extends State<AudioBookDemos> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        //title: Text('AudioBook'),
+        title: const Text(
+          'AudioBook',
+          style: TextStyle(color: Colors.black),
+        ),
         toolbarTextStyle: const TextStyle(color: Colors.black),
         backgroundColor: const Color.fromARGB(255, 245, 224, 231),
         leading: const Icon(
@@ -170,9 +173,35 @@ class _AudioBookDemosState extends State<AudioBookDemos> {
             ),
             Padding(
               padding: const EdgeInsets.only(top: 800.0),
-              child: Container(
-                height: 500,
-                color: Color.fromARGB(255, 245, 224, 231),
+              child: ClipRRect(
+                borderRadius: const BorderRadius.only(
+                    topRight: Radius.circular(75),
+                    topLeft: Radius.circular(75)),
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  color: const Color.fromARGB(255, 245, 224, 231),
+                  child: Column(
+                    children: [
+                      const Padding(
+                        padding: EdgeInsets.only(top: 26.0),
+                        child: MainTitle(mainTitle: 'Hi! i am Jessica.'),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.all(32.0),
+                        child: Text(
+                          'I am Jessica. I love so much reading book! I am 20 years olda an i do not know...' *
+                              15,
+                          style: const TextStyle(
+                            fontSize: 18,
+                            fontWeight: FontWeight.w600,
+                            wordSpacing: 2,
+                          ),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
               ),
             )
           ],
