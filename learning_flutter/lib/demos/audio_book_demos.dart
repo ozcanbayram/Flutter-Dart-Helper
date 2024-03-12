@@ -18,9 +18,45 @@ class _AudioBookDemosState extends State<AudioBookDemos> {
         ),
         toolbarTextStyle: const TextStyle(color: Colors.black),
         backgroundColor: const Color.fromARGB(255, 245, 224, 231),
-        leading: const Icon(
-          Icons.menu_rounded,
-          color: Colors.black,
+        leading: PopupMenuButton(
+          icon: const Icon(
+            Icons.menu_rounded,
+            color: Colors.black,
+          ),
+          itemBuilder: (context) => [
+            PopupMenuItem<String>(
+              child: const Text('Secenek 1'),
+              onTap: () {},
+            ),
+            PopupMenuItem(
+              child: const Text('Secenek 2'),
+              onTap: () {},
+            ),
+            PopupMenuItem<String>(
+              child: const Text('Secenek 3'),
+              onTap: () {},
+            ),
+            PopupMenuItem(
+              child: const Text('Secenek 4'),
+              onTap: () {},
+            ),
+            PopupMenuItem<String>(
+              child: const Text('Secenek 5'),
+              onTap: () {},
+            ),
+            PopupMenuItem(
+              child: const Text('Secenek 6'),
+              onTap: () {},
+            ),
+            PopupMenuItem<String>(
+              child: const Text('Secenek 7'),
+              onTap: () {},
+            ),
+            PopupMenuItem(
+              child: const Text('Secenek 8'),
+              onTap: () {},
+            ),
+          ],
         ),
       ),
       body: SingleChildScrollView(
@@ -189,7 +225,7 @@ class _AudioBookDemosState extends State<AudioBookDemos> {
                       Padding(
                         padding: const EdgeInsets.all(32.0),
                         child: Text(
-                          'I am Jessica. I love so much reading book! I am 20 years olda an i do not know...' *
+                          'I am Jessica. I love so much reading book! I am 20 years olda an i do not know.' *
                               15,
                           style: const TextStyle(
                             fontSize: 18,
@@ -240,11 +276,11 @@ class CardUtility extends StatelessWidget {
             ),
           ),
           Text(
-            bookName!,
+            bookName,
             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.w900),
           ),
           Text(
-            writerName!,
+            writerName,
             style: const TextStyle(color: Colors.black),
           ),
           Row(
