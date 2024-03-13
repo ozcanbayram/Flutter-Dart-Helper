@@ -45,6 +45,8 @@ class PostModel5 {
   final int _id;
   final String _title;
   final String _body;
+  // Buradaki veriler private oldukları için kuıllanılırken değişkenleri görmek için erişilemez. Erişilmesini istediklerimiz için Encapsulation yapavbilriz:
+  int get userId => _userId;
   PostModel5({
     required int userId,
     required int id,
@@ -96,5 +98,32 @@ class PostModel7 {
     int _id = id;
     String _title = title;
     String _body = body;
+  }
+}
+
+class PostModel8 {
+  // 8 - Eğer veriler internetten gelecekse null olma ihtimali vardır.
+  final int? userId;
+  final int? id;
+  final String? title;
+  String? body;
+
+  PostModel8({this.userId, this.id, this.title, this.body});
+
+  //body değerini değişriemek için nullable kontroü yapalım:
+  void updateBody(String? data) {
+    if (data != null && data != data.isNotEmpty) {
+      body = data;
+    }
+  }
+
+  //Bir kopyasını olulturup değişkenlerden değişenleri ekleyen modeli yazalım.
+  PostModel8 copyWith({int? userId, int? id, String? title, String? body}) {
+    return PostModel8(
+        userId: userId ?? this.userId,
+        id: id ?? this.id,
+        title: title ?? this.title,
+        body: body ?? this.body);
+    //Bu copyWith işlemini, kullandığımız sayfada veri değiştirirken kullanırız.
   }
 }

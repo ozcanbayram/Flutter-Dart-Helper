@@ -22,6 +22,7 @@ import '101/stateful_learn.dart';
 import '101/stateful_life_cycle_learn.dart';
 import '101/statless_learn.dart';
 import '101/text_filed_learn.dart';
+import '202/model_learn_view.dart';
 import '202/tab_learn.dart';
 import 'demos/audio_book_demos.dart';
 import 'demos/chats_screen_demos.dart';
@@ -43,7 +44,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.light().copyWith(
+      theme: ThemeData.dark().copyWith(
           tabBarTheme: TabBarTheme(indicatorSize: TabBarIndicatorSize.label),
           bottomAppBarTheme:
               BottomAppBarTheme(shape: CircularNotchedRectangle()),
@@ -67,7 +68,7 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: TabLearn(),
+      home: ModelLearnView(),
     );
   }
 }
