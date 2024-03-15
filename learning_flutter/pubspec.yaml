@@ -32,6 +32,8 @@ dependencies:
     sdk: flutter
 
   google_fonts: ^6.1.0
+  
+  dio: ^5.4.1 # VB10 Using dio for service. 
 
 
   # The following adds the Cupertino Icons font to your application.
