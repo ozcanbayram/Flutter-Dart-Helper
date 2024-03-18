@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_full_learn_one/service/post_model.dart';
+import 'package:flutter_full_learn_one/service/post_service.dart';
 
 class ServiceLearn extends StatefulWidget {
   const ServiceLearn({super.key});
@@ -19,6 +20,9 @@ class _ServiceLearnState extends State<ServiceLearn> {
   late final Dio _dio; //Dio'yu her yerde oluşturmak yerine 1 kere tanımlarız.
   final _baseUrl = 'https://jsonplaceholder.typicode.com/';
 
+  // TEST EDİLEBİLİR KOD
+  late final PostService _postService;
+
   void changeLoading() {
     setState(() {
       _isLoading = !_isLoading; //her seferinde değeri tersine dönecek.
@@ -29,8 +33,9 @@ class _ServiceLearnState extends State<ServiceLearn> {
   void initState() {
     _dio = Dio(BaseOptions(baseUrl: _baseUrl)); //Dio tanımlanıyor.
     super.initState();
+    _postService = PostService();
     name = 'Ozcan';
-    fetchPostItems();
+    fetchPostItemsAdvance();
   }
 
   Future<void> fetchPostItems() async {
@@ -58,23 +63,7 @@ class _ServiceLearnState extends State<ServiceLearn> {
   Future<void> fetchPostItemsAdvance() async {
     //Burada loafding için true yaparak bir verinin yükleneceğini belirtiriz.
     changeLoading();
-    final response =
-        await Dio().get('https://jsonplaceholder.typicode.com/posts');
-
-    //dataları görmek için:
-    if (response.statusCode == HttpStatus.ok) {
-      //Veriler geliyorsa (OK)
-      final _datas =
-          response.data; //_datas değişkeninin içine response datalarını ati
-
-      if (_datas is List) {
-        //Eğer _datas listeyse dataları mapleyelim ve verileri PostModel'den alalım. SetState içinde yaparak ekranda gösterelim.
-        setState(() {
-          _items = _datas.map((e) => PostModel.fromJson(e)).toList();
-        });
-      }
-    }
-
+    _items = await _postService.fetchPostItemsAdvance();
     changeLoading();
   }
 
@@ -89,14 +78,16 @@ class _ServiceLearnState extends State<ServiceLearn> {
         ],
         title: Text(name ?? ''),
       ),
-      body: ListView.builder(
-        padding: EdgeInsets.symmetric(horizontal: 20),
-        itemCount: _items?.length ?? 0,
-        itemBuilder: (context, index) {
-          return _PostCard(
-              model: _items?[index]); //Extract widget ile oluşturuldu.
-        },
-      ),
+      body: _items == null
+          ? Placeholder()
+          : ListView.builder(
+              padding: EdgeInsets.symmetric(horizontal: 20),
+              itemCount: _items?.length ?? 0,
+              itemBuilder: (context, index) {
+                return _PostCard(
+                    model: _items?[index]); //Extract widget ile oluşturuldu.
+              },
+            ),
     );
   }
 }

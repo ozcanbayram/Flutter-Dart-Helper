@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
               centerTitle: true,
               backgroundColor: Colors.transparent,
               elevation: 0)),
-      home: ServicePostLearn(),
+      home: ServiceLearn(),
     );
   }
 }
