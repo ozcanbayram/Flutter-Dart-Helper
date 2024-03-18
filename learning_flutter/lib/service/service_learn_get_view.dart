@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn_one/service/comments_learn_view.dart';
 import 'package:flutter_full_learn_one/service/post_model.dart';
 import 'package:flutter_full_learn_one/service/post_service.dart';
 
@@ -104,6 +105,13 @@ class _PostCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: ListTile(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => CommentsLearnView(
+              postId: _model?.id,
+            ),
+          ));
+        },
         //verileri göstermek için itemse git indexlerin içindeki title'i getir. Eğer boş ise '' getir.
         title: Text(_model?.title ?? ''),
         subtitle: Text(_model?.body ?? ''),

@@ -13,8 +13,6 @@ abstract class IPostService {
   Future<bool> deleteItemToService(int id);
 }
 
-
-
 class PostService implements IPostService {
   final Dio _dio;
   PostService()
