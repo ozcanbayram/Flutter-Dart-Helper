@@ -62,8 +62,36 @@ class _MyServiceViewState extends State<MyServiceView> {
       body: ListView.builder(
         itemCount: _items?.length ?? 0,
         itemBuilder: (context, index) {
-          return ListTile(
-            title: Text(_items?[index].name ?? ''),
+          return Column(
+            children: [
+              Card(
+                child: Column(
+                  children: [
+                    ListTile(
+                      isThreeLine: true,
+                      leading: Icon(Icons.person, size: 50),
+                      title: Text(_items?[index].name ?? ''),
+                      trailing: Icon(Icons.chevron_right),
+                      subtitle: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(_items?[index].username ?? ''),
+                          Text('Adress:'),
+                          Row(
+                            children: [
+                              Text(_items?[index].address?.street ?? ''),
+                              Text(' '),
+                              Text(_items?[index].address?.suite ?? ''),
+                            ],
+                          ),
+                          Text(_items?[index].phone ?? ''),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            ],
           );
         },
       ),
