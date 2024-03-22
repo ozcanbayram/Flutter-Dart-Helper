@@ -15,9 +15,18 @@ class MyServiceView extends StatefulWidget {
 class _MyServiceViewState extends State<MyServiceView> {
   List<ServiceModel>? _items;
   String? name;
+  bool _isLoading = false;
+
+  void _changeLoading() {
+    setState(() {
+      _isLoading = !_isLoading;
+    });
+  }
+
   Future<void> fetchPostItems() async {
+    _changeLoading();
     final response =
-        await Dio().get('https://jsonplaceholder.typicode.com/todos');
+        await Dio().get('https://jsonplaceholder.typicode.com/users');
     if (response.statusCode == HttpStatus.ok) {
       final _datas = response.data;
       print('201 SUCCESSFULL');
@@ -30,6 +39,7 @@ class _MyServiceViewState extends State<MyServiceView> {
         print('Data is Not a List');
       }
     }
+    _changeLoading();
   }
 
   @override
@@ -43,13 +53,18 @@ class _MyServiceViewState extends State<MyServiceView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        actions: [
+          _isLoading ? CircularProgressIndicator.adaptive() : SizedBox.shrink()
+        ],
         title: Text(name ?? ''),
         backgroundColor: const Color.fromARGB(255, 64, 243, 70),
       ),
       body: ListView.builder(
         itemCount: _items?.length ?? 0,
         itemBuilder: (context, index) {
-          return Text('data');
+          return ListTile(
+            title: Text(_items?[index].name ?? ''),
+          );
         },
       ),
     );
