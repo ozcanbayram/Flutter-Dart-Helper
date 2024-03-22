@@ -17,13 +17,13 @@ class _MyServiceViewState extends State<MyServiceView> {
   String? name;
   bool _isLoading = false;
 
-  void _changeLoading() {
+  void _changeLoading() { //Yüklenirken dönen loading
     setState(() {
       _isLoading = !_isLoading;
     });
   }
 
-  Future<void> fetchPostItems() async {
+  Future<void> fetchPostItems() async { //Bu  metot ile servise bağlanalım, bağlantıyı kontrol edelim
     _changeLoading();
     final response =
         await Dio().get('https://jsonplaceholder.typicode.com/users');
@@ -42,8 +42,8 @@ class _MyServiceViewState extends State<MyServiceView> {
     _changeLoading();
   }
 
-  @override
-  void initState() {
+  @override 
+  void initState() { // initState ile sayfa yüklenmeden önce fetchPostItems metodunu çalıştırarak verileri çekelim
     super.initState();
     fetchPostItems();
     name = 'Service Example';
