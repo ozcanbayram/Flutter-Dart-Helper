@@ -16,17 +16,18 @@ class _MyServiceViewState extends State<MyServiceView> {
   List<ServiceModel>? _items;
   String? name;
   Future<void> fetchPostItems() async {
-    final response = await Dio().get('https://reqres.in/api/users?page=2');
+    final response =
+        await Dio().get('https://jsonplaceholder.typicode.com/todos');
     if (response.statusCode == HttpStatus.ok) {
       final _datas = response.data;
       print('201 SUCCESSFULL');
       if (_datas is List) {
         setState(() {
           _items = _datas.map((e) => ServiceModel.fromJson(e)).toList();
-          print('201');
+          print('Data is a List (Succesfull)');
         });
       } else {
-        print('Data is Not a List'); //Data is  not a list change datas source or API Service 
+        print('Data is Not a List');
       }
     }
   }
@@ -35,7 +36,7 @@ class _MyServiceViewState extends State<MyServiceView> {
   void initState() {
     super.initState();
     fetchPostItems();
-    name = 'Ozcan';
+    name = 'Service Example';
   }
 
   @override
