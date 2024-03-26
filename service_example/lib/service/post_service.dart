@@ -10,7 +10,7 @@ class PostService {
       : _dio =
             Dio(BaseOptions(baseUrl: 'https://jsonplaceholder.typicode.com/'));
 
-  //Send to service
+  // Send to service
   Future<bool> addItemToService(ServiceModel serviceModel) async {
     try {
       final response =
@@ -22,6 +22,30 @@ class PostService {
     }
   }
 
+  // Delete to service
+  Future<bool> deleteItemToService(int id) async {
+    try {
+      final response = await _dio.post('${_PostServicePaths.users.name}/$id');
+      return response.statusCode == HttpStatus.created;
+    } on DioException catch (error) {
+      print(error.message);
+      return false;
+    }
+  }
+
+  // Update to service
+  Future<bool> putItemToService(ServiceModel serviceModel, int id) async {
+    try {
+      final response = await _dio.put('${_PostServicePaths.users.name}/$id',
+          data: serviceModel);
+      return response.statusCode == HttpStatus.ok;
+    } on DioException catch (error) {
+      print(error.message);
+      return false;
+    }
+  }
+
+// Fetch from service
   Future<List<ServiceModel>?> fetchPostItemsAdvance() async {
     try {
       //Bu  metot ile servise bağlanalım, bağlantıyı kontrol edelim
