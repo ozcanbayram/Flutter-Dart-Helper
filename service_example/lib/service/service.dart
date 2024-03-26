@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:service_example/service/post_service.dart';
 
 import '../model/model.dart';
 
@@ -18,6 +19,8 @@ class _MyServiceViewState extends State<MyServiceView> {
   bool _isLoading = false;
   late final Dio _dio;
   final _baseUrl = 'https://jsonplaceholder.typicode.com/';
+
+  late final PostService _postService;
 
   void _changeLoading() {
     //Yüklenirken dönen loading
@@ -50,19 +53,7 @@ class _MyServiceViewState extends State<MyServiceView> {
   Future<void> fetchPostItemsAdvance() async {
     //Bu  metot ile servise bağlanalım, bağlantıyı kontrol edelim
     _changeLoading();
-    final response = await _dio.get('users');
-    if (response.statusCode == HttpStatus.ok) {
-      final _datas = response.data;
-      print('201 SUCCESSFULL');
-      if (_datas is List) {
-        setState(() {
-          _items = _datas.map((e) => ServiceModel.fromJson(e)).toList();
-          print('Data is a List (Succesfull)');
-        });
-      } else {
-        print('Data is Not a List');
-      }
-    }
+    _items = await _postService.fetchPostItemsAdvance();
     _changeLoading();
   }
 
@@ -71,7 +62,8 @@ class _MyServiceViewState extends State<MyServiceView> {
     // initState ile sayfa yüklenmeden önce fetchPostItems metodunu çalıştırarak verileri çekelim
     super.initState();
     _dio = Dio(BaseOptions(baseUrl: _baseUrl));
-    fetchPostItems();
+    _postService = PostService();
+    fetchPostItemsAdvance();
     name = 'Service Example 1 (JsonPlaceholder)';
   }
 
