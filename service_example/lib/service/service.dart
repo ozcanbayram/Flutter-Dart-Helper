@@ -20,7 +20,8 @@ class _MyServiceViewState extends State<MyServiceView> {
   late final Dio _dio;
   final _baseUrl = 'https://jsonplaceholder.typicode.com/';
 
-  late final PostService _postService;
+  //TEST EDİLEBİLİR KOD
+  late final IPostService _postService;
 
   void _changeLoading() {
     //Yüklenirken dönen loading

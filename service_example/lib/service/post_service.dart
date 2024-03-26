@@ -4,13 +4,21 @@ import 'package:dio/dio.dart';
 
 import '../model/model.dart';
 
-class PostService {
+abstract class IPostService {
+  Future<bool> addItemToService(ServiceModel serviceModel);
+  Future<bool> deleteItemToService(int id);
+  Future<bool> putItemToService(ServiceModel serviceModel, int id);
+  Future<List<ServiceModel>?> fetchPostItemsAdvance();
+}
+
+class PostService implements IPostService {
   final Dio _dio;
   PostService()
       : _dio =
             Dio(BaseOptions(baseUrl: 'https://jsonplaceholder.typicode.com/'));
 
   // Send to service
+  @override
   Future<bool> addItemToService(ServiceModel serviceModel) async {
     try {
       final response =
@@ -23,6 +31,7 @@ class PostService {
   }
 
   // Delete to service
+  @override
   Future<bool> deleteItemToService(int id) async {
     try {
       final response = await _dio.post('${_PostServicePaths.users.name}/$id');
@@ -34,6 +43,7 @@ class PostService {
   }
 
   // Update to service
+  @override
   Future<bool> putItemToService(ServiceModel serviceModel, int id) async {
     try {
       final response = await _dio.put('${_PostServicePaths.users.name}/$id',
@@ -46,6 +56,7 @@ class PostService {
   }
 
 // Fetch from service
+  @override
   Future<List<ServiceModel>?> fetchPostItemsAdvance() async {
     try {
       //Bu  metot ile servise bağlanalım, bağlantıyı kontrol edelim
