@@ -37,14 +37,14 @@ class _MyServiceViewState extends State<MyServiceView> {
         await Dio().get('https://jsonplaceholder.typicode.com/users');
     if (response.statusCode == HttpStatus.ok) {
       final _datas = response.data;
-      print('201 SUCCESSFULL');
+      //print('201 SUCCESSFULL');
       if (_datas is List) {
         setState(() {
           _items = _datas.map((e) => ServiceModel.fromJson(e)).toList();
-          print('Data is a List (Succesfull)');
+          //  print('Data is a List (Succesfull)');
         });
       } else {
-        print('Data is Not a List');
+        //  print('Data is Not a List');
       }
     }
     _changeLoading();
@@ -72,7 +72,7 @@ class _MyServiceViewState extends State<MyServiceView> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          _isLoading ? CircularProgressIndicator.adaptive() : SizedBox.shrink()
+          _isLoading ? const CircularProgressIndicator.adaptive() : SizedBox.shrink()
         ],
         title: Text(name ?? ''),
         backgroundColor: const Color.fromARGB(255, 64, 243, 70),
@@ -107,18 +107,18 @@ class _PostCard extends StatelessWidget {
         children: [
           ListTile(
             isThreeLine: true,
-            leading: Icon(Icons.person, size: 50),
+            leading: const Icon(Icons.person, size: 50),
             title: Text(_model?.name ?? ''),
-            trailing: Icon(Icons.chevron_right),
+            trailing: const Icon(Icons.chevron_right),
             subtitle: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(_model?.username ?? ''),
-                Text('Adress:'),
+                const Text('Adress:'),
                 Row(
                   children: [
                     Text(_model?.address?.street ?? ''),
-                    Text(' '),
+                    const Text(' '),
                     Text(_model?.address?.suite ?? ''),
                   ],
                 ),

@@ -54,7 +54,7 @@ class _MyServiceViewState extends State<MyServicePost> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          _isLoading ? CircularProgressIndicator.adaptive() : SizedBox.shrink()
+          _isLoading ? const CircularProgressIndicator.adaptive() : const SizedBox.shrink()
         ],
         title: Text(name ?? ''),
         backgroundColor: const Color.fromARGB(255, 64, 243, 70),
@@ -63,20 +63,20 @@ class _MyServiceViewState extends State<MyServicePost> {
         children: [
           TextField(
             controller: _nameEditingController,
-            decoration: InputDecoration(labelText: 'Name'),
+            decoration: const InputDecoration(labelText: 'Name'),
             keyboardType: TextInputType.text,
             textInputAction: TextInputAction.next,
           ),
           TextField(
             textInputAction: TextInputAction.next,
             controller: _userNameEditingController,
-            decoration: InputDecoration(labelText: 'Username'),
+            decoration: const InputDecoration(labelText: 'Username'),
           ),
           TextField(
             controller: _userIdEditingController,
             keyboardType: TextInputType.number,
-            autofillHints: [AutofillHints.creditCardNumber],
-            decoration: InputDecoration(labelText: 'UserId'),
+            autofillHints: const [AutofillHints.creditCardNumber],
+            decoration: const InputDecoration(labelText: 'UserId'),
           ),
           TextButton(
             onPressed: _isLoading

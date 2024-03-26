@@ -32,7 +32,7 @@ class PostService {
         }
       }
     } catch (e) {
-      print('HATA');
+      
       return null;
     }
     return null;
