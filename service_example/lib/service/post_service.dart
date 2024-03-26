@@ -16,7 +16,8 @@ class PostService {
       final response =
           await _dio.post(_PostServicePaths.users.name, data: serviceModel);
       return response.statusCode == HttpStatus.created;
-    } catch (e) {
+    } on DioException catch (error) {
+      print(error.message);
       return false;
     }
   }
@@ -31,8 +32,9 @@ class PostService {
           return _datas.map((e) => ServiceModel.fromJson(e)).toList();
         }
       }
-    } catch (e) {
-      
+    } on DioException catch (error) {
+      print(error.message);
+
       return null;
     }
     return null;

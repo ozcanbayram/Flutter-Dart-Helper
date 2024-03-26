@@ -72,21 +72,25 @@ class _MyServiceViewState extends State<MyServiceView> {
     return Scaffold(
       appBar: AppBar(
         actions: [
-          _isLoading ? const CircularProgressIndicator.adaptive() : SizedBox.shrink()
+          _isLoading
+              ? const CircularProgressIndicator.adaptive()
+              : SizedBox.shrink()
         ],
         title: Text(name ?? ''),
         backgroundColor: const Color.fromARGB(255, 64, 243, 70),
       ),
-      body: ListView.builder(
-        itemCount: _items?.length ?? 0,
-        itemBuilder: (context, index) {
-          return Column(
-            children: [
-              _PostCard(model: _items?[index]),
-            ],
-          );
-        },
-      ),
+      body: _items == null
+          ? Placeholder()
+          : ListView.builder(
+              itemCount: _items?.length ?? 0,
+              itemBuilder: (context, index) {
+                return Column(
+                  children: [
+                    _PostCard(model: _items?[index]),
+                  ],
+                );
+              },
+            ),
     );
   }
 }
