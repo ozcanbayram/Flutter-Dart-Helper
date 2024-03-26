@@ -1,3 +1,4 @@
+import 'dart:developer';
 import 'dart:io';
 
 import 'package:dio/dio.dart';
@@ -17,6 +18,16 @@ class _MyServiceViewState extends State<MyServicePost> {
   bool _isLoading = false;
   late final Dio _dio;
   final _baseUrl = 'https://jsonplaceholder.typicode.com/';
+
+  //Send to service
+  Future<void> addItemToService(ServiceModel serviceModel) async {
+    _changeLoading();
+    final response = await _dio.post('users', data: serviceModel);
+    if (response.statusCode == HttpStatus.created) {
+      name = 'Basarili';
+    }
+    _changeLoading();
+  }
 
   final TextEditingController _nameEditingController = TextEditingController();
   final TextEditingController _userNameEditingController =
@@ -68,7 +79,20 @@ class _MyServiceViewState extends State<MyServicePost> {
             decoration: InputDecoration(labelText: 'UserId'),
           ),
           TextButton(
-            onPressed: () {},
+            onPressed: _isLoading
+                ? null
+                : () {
+                    if (_nameEditingController.text.isNotEmpty &&
+                        _userNameEditingController.text.isNotEmpty &&
+                        _userIdEditingController.text.isEmpty) {
+                      final model = ServiceModel(
+                          name: _nameEditingController.text,
+                          username: _userNameEditingController.text,
+                          id: int.tryParse(_userIdEditingController.text));
+
+                      addItemToService(model);
+                    }
+                  },
             child: const Text('Send'),
           ),
         ],
