@@ -5,19 +5,24 @@ import 'package:flutter/material.dart';
 
 import '../model/model.dart';
 
-class MyServiceView extends StatefulWidget {
-  const MyServiceView({super.key});
+class MyServicePost extends StatefulWidget {
+  const MyServicePost({super.key});
 
   @override
-  State<MyServiceView> createState() => _MyServiceViewState();
+  State<MyServicePost> createState() => _MyServiceViewState();
 }
 
-class _MyServiceViewState extends State<MyServiceView> {
-  List<ServiceModel>? _items; // Our List
+class _MyServiceViewState extends State<MyServicePost> {
   String? name;
   bool _isLoading = false;
   late final Dio _dio;
   final _baseUrl = 'https://jsonplaceholder.typicode.com/';
+
+  final TextEditingController _nameEditingController = TextEditingController();
+  final TextEditingController _userNameEditingController =
+      TextEditingController();
+  final TextEditingController _userIdEditingController =
+      TextEditingController();
 
   void _changeLoading() {
     //Yüklenirken dönen loading
@@ -26,53 +31,11 @@ class _MyServiceViewState extends State<MyServiceView> {
     });
   }
 
-  //fetch datas from service
-  Future<void> fetchPostItems() async {
-    //Bu  metot ile servise bağlanalım, bağlantıyı kontrol edelim
-    _changeLoading();
-    final response =
-        await Dio().get('https://jsonplaceholder.typicode.com/users');
-    if (response.statusCode == HttpStatus.ok) {
-      final _datas = response.data;
-      print('201 SUCCESSFULL');
-      if (_datas is List) {
-        setState(() {
-          _items = _datas.map((e) => ServiceModel.fromJson(e)).toList();
-          print('Data is a List (Succesfull)');
-        });
-      } else {
-        print('Data is Not a List');
-      }
-    }
-    _changeLoading();
-  }
-
-  Future<void> fetchPostItemsAdvance() async {
-    //Bu  metot ile servise bağlanalım, bağlantıyı kontrol edelim
-    _changeLoading();
-    final response = await _dio.get('users');
-    if (response.statusCode == HttpStatus.ok) {
-      final _datas = response.data;
-      print('201 SUCCESSFULL');
-      if (_datas is List) {
-        setState(() {
-          _items = _datas.map((e) => ServiceModel.fromJson(e)).toList();
-          print('Data is a List (Succesfull)');
-        });
-      } else {
-        print('Data is Not a List');
-      }
-    }
-    _changeLoading();
-  }
-
   @override //Loading
   void initState() {
     // initState ile sayfa yüklenmeden önce fetchPostItems metodunu çalıştırarak verileri çekelim
     super.initState();
     _dio = Dio(BaseOptions(baseUrl: _baseUrl));
-    fetchPostItems();
-    name = 'Service Example 1 (JsonPlaceholder)';
   }
 
   @override
@@ -85,54 +48,28 @@ class _MyServiceViewState extends State<MyServiceView> {
         title: Text(name ?? ''),
         backgroundColor: const Color.fromARGB(255, 64, 243, 70),
       ),
-      body: ListView.builder(
-        itemCount: _items?.length ?? 0,
-        itemBuilder: (context, index) {
-          return Column(
-            children: [
-              _PostCard(model: _items?[index]),
-            ],
-          );
-        },
-      ),
-    );
-  }
-}
-
-// Card
-class _PostCard extends StatelessWidget {
-  const _PostCard({
-    super.key,
-    required ServiceModel? model,
-  }) : _model = model;
-
-  final ServiceModel? _model;
-
-  @override
-  Widget build(BuildContext context) {
-    return Card(
-      child: Column(
+      body: Column(
         children: [
-          ListTile(
-            isThreeLine: true,
-            leading: Icon(Icons.person, size: 50),
-            title: Text(_model?.name ?? ''),
-            trailing: Icon(Icons.chevron_right),
-            subtitle: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text(_model?.username ?? ''),
-                Text('Adress:'),
-                Row(
-                  children: [
-                    Text(_model?.address?.street ?? ''),
-                    Text(' '),
-                    Text(_model?.address?.suite ?? ''),
-                  ],
-                ),
-                Text(_model?.phone ?? ''),
-              ],
-            ),
+          TextField(
+            controller: _nameEditingController,
+            decoration: InputDecoration(labelText: 'Name'),
+            keyboardType: TextInputType.text,
+            textInputAction: TextInputAction.next,
+          ),
+          TextField(
+            textInputAction: TextInputAction.next,
+            controller: _userNameEditingController,
+            decoration: InputDecoration(labelText: 'Username'),
+          ),
+          TextField(
+            controller: _userIdEditingController,
+            keyboardType: TextInputType.number,
+            autofillHints: [AutofillHints.creditCardNumber],
+            decoration: InputDecoration(labelText: 'UserId'),
+          ),
+          TextButton(
+            onPressed: () {},
+            child: const Text('Send'),
           ),
         ],
       ),
