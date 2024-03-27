@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_spinkit/flutter_spinkit.dart';
 import 'package:service_example/service/post_service.dart';
 
 import '../model/model.dart';
@@ -72,16 +73,24 @@ class _MyServiceViewState extends State<MyServiceView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
-          _isLoading
-              ? const CircularProgressIndicator.adaptive()
-              : SizedBox.shrink()
-        ],
+        // actions: [
+        //   _isLoading
+        //       ? SpinKitWave(
+        //           color: Colors.black,
+        //           size: 10.0,
+        //           // controller: AnimationController(vsync: this, duration: const Duration(milliseconds: 1000)),
+        //         )
+        //       : SizedBox.shrink()
+        // ],
         title: Text(name ?? ''),
         backgroundColor: const Color.fromARGB(255, 64, 243, 70),
       ),
       body: _items == null
-          ? Placeholder()
+          ? SpinKitFadingFour(
+              color: Color.fromARGB(255, 64, 243, 70),
+              size: 50.0,
+              // controller: AnimationController(vsync: this, duration: const Duration(milliseconds: 1000)),
+            )
           : ListView.builder(
               itemCount: _items?.length ?? 0,
               itemBuilder: (context, index) {
