@@ -8,6 +8,7 @@ import 'package:flutter_full_learn_one/101/list_tile_learn.dart';
 //import 'package:flutter_full_learn_one/lesson_one/container_sized_box_learn.dart';
 import 'package:flutter_full_learn_one/101/scaffold_learn.dart';
 import 'package:flutter_full_learn_one/101/stack_learn.dart';
+import 'package:flutter_full_learn_one/202/theme/light_theme.dart';
 import 'package:flutter_full_learn_one/demos/note_demos_view.dart';
 import 'package:flutter_full_learn_one/service/service_learn_get_view.dart';
 import 'package:flutter_full_learn_one/service/service_post_learn_view.dart';
@@ -48,30 +49,32 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData.dark().copyWith(
-          tabBarTheme: TabBarTheme(indicatorSize: TabBarIndicatorSize.label),
-          bottomAppBarTheme:
-              BottomAppBarTheme(shape: CircularNotchedRectangle()),
-          inputDecorationTheme:
-              const InputDecorationTheme(), //burada inputları stillendirebiliriz.
-          listTileTheme: const ListTileThemeData(
-            contentPadding: EdgeInsets.zero,
-            iconColor: Colors.black,
-          ),
-          progressIndicatorTheme:
-              const ProgressIndicatorThemeData(color: Colors.amber),
-          cardTheme: const CardTheme(
-            // Kart tasarımları için tema tasarlama
-            shape: RoundedRectangleBorder(),
-          ),
-          errorColor: ItemsColor
-              .renk1, //color_learn sayfasında belirlediğimiz renk sınıfındaki rengi, error rengi olarak thema içerisinde belirledik.
-          appBarTheme: const AppBarTheme(
-              toolbarTextStyle: TextStyle(color: Colors.black),
-              // Burada temalar kullanılara projenin tamamında aynı appBar'ın olması sağlanır.
-              centerTitle: true,
-              backgroundColor: Colors.transparent,
-              elevation: 0)),
+      theme: LightTheme().theme,
+
+      // ThemeData.dark().copyWith(
+      //     tabBarTheme: TabBarTheme(indicatorSize: TabBarIndicatorSize.label),
+      //     bottomAppBarTheme:
+      //         BottomAppBarTheme(shape: CircularNotchedRectangle()),
+      //     inputDecorationTheme:
+      //         const InputDecorationTheme(), //burada inputları stillendirebiliriz.
+      //     listTileTheme: const ListTileThemeData(
+      //       contentPadding: EdgeInsets.zero,
+      //       iconColor: Colors.black,
+      //     ),
+      //     progressIndicatorTheme:
+      //         const ProgressIndicatorThemeData(color: Colors.amber),
+      //     cardTheme: const CardTheme(
+      //       // Kart tasarımları için tema tasarlama
+      //       shape: RoundedRectangleBorder(),
+      //     ),
+      //     errorColor: ItemsColor
+      //         .renk1, //color_learn sayfasında belirlediğimiz renk sınıfındaki rengi, error rengi olarak thema içerisinde belirledik.
+      //     appBarTheme: const AppBarTheme(
+      //         toolbarTextStyle: TextStyle(color: Colors.black),
+      //         // Burada temalar kullanılara projenin tamamında aynı appBar'ın olması sağlanır.
+      //         centerTitle: true,
+      //         backgroundColor: Colors.transparent,
+      //         elevation: 0)),
       home: PackageLearnView(),
     );
   }

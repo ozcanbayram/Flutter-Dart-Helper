@@ -17,7 +17,19 @@ class _PackageLearnViewState extends State<PackageLearnView>
       appBar: AppBar(
         title: Text('✨ Flutter Spinkit #'),
       ),
-      body: LoadingBar(),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        backgroundColor: Theme.of(context).buttonTheme.colorScheme?.onSecondary,
+      ),
+      body: Column(
+        children: [
+          Text(
+            'data',
+            style: Theme.of(context).textTheme.titleMedium,
+          ),
+          LoadingBar(),
+        ],
+      ),
     );
   }
 }
