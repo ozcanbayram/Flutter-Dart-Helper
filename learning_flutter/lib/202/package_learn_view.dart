@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_full_learn_one/202/package/loading_bar.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
 
 class PackageLearnView extends StatefulWidget {
@@ -16,14 +17,7 @@ class _PackageLearnViewState extends State<PackageLearnView>
       appBar: AppBar(
         title: Text('✨ Flutter Spinkit #'),
       ),
-      body: Center(
-        child: SpinKitCubeGrid(
-          color: Colors.amberAccent,
-          size: 50.0,
-          controller: AnimationController(
-              vsync: this, duration: const Duration(milliseconds: 1000)),
-        ),
-      ),
+      body: LoadingBar(),
     );
   }
 }
