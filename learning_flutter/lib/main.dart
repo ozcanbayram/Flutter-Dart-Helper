@@ -8,6 +8,7 @@ import 'package:flutter_full_learn_one/101/list_tile_learn.dart';
 //import 'package:flutter_full_learn_one/lesson_one/container_sized_box_learn.dart';
 import 'package:flutter_full_learn_one/101/scaffold_learn.dart';
 import 'package:flutter_full_learn_one/101/stack_learn.dart';
+import 'package:flutter_full_learn_one/202/animated_learn_view.dart';
 import 'package:flutter_full_learn_one/202/image_learn_202.dart';
 import 'package:flutter_full_learn_one/202/theme/light_theme.dart';
 import 'package:flutter_full_learn_one/202/theme/theme_learn_view.dart';
@@ -77,7 +78,7 @@ class MyApp extends StatelessWidget {
       //         centerTitle: true,
       //         backgroundColor: Colors.transparent,
       //         elevation: 0)),
-      home: ImageLearn202(),
+      home: AnimatedLearnView(),
     );
   }
 }

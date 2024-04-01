@@ -7,32 +7,35 @@ class LightTheme {
 
   LightTheme() {
     theme = ThemeData(
-      //APPBAR THEME
-      appBarTheme: AppBarTheme(
-          backgroundColor: _lightColor.appBarColor,
-          shape: const RoundedRectangleBorder(
-              borderRadius:
-                  BorderRadius.vertical(bottom: Radius.circular(25)))),
-      //BACKGROUNDCOLOR (Scaffold)
-      scaffoldBackgroundColor: Colors.white.withOpacity(0.9),
-      //TEXT THEME
-      textTheme: ThemeData.light().textTheme.copyWith(
-              titleMedium: TextStyle(
-            fontSize: 25,
-            color: _lightColor._textColor,
-          )),
-      //BUTTONCOLOR
-      buttonTheme: ButtonThemeData(
-        colorScheme: ColorScheme.light(
-          onPrimary: Colors.purple,
-          onSecondary: _lightColor.buttonColor,
+        //APPBAR THEME
+        appBarTheme: AppBarTheme(
+            backgroundColor: _lightColor.appBarColor,
+            shape: const RoundedRectangleBorder(
+                borderRadius:
+                    BorderRadius.vertical(bottom: Radius.circular(25)))),
+        //BACKGROUNDCOLOR (Scaffold)
+        scaffoldBackgroundColor:
+            const Color.fromARGB(255, 236, 235, 235).withOpacity(0.9),
+        //TEXT THEME
+        textTheme: ThemeData.light().textTheme.copyWith(
+                titleMedium: TextStyle(
+              fontSize: 25,
+              color: _lightColor._textColor,
+            )),
+        //BUTTONCOLOR
+        buttonTheme: ButtonThemeData(
+          colorScheme: ColorScheme.light(
+            onPrimary: Colors.purple,
+            onSecondary: _lightColor.buttonColor,
+          ),
         ),
-      ),
-      //CHECKBOX THEME
-      checkboxTheme: CheckboxThemeData(
-        fillColor: MaterialStateProperty.all(Colors.red),
-      ),
-    );
+        //CHECKBOX THEME
+        checkboxTheme: CheckboxThemeData(
+          fillColor: MaterialStateProperty.all(Colors.red),
+        ),
+        //FLOATINGACTIONBUTTON THEME
+        floatingActionButtonTheme:
+            FloatingActionButtonThemeData(backgroundColor: Colors.amber));
   }
 }
 
