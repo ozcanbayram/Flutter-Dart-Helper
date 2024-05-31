@@ -13,8 +13,8 @@ class TextLearningView extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            CupertinoButton(child: Text('Cupertino Button (IOS)'), onPressed: () {}), //Genellikle ios'a  uygun. MaterialApp yerine kullanılabilir. (Optional Alternatif)
-            TextButton(onPressed: () {}, child: Text('TextButton (General & ANDROID)')), //Genellikle genel ya da android için uygun.
+            CupertinoButton(child: const Text('Cupertino Button (IOS)'), onPressed: () {}), //Genellikle ios'a  uygun. MaterialApp yerine kullanılabilir. (Optional Alternatif)
+            TextButton(onPressed: () {}, child: const Text('TextButton (General & ANDROID)')), //Genellikle genel ya da android için uygun.
             Text( //Basit text tasarımı (Aşama1)
               'Hello $name ${name.length}',
               maxLines: 2,
@@ -36,14 +36,14 @@ class TextLearningView extends StatelessWidget {
               textAlign: TextAlign.center,
               style: ProjectStyles.welcomeStyle,
             ),
-            Text( //Gelişmiş Text tasarımı (Aşama3)
+            const Text( //Gelişmiş Text tasarımı (Aşama3)
               'Theme ile yazı stili',
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
               textAlign: TextAlign.center,
-              style: Theme.of(context).textTheme.headline5?.copyWith(
-                    color: ProjectColor.firstColor,
-                  ),
+              //style: Theme.of(context).textTheme.headline5?.copyWith(
+              //color: ProjectColor.firstColor,
+              //),
             ),
             Text(userName ?? ''), //Controlling Nullable
             Text(keys
