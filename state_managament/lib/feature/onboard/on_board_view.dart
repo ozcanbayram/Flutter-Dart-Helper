@@ -8,8 +8,16 @@ class OnBoardView extends StatefulWidget {
   State<OnBoardView> createState() => _OnBoardViewState();
 }
 
-class _OnBoardViewState extends State<OnBoardView> {
+class _OnBoardViewState extends State<OnBoardView>
+    with SingleTickerProviderStateMixin {
   final String _skipTitle = 'Skip';
+  late final TabController _tabController;
+  @override
+  void initState() {
+    super.initState();
+    _tabController = TabController(length: 3, vsync: this);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -31,6 +39,15 @@ class _OnBoardViewState extends State<OnBoardView> {
           const Text(
               'Now you can order food any  time right from your mobile.'),
           Image.asset('asset/images/ich_chef.png'),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              TabPageSelector(
+                controller: _tabController,
+              ),
+              FloatingActionButton(onPressed: () {}, child: Text('Next')),
+            ],
+          ),
         ],
       ),
     );
