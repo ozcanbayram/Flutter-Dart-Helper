@@ -18,7 +18,7 @@ class _MyServiceViewState extends State<MyServiceView> {
   List<ServiceModel>? _items; // Our List
   String? name;
   bool _isLoading = false;
-  late final Dio _dio;
+  late final Dio dio;
   final _baseUrl = 'https://jsonplaceholder.typicode.com/';
 
   //TEST EDİLEBİLİR KOD
@@ -63,7 +63,7 @@ class _MyServiceViewState extends State<MyServiceView> {
   void initState() {
     // initState ile sayfa yüklenmeden önce fetchPostItems metodunu çalıştırarak verileri çekelim
     super.initState();
-    _dio = Dio(BaseOptions(baseUrl: _baseUrl));
+    dio = Dio(BaseOptions(baseUrl: _baseUrl));
     _postService = PostService();
     fetchPostItemsAdvance();
     name = 'Service Example 1 (JsonPlaceholder)';
