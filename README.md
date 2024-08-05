@@ -5,3 +5,5 @@
 
 ## Tools & Languages
 ![Langs](https://skillicons.dev/icons?i=flutter,dart,vscode,androidstudio,")
+
+![giphy](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWE3ZnVkZ3p4OWl6ZGZpNzA4N2R0ZWl5eWpyd3MxbmhucGZ3bmhzaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/26u4nJPf0JtQPdStq/giphy.gif)
