@@ -19,5 +19,6 @@ void main() {
       print('Belirsiz.');
   }
 
-  //Switch ile kontrol edilecek değeri belirleriz, case ile kontrol edilecek ihtimaller için durumlar belirleriz. Default ile, caselerin hiçbiri sağlanmazsa ne olması gerektiğini belirleriz.
+  //Switch ile kontrol edilecek değeri belirleriz, case ile kontrol edilecek ihtimaller için durumlar belirleriz.
+  //  Default ile, caselerin hiçbiri sağlanmazsa ne olması gerektiğini belirleriz.
 }

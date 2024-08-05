@@ -95,4 +95,5 @@ class PostService implements IPostService {
 
 enum _PostServicePaths { posts, comments }
 
-enum _PostQueryPaths { postId, comments }
+enum _PostQueryPaths { postId }
+// enum _PostQueryPaths { postId, comments }
