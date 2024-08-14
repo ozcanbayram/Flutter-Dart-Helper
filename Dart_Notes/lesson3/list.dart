@@ -52,4 +52,13 @@ void main() {
           'oooo! ${moneyCustomerNews[i]}, paranız var size kredi verelim hemen');
     }
   }
+
+  // listenin içerisinde bir verinin varlığını kontrol etmek için .contains('x') metodu kullanılabilir.
+
+  print('----------------------');
+  //Aşağıdaki liste dynamic yapıdadır yani birden fazla türdeki veriyi tutabilir. 
+  List<dynamic> users = [1, 'ali', false];
+  for (var item in users) {
+    print(item);
+  }
 }
