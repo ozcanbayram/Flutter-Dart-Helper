@@ -53,7 +53,7 @@ void main() {
     }
   }
 
-  // listenin içerisinde bir verinin varlığını kontrol etmek için .contains('x') metodu kullanılabilir.
+  // listenin içerisinde bir verinin varlığını kontrol etmek için .contains('x') metodu kullanılabilir. 
 
   print('----------------------');
   //Aşağıdaki liste dynamic yapıdadır yani birden fazla türdeki veriyi tutabilir. 
