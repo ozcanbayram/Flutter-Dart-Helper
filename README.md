@@ -8,6 +8,13 @@
 
 <hr>
 
+### Dart notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes"> Tıkla </a> 
+### Güncellenecek olan Flutter notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/learning_flutter"> Tıkla </a> 
+### Servis kullanma örneğini incelemek için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/service_example"> Tıkla </a> 
+
+
+<hr>
+
 # Topluluk ile öğren, katkıda bulun. 
 
 ![giphy](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWE3ZnVkZ3p4OWl6ZGZpNzA4N2R0ZWl5eWpyd3MxbmhucGZ3bmhzaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/26u4nJPf0JtQPdStq/giphy.gif)
