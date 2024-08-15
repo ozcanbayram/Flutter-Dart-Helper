@@ -1,7 +1,9 @@
 # Flutter & Dart Learning
-### Flutter Öğrenirken birçok kaynaktan yararlanıyorum. Kendi çalışmalarımı ve notlarımı burada depoluyorum. 
-#### Bu repoyu inceleyerek henüz öğrenme aşamasında Flutter ile yazdığım projeleri ve Flutter'ın temelleri hakkında aldığım notları inceleyebilirsiniz.  
-#### Bu repoyu yeni öğrenecek olan arkadaşlarımla paylaşmak için hazrılıyorum. Temel notları anlaşılır ve basit örneklerle açıklayarak yazıyorum. Daha sonra ileri seviye widgetlar hazırlayarak da geliştirmelerime devam edeveğim. Kullanıma hazır widgetlar yazıp pr atabilir ve repoya katkıda bulunabilirsiniz.
+
+`Bu repoyu geliştirmeye devam ediyorum. Sen de katkıda bulunabilirsin. Faydalı pull requestlerini beklyiorum.`
+
+
+#### ❗Bu repoyu Flutter ve Dart'ı yeni öğrenecek olan ve farklı widget tasarımları görmek isteyen kişiler ile paylaşmak için hazrılıyorum. Temel notları anlaşılır ve basit örneklerle açıklayarak yazıyorum. Daha sonra gelişmiş widgetlar hazırlayarak da geliştirmelere devam edeceğim. Repoyu Flutter öğrenmek isteyenler için faydalı bir kayndak haline getirmeye çalışıyorum. Kullanıma hazır widgetlar yazarak pr atabilir ve repoya katkıda bulunabilirsiniz.
 
 ## Tools & Languages
 ![Langs](https://skillicons.dev/icons?i=flutter,dart,vscode,androidstudio,")
