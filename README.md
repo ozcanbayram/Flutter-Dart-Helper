@@ -9,7 +9,7 @@
 <hr>
 
 ### Dart notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes"> Tıkla </a> 
-### Güncellenecek olan Flutter notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/learning_flutter"> Tıkla </a> 
+### Flutter notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/learning_flutter"> Tıkla </a> 
 ### Servis kullanma örneğini incelemek için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/service_example"> Tıkla </a> 
 
 
