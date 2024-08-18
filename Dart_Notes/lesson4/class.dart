@@ -25,8 +25,15 @@ void main(List<String> args) {
   if (user1.age == null) {
     print('Kullanıcı yaşını belirtmemiş'); //? Burada null kontrolü yapıyoruz.
   } else {
-    print(user1.age);
+    if (user1.age! >= 18) {
+      //-> ! ile, null gelmeyeceğinden emin olduğumuzu belirtiriz.
+      print('Kullanıcı 18 yaşından büyüktür');
+    } else {
+      print('Kullanıcı 18 yaşından küçük!');
+    }
   }
+
+  print(user1.userCode);
 }
 
 class User {
@@ -37,16 +44,22 @@ class User {
   //sehrini vermeyebilir
   late final String name;
   //* -> late : bu değer sonradan verilecek anlamına gelir. Consturctor anında değer gelecek.
+  //* late final olan bir şeyi constructor anında çağırmalıyız.
   late final int money;
   late final int? age;
   late final String? city;
   //* -> String? ile nullable tanımlarız verinin gelmesi zorunlu olmaz.
   //Yukarıdaki özelliklerin, constructorunu oluşturmalıyız.
+
+  //! bir userCode oluşturalım ve bu kullanıcının adı ve şehrinden oluşsun. Eğer yaşı null ise 00 olarak belirlensin.
+  late final userCode;
+
   User(String nameC, int money, {int? age, String? city}) {
     //! Bir özellik gelmeyebilirse ve bnunu opsiyonal yapacaksak {} kullanırız.
     this.name = nameC;
     this.money = money;
     this.age = age;
     this.city = city;
+    userCode = (city ?? 'ist') + name;
   }
 }
