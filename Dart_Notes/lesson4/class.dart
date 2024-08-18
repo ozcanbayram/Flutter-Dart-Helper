@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 void main(List<String> args) {
   //Null yapısı: eğer bir değişken oluşturur ve değer atamazsak bu degiskenin default degeri null olur ve
   //dart burada hata veriri.
@@ -16,12 +17,36 @@ void main(List<String> args) {
   } else {
     print('para null bir deger');
   }
+  print('-----' * 20);
+
+  //Şimdi User sınıfından bir nesne oluşturarak bu sınıfı kullanalım:
+  User user1 = User('Özcan', 1500, city: 'Turkey');
+  //-> age bilgisi verilmemiş olsun
+  if (user1.age == null) {
+    print('Kullanıcı yaşını belirtmemiş'); //? Burada null kontrolü yapıyoruz.
+  } else {
+    print(user1.age);
+  }
 }
 
-// class User {
-//   //Sınfın özellikleri:
-//   String name;
-//   int money;
-//   int age;
-//   String city;
-// }
+class User {
+  //Sınfın özellikleri:
+  //ad olmak zorunda
+  //para olmak zorunda
+  //yasini vermeyebilir
+  //sehrini vermeyebilir
+  late final String name;
+  //* -> late : bu değer sonradan verilecek anlamına gelir. Consturctor anında değer gelecek.
+  late final int money;
+  late final int? age;
+  late final String? city;
+  //* -> String? ile nullable tanımlarız verinin gelmesi zorunlu olmaz.
+  //Yukarıdaki özelliklerin, constructorunu oluşturmalıyız.
+  User(String nameC, int money, {int? age, String? city}) {
+    //! Bir özellik gelmeyebilirse ve bnunu opsiyonal yapacaksak {} kullanırız.
+    this.name = nameC;
+    this.money = money;
+    this.age = age;
+    this.city = city;
+  }
+}
