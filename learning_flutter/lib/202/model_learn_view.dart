@@ -17,6 +17,7 @@ class _ModelLearnViewState extends State<ModelLearnView> {
 
     //model_learn.dart sayfasındaki modellerin kullanuımını görelim.
 
+    // ignore: unused_local_variable
     final user1 = PostModel1()
       //user1.body = 'Hello'; //değer atandı. Değerleri aşağıdaki gibi de atayabilirdik: (..Koyarak)
       ..userId = 1
@@ -28,9 +29,11 @@ class _ModelLearnViewState extends State<ModelLearnView> {
     //final olmadıklarından dolayı değerleri değiştirilebilir.
     user2.body = 'Deger degisti';
 
+    // ignore: unused_local_variable
     final user3 = PostModel3(1, 2, 'title', 'body');
     //final olarak tanımlandıkları için değerleri sonradan değiştirilemez.
 
+    // ignore: unused_local_variable
     final user4 = PostModel4(userId: 1, id: 2, title: 'title', body: 'body');
     //veriler named olarak geldi. Final oldukları için değerleri değiştirilemez.
 
@@ -38,13 +41,16 @@ class _ModelLearnViewState extends State<ModelLearnView> {
     //private olarak belirlendikleri için başka yerde verileri görmek için değişkenlere erişilemez. Encapsulation yapabiliriz.
     user5.userId;
 
+    // ignore: unused_local_variable
     final user6 = PostModel6(userId: 1, id: 2, title: 'title', body: 'body');
     //Bu model PostModel5'in farklı bir yazım şeklidir. İşlevleri aynıdır.
 
+    // ignore: unused_local_variable
     final user7 = PostModel7();
     //Burada değer istemez, değer vermezsek otomatik olarak default değerlerini alır.
 
     //Servisten data çeliyorsak en mantıklı yöntemlerden biri PostModel8 dir:
+    // ignore: unused_local_variable
     final user8 = PostModel8(body: 'deger');
     //named oalrak gelen değerleri buradan belirtebiliriz. Belirtmez isek null olarak gelir.
   }

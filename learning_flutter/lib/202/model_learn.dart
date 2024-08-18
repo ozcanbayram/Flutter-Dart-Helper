@@ -42,8 +42,11 @@ class PostModel4 {
 class PostModel5 {
   // 5 - Verileri alıp hemen müşteriye vermeyiz. Private olarak alırız. Değerleri String olarak alırız. Required ile vermek zorunda olduğunu belirtiriz.
   final int _userId;
+  // ignore: unused_field
   final int _id;
+  // ignore: unused_field
   final String _title;
+  // ignore: unused_field
   final String _body;
   // Buradaki veriler private oldukları için kuıllanılırken değişkenleri görmek için erişilemez. Erişilmesini istediklerimiz için Encapsulation yapavbilriz:
   int get userId => _userId;
@@ -61,9 +64,13 @@ class PostModel5 {
 
 class PostModel6 {
   // 6 - Verileri alıp hemen müşteriye vermeyiz. Private olarak alırız. Değerleri String olarak alırız. Required ile vermek zorunda olduğunu belirtiriz.
+  // ignore: unused_field
   late final int _userId;
+  // ignore: unused_field
   late final int _id;
+  // ignore: unused_field
   late final String _title;
+  // ignore: unused_field
   late final String _body;
   PostModel6({
     required int userId,
@@ -82,9 +89,13 @@ class PostModel6 {
 
 class PostModel7 {
   // 7 - Required vermeden bir default değer belirleyebiliriz.
+  // ignore: unused_field
   late final int _userId;
+  // ignore: unused_field
   late final int _id;
+  // ignore: unused_field
   late final String _title;
+  // ignore: unused_field
   late final String _body;
   PostModel7({
     int userId = 0,
