@@ -1,4 +1,7 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'model/user_model.dart';
+import 'model/user_model_2.dart';
+
 void main(List<String> args) {
   //Null yapısı: eğer bir değişken oluşturur ve değer atamazsak bu degiskenin default degeri null olur ve
   //dart burada hata veriri.
@@ -20,7 +23,9 @@ void main(List<String> args) {
   print('-----' * 20);
 
   //Şimdi User sınıfından bir nesne oluşturarak bu sınıfı kullanalım:
-  User user1 = User('Özcan', 1500, city: 'Turkey');
+  User user1 = User('Özcan', 1500, id: '123456789', city: 'Turkey');
+  User user2 = User('Ali', 2000, id: '123', city: 'Turkey');
+  //model/user_model.dart sınıfından geliyor.
   //-> age bilgisi verilmemiş olsun
   if (user1.age == null) {
     print('Kullanıcı yaşını belirtmemiş'); //? Burada null kontrolü yapıyoruz.
@@ -33,33 +38,18 @@ void main(List<String> args) {
     }
   }
 
-  print(user1.userCode);
-}
+  print(user2.userCode);
 
-class User {
-  //Sınfın özellikleri:
-  //ad olmak zorunda
-  //para olmak zorunda
-  //yasini vermeyebilir
-  //sehrini vermeyebilir
-  late final String name;
-  //* -> late : bu değer sonradan verilecek anlamına gelir. Consturctor anında değer gelecek.
-  //* late final olan bir şeyi constructor anında çağırmalıyız.
-  late final int money;
-  late final int? age;
-  late final String? city;
-  //* -> String? ile nullable tanımlarız verinin gelmesi zorunlu olmaz.
-  //Yukarıdaki özelliklerin, constructorunu oluşturmalıyız.
+  // print(user1.id);  --> Buradaki id model sınıfı içerisinde private olarak tanımlandığı için kullanılamaz. (Encapsulation)
 
-  //! bir userCode oluşturalım ve bu kullanıcının adı ve şehrinden oluşsun. Eğer yaşı null ise 00 olarak belirlensin.
-  late final userCode;
-
-  User(String nameC, int money, {int? age, String? city}) {
-    //! Bir özellik gelmeyebilirse ve bnunu opsiyonal yapacaksak {} kullanırız.
-    this.name = nameC;
-    this.money = money;
-    this.age = age;
-    this.city = city;
-    userCode = (city ?? 'ist') + name;
+  //Musteri id si 123 olana indirim yapılsın:
+  //Burada id ler private olduğu için bir fonksiyon kullanılarak bu işlem yapılmalıdır.
+  //Yazdığımız isSpecialUser fonksitonunu kullanalım:
+  if (user2.isSpecialUser('123')) {
+    user2.money += 100;
+    print('Para eklendi ${user2.money}');
   }
+
+  User2 user3 = User2('Fatih', 3500, 50, 'İstanbul', 1512);
+  user3.money += 20; //Final olduğundan dolayı direkt değiştiremeyiz.
 }
