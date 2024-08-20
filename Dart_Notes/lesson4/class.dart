@@ -49,7 +49,9 @@ void main(List<String> args) {
     user2.money += 100;
     print('Para eklendi ${user2.money}');
   }
+  // user2.isEmptyId;
 
-  User2 user3 = User2('Fatih', 3500, 50, 'İstanbul', 1512);
+  User2 user3 = User2('Vedat', 2100, 32, 'Adana');
   user3.money += 20; //Final olduğundan dolayı direkt değiştiremeyiz.
+  print(user3.money);
 }

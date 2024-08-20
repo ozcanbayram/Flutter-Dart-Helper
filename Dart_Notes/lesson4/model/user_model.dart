@@ -32,7 +32,19 @@ class User {
   }
 
   bool isSpecialUser(String id) {
-    return _id ==
-        id; //Burada eğer _id ile id aynıysa true değilse false dönecek.
+    return _id == id;
+    //Burada eğer _id ile id aynıysa true değilse false dönecek.
   }
+
+  // ---***---***---***---***---***---
+
+  //id nin boş oluğ olmadığını kontrol eden fonksiyon:
+  // bool isEmptyId() {
+  //   return _id.isEmpty;
+  // }
+
+  //Bu fonksiyon ile aynı işleve sahip olan daha kısa yazılmış hali:
+  bool get isEmptyId => _id.isEmpty;
+  //Burası bir parametre ya da değer almıyor ise get kullanabiliriz.
+  // get; compitued value anlamında gelir değer çağrıldığında her defasında hesaplanır ve sonucu döndürür.
 }
