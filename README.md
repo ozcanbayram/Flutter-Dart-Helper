@@ -11,7 +11,7 @@
 <hr>
 
 <details>
-<summary> <h2> Dart Notları </h2> </summary>
+<summary> <h2> 💎 Dart Notları </h2> </summary>
   
 ### 👉 Tüm Dart notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes"> Tıkla </a> 
 ### 👉 Temel Başlangıc için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/lesson1"> Tıkla </a> 
@@ -27,11 +27,17 @@
 <hr>
 </details>
 
-
-
+<details>
+<summary> <h2> ⭐ Flutter Notları </h2> </summary>
+  
 ### 👉 Flutter notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/learning_flutter"> Tıkla </a> 
 ### 👉 Temel widget kullanımları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/learning_flutter/lib/101"> Tıkla </a>
-### 👉 Servis kullanma örneğini incelemek için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/service_example"> Tıkla </a> 
+### 👉 Servis kullanma örnek uygulamasını incelemek için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/service_example"> Tıkla </a> 
+
+### Devamı gelecek...
+<hr>
+</details>
+
 
 
 <hr>
