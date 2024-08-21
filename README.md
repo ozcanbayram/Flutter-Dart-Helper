@@ -11,9 +11,17 @@
 <hr>
 
 <details>
-<summary> <h3> Dart Notları </h3> </summary>
+<summary> <h2> Dart Notları </h2> </summary>
   
 ### 👉 Tüm Dart notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes"> Tıkla </a> 
+### 👉 Temel Başlangıc için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/lesson1"> Tıkla </a> 
+### 👉 if-else için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson2/conditial.dart"> Tıkla </a> 
+### 👉 Operatörler için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson2/operators.dart"> Tıkla </a> 
+### 👉 Switch-Case için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson2/switch.dart"> Tıkla </a> 
+### 👉 Listeler için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson3/list.dart"> Tıkla </a> 
+### 👉 Map için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson3/map.dart"> Tıkla </a> 
+### 👉 Methotlar (Fonksiyonlar) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson3/methods.dart"> Tıkla </a> 
+### 👉 Sınıf yapıları ve detayları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/lesson4"> Tıkla </a> 
 <hr>
 </details>
 
