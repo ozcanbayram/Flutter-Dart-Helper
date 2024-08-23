@@ -21,7 +21,7 @@
 ### 👉 Listeler için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson3/list.dart"> Tıkla </a> 
 ### 👉 Map için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson3/map.dart"> Tıkla </a> 
 ### 👉 Methotlar (Fonksiyonlar) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson3/methods.dart"> Tıkla </a> 
-### 👉 Sınıf yapıları ve detayları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/lesson4"> Tıkla </a> 
+### 👉 Sınıf yapıları (class, extends, implements...) ve detayları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/lesson4"> Tıkla </a> 
 
 ### Devamı gelecek...
 <hr>
