@@ -20,6 +20,8 @@
 ### 👉 Map için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson3/map.dart"> Tıkla </a> 
 ### 👉 Methotlar (Fonksiyonlar) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson3/methods.dart"> Tıkla </a> 
 ### 👉 Sınıf yapıları (class, extends, implements...) ve detayları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/lesson4"> Tıkla </a> 
+### 👉 Extension için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson4/extension.dart"> Tıkla </a> 
+### 👉 Enums için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson4/enums.dart"> Tıkla </a> 
 
 ### Devamı gelecek...
 <hr>
@@ -123,3 +125,27 @@ class ItemsColor {
 <!--  ![giphy](https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExNWE3ZnVkZ3p4OWl6ZGZpNzA4N2R0ZWl5eWpyd3MxbmhucGZ3bmhzaCZlcD12MV9naWZzX3NlYXJjaCZjdD1n/26u4nJPf0JtQPdStq/giphy.gif) -->
 
 ![giphy](https://media.giphy.com/media/NC8i34AU5UxWMHVxyU/giphy.gif?cid=790b76115a7fudgzx9izdfi7087dteiyyjrws1nhnpfwnhsh&ep=v1_gifs_search&rid=giphy.gif&ct=g)
+
+<hr>
+
+## 📦 Kaynaklar 📦
+``
+Kendi deneyerek ve araştırarak öğrendiklerim.
+`` <br>
+``
+HardwareAndro (Youtube)
+``<br>
+``
+flutter.dev (Flutter Dökümantasyon)
+``<br>
+``
+dart.dev (Dart Dökümantasyon)
+``<br>
+``
+youtube (Bir çok kanal ve tutorial)
+``<br>
+``
+mitchkoko (Youtube)
+``<br>
+#### ❗NOT: ``Henüz bir çok içeriği eklemedim. Adım adım her gün eklemeler yaparak ilerliyorum. Sizler de katkıda bulunarak süreci daha verimli bir hale getirebilirsiniz.``
+
