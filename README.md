@@ -5,8 +5,6 @@
 
 #### ❗Bu repoyu Flutter ve Dart'ı yeni öğrenecek olan ve farklı widget tasarımları görmek isteyen kişiler ile paylaşmak için hazrılıyorum. Temel notları anlaşılır ve basit örneklerle açıklayarak yazıyorum. Daha sonra gelişmiş widgetlar hazırlayarak da geliştirmelere devam edeceğim. Repoyu Flutter öğrenmek isteyenler için faydalı bir kayndak haline getirmeye çalışıyorum. Kullanıma hazır widgetlar yazarak pr atabilir ve repoya katkıda bulunabilirsiniz.
 
-## Tools & Languages
-![Langs](https://skillicons.dev/icons?i=flutter,dart,vscode,androidstudio,")
 
 <hr>
 
@@ -54,9 +52,69 @@ flutter run
 ```
 ### Geçerli Flutter veya Dart sürümünüz proje ile uyumlu değilse internet üzerinde kısa bir arama ile Flutter - Dart sürümünüzü ya da projedeki sürümü güncelleyebilrisiniz.
 ### Eğer projeye katkıda bulunacaksanız, bir pull request oluşturacaksanız lütfen projenin mevcut sürümünü değiştirmemeye özen gösterin. Bu işlem ana repo tarafından gerekli zamanda yapılacaktır.
-### Forklayarak üzerinde değişiklikler yapabilr ve yeni PRlar oluşturarak repoya katkıda bulunabilirsin. Tasarladığın widgetları ya da öğretici yorumlarını ve kodlarını topluluk ile paylaşabilirsin.
 
+### Eğer projeyi bilgisayarında çalışırdıktan sonra bir ekranı emulatmrunde görmek istiyorsan. main.dart kodlarından aşağıdaki değişikliği yapman gerekecektir:
+```
+import 'package:flutter/material.dart';
+import 'package:flutter_full_learn_one/202/theme/light_theme.dart';
+import '202/package_learn_view.dart';
+
+void main() {
+  runApp(const MyApp());
+}
+
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
+      theme: LightTheme().theme,
+      home: PackageLearnView(),
+    );
+  }
+}
+```
+### Yukarıdaki main kodlarında  ``` home: PackageLearnView  ``` kısmındaki PackageLearnView widget isminin yerine, çalıştırmak istediğiniz widgetin ismini yazabilrsiniz.
+### Örneğin aşağıdaki widgetin ismini  ColorsLearnView olarak ``` home ``` kısmına yazarbilir ve bu widgetin emulatorde çalılşmasını sağlayabilrisiniz.
+````
+import 'package:flutter/material.dart';
+
+class ColorsLearnView extends StatelessWidget {
+  const ColorsLearnView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text('Color Learning'),
+      ),
+      body: Container(
+          //color: Theme.of(context).colorScheme.error, arkaplan container rengi
+          child: Text(
+        'dasd',
+        style: Theme.of(context)
+            .textTheme
+            .titleMedium
+            ?.copyWith(color: Theme.of(context).colorScheme.error),
+      )),
+    );
+  }
+}
+class ItemsColor {
+  static final renk1 = Color.fromARGB(255, 113, 207, 47);
+}
+````
+
+### Forklayarak üzerinde değişiklikler yapabilr ve yeni PRlar oluşturarak repoya katkıda bulunabilirsin. Tasarladığın widgetları ya da öğretici yorumlarını ve kodlarını topluluk ile paylaşabilirsin.
+### Unutma ki repoyu geliştirmek, daha okunabilir ve düzenli hale getirmek için çalışıyorum.
+### ⭐ Repoyu yıldızlayarak daha sonradan kolayca erişebilirsin. Sen de katkıda bulunarak bu topluluğa destek olabilir ve öğrenmek isteyen kişilere fayda sağlayabilirsin.⭐
 <hr>
+
+## Tools & Languages
+![Langs](https://skillicons.dev/icons?i=flutter,dart,vscode,androidstudio,")
 
 
 # Topluluk ile öğren, katkıda bulun. 
