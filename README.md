@@ -12,6 +12,7 @@
 <summary> <h2> 💎 Dart Notları </h2> </summary>
   
 ### 👉 Tüm Dart notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes"> Tıkla </a> 
+### 👉 Algoritma soruları ve çözümleri için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/algorithm_questions"> Tıkla </a> 
 ### 👉 Temel Başlangıc için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/lesson1"> Tıkla </a> 
 ### 👉 if-else için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson2/conditial.dart"> Tıkla </a> 
 ### 👉 Operatörler için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson2/operators.dart"> Tıkla </a> 
@@ -50,6 +51,17 @@
 ### Devamı gelecek...
 <hr>
 </details>
+
+<details>
+<summary> <h2> ⚡ Algoritma Örnekleri </h2> </summary>
+  
+### 👉 Tüm algoritma soruları ve çözümleri için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/algorithm_questions"> Tıkla </a> 
+### 👉 Sayının tek çift kontrolü örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/algorithm_questions/odd_or_even.dart"> Tıkla </a> 
+
+### Devamı gelecek (Açıklamalı gelişmiş algoritma örnekleri)...
+<hr>
+</details>
+
 
 
 <hr>
