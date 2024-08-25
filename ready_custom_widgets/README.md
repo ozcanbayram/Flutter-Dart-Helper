@@ -1,16 +1,8 @@
-# ready_custom_widgets
+ <h2> 🚀 Hazır Widgetlar </h2> 
 
-A new Flutter project.
+![customDrawer](https://github.com/user-attachments/assets/6f82cc24-224a-4505-92f5-1fc374103705)
 
-## Getting Started
+### 👉 Drawer Menu için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/ready_custom_widgets/lib/feature/drawer_menu"> Tıkla </a> 
+<hr>
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### Devamı gelecek...
