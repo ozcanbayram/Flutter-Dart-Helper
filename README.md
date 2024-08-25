@@ -128,6 +128,14 @@ class ItemsColor {
 ### ⭐ Repoyu yıldızlayarak daha sonradan kolayca erişebilirsin. Sen de katkıda bulunarak bu topluluğa destek olabilir ve öğrenmek isteyen kişilere fayda sağlayabilirsin.⭐
 <hr>
 
+# ❗ Katkıda bulunmadan önce oku ❗
+
+### Eğer kendi tasarladığın widgeti paylaşmak istiyorsan lütfen "ready_custom_widgets/lib/feature" içerisinde kendine ait bir klasör oluşturarak eklemelerini bu klasörde yap ve pull request oluştur.
+### Eğer Flutter ya da Dart notlarına ekleme yapacaksan; mevcut kodlar üzerinde eklemelerini yorum satırlarıyla belirterek yapabilirsin fakat repoda ele alınmamış bir konuyu kendi yorumlarınla anlatmak istiyorsan lütfen Dart_Notes klasörü içinde konuyla alakalı bir klasör aç ve geliştirmelerini burada yaparak pull request oluştur. <br> Bunun aynısı Flutter notları için de geçerli.
+### Gerekli incelemelerden sonra eğer katkıların faydalıysa merge edilecektir, düzenlemen gereken şeyler olur ise pull requestinde yorum olarak belirilecektir.
+
+<hr> 
+
 ## Tools & Languages
 ![Langs](https://skillicons.dev/icons?i=flutter,dart,vscode,androidstudio,")
 
