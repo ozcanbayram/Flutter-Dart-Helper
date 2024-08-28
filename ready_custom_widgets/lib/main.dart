@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:ready_custom_widgets/feature/drawer_menu/custom_drawer_menu.dart';
+import 'package:flutter/services.dart';
+import 'package:ready_custom_widgets/feature/register_screen/custom_login.dart';
 
 void main() {
   runApp(const MyApp());
+
+  //? Status bar rengini dark yapmak için:
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
 }
 
 class MyApp extends StatelessWidget {
@@ -17,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const DrawerMenuScreen(),
+      home:  CustomLoginView(),
     );
   }
 }

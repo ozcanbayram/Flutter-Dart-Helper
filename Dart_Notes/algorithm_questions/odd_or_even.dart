@@ -1,8 +1,8 @@
 //! Bu örnekte bir sayının tek mi çift mi olduğunu bulalım:
 //* eğer sayi çift ise true, tek ise false yazdıralım.
 void main() {
-  final int sayi1 = 150; //? Sayıyı belirleyelim
-  final int sayi2 = 155; //? Sayıyı belirleyelim
+  final int sayi1 = 150; //? Sayıyı belirleyelim. (Bu sayı herhangi bir yerden gelen değer olabilir.)
+  final int sayi2 = 155; //? Sayıyı belirleyelim (Bu sayı herhangi bir yerden gelen değer olabilir.)
 
 //! Fonksitonu sayı için uygulayarak tek/çift kontrolü yapalım ve sonucu print ile yazdıralım.
   print(isOddOrEven(sayi1));
