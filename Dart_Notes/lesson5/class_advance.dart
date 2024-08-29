@@ -67,7 +67,8 @@ class _User {
   }
 }
 
-class Bank {
+class Bank with BankMixin {
+  //? Burada aşağıda yazdığımız mixin'i kullanıyoruz.
   final int money;
   final String id;
 
@@ -93,4 +94,22 @@ class Bank {
     //? Ve eğer bank sınıfına ait ise kullanıcının id si ile eşit mi kontrol et.
     //? Bu şartlar sağlanıyor ise == operatoru true dönecektir.
   }
+
+  @override
+  void sayBankHello() {
+    //* mixin kullandığımız için gelen override
+    calculateMoney(money); //? mixinde yazılan metot
+  }
+}
+
+//! mixin constructoru olmayan sınıf olarak düşünülebilir.
+//! kendisine verilen işleri yapar ve döndürür. Performansı class'a göre daha iyidir.
+
+mixin BankMixin {
+  void sayBankHello();
+
+  void calculateMoney(int money) {
+    print(money);
+  }
+  //* bu mixin'i bir yerde kullanmak için with kullanırız. Hadi Bank sınıfında kullanalım.
 }
