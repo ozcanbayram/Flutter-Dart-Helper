@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ready_custom_widgets/feature/drawer_menu/custom_drawer_menu.dart';
+import 'package:ready_custom_widgets/feature/register_screen/custom_login.dart';
 
 class WidgetsList extends StatefulWidget {
   const WidgetsList({super.key});
@@ -18,20 +19,52 @@ class _WidgetsListState extends State<WidgetsList> {
         title: const Center(child: Text('All Custom Widgets')),
         backgroundColor: const Color(0xff7695FF),
       ),
-      body: ListTile(
-        title: const Text(
-          'Drawer Menu',
-          style: TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-        ),
-        subtitle: const Text(
-          'Gradiyan renk geçişli menü.',
-          style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
-        ),
-        leading: const Icon(
-          Icons.verified,
-          size: 35,
-          color: Color(0xff7695FF),
-        ),
+      body: const Column(
+        children: [
+          _CustomListTile(
+              title: 'Drawer Menu',
+              subTitle: 'Gradiyan renk geçişli menü',
+              isVerifiy: true,
+              goWidget: DrawerMenuScreen()),
+          _CustomListTile(
+              title: 'Login Screen',
+              subTitle: 'Kişiselleştirmeye hazır giriş yapma ekranı',
+              isVerifiy: true,
+              goWidget: CustomLoginView()),
+        ],
+      ),
+    );
+  }
+}
+
+class _CustomListTile extends StatelessWidget {
+  final String title;
+  final String subTitle;
+  final bool isVerifiy;
+  final Widget goWidget;
+
+  const _CustomListTile({
+    // ignore: unused_element (super.key)
+    super.key,
+    required this.title,
+    required this.subTitle,
+    required this.isVerifiy,
+    required this.goWidget,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 8.0),
+      child: ListTile(
+        title: Text(title,
+            style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
+        subtitle: Text(subTitle,
+            style: const TextStyle(fontSize: 16, fontWeight: FontWeight.bold)),
+        leading: Icon(
+            isVerifiy ? Icons.verified : Icons.contact_support_outlined,
+            size: 35,
+            color: isVerifiy ? const Color(0xff7695FF) : Colors.red),
         trailing: const Icon(Icons.arrow_forward_ios_outlined),
         onTap: () {
           Navigator.push(
@@ -48,7 +81,7 @@ class _WidgetsListState extends State<WidgetsList> {
 
                 return SlideTransition(
                   position: offsetAnimation,
-                  child: const DrawerMenuScreen(),
+                  child: goWidget,
                 );
               },
             ),
