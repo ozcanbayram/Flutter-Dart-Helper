@@ -152,7 +152,7 @@ class ItemsColor {
 
 # ❗ Katkıda bulunmadan önce oku ❗
 
-### Eğer kendi tasarladığın widgeti paylaşmak istiyorsan lütfen "ready_custom_widgets/lib/feature" içerisinde kendine ait bir klasör oluşturarak eklemelerini bu klasörde yap ve pull request oluştur.
+### Eğer kendi tasarladığın widgeti paylaşmak istiyorsan lütfen "ready_custom_widgets/lib/feature" içerisinde kendine ait bir klasör oluşturarak eklemelerini bu klasörde yap ve pull request oluştur.<br> (Örnek olarak <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/tree/master/ready_custom_widgets/lib/feature"> burayı </a> inceleyebilirsin.  )
 ### Eğer Flutter ya da Dart notlarına ekleme yapacaksan; mevcut kodlar üzerinde eklemelerini yorum satırlarıyla belirterek yapabilirsin fakat repoda ele alınmamış bir konuyu kendi yorumlarınla anlatmak istiyorsan lütfen Dart_Notes klasörü içinde konuyla alakalı bir klasör aç ve geliştirmelerini burada yaparak pull request oluştur. <br> Bunun aynısı Flutter notları için de geçerli.
 ### Gerekli incelemelerden sonra eğer katkıların faydalıysa merge edilecektir, düzenlemen gereken şeyler olur ise pull requestinde yorum olarak belirilecektir.
 
