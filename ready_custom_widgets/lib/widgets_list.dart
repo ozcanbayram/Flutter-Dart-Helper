@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:ready_custom_widgets/feature/drawer_menu/custom_drawer_menu.dart';
+import 'package:ready_custom_widgets/feature/loading_bar/custom_loading_bar.dart';
 import 'package:ready_custom_widgets/feature/register_screen/custom_login.dart';
 
 class WidgetsList extends StatefulWidget {
@@ -31,6 +32,11 @@ class _WidgetsListState extends State<WidgetsList> {
               subTitle: 'Kişiselleştirmeye hazır giriş yapma ekranı',
               isVerifiy: true,
               goWidget: CustomLoginView()),
+          _CustomListTile(
+              title: 'Loading Bar Widget',
+              subTitle: 'Özel bekleme animasyonları',
+              isVerifiy: true,
+              goWidget: LoadingBar()),
         ],
       ),
     );
