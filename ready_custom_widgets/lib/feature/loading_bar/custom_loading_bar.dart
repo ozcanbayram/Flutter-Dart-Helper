@@ -15,13 +15,36 @@ class tLoadingBarState extends State<LoadingBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Custom Loading Bar'),
-      ),
-      body: const Center(
-        child: SpinKitChasingDots(
-          color: Colors.red,
-          size: 50,
+        backgroundColor: Colors.red,
+        title: const Center(
+          child: Text(
+            'Custom Loading Bar',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
+      ),
+      body: const Column(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          SizedBox(
+            width: 400,
+            height: 200,
+            child: Card(
+              child: Column(
+                children: [
+                  SpinKitDancingSquare(
+                    size: 80,
+                    color: Colors.red,
+                  ),
+                  Text(
+                    'Dancing Square',
+                    style: TextStyle(fontSize: 35),
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
