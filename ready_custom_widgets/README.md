@@ -17,6 +17,16 @@
 
 ![gif](https://github.com/user-attachments/assets/c498e311-9f88-4a3c-b281-92177eaa62b1)
 
+
+<hr>
+
+
+
+### 👉 Bottom Nav Bar için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/ready_custom_widgets/lib/feature/bottom_nav_bar/custom_navbar.dart"> Tıkla </a> 
+
+![bottomnavbar](https://github.com/user-attachments/assets/ef62fdc3-884a-47f4-a020-a1e9e3b59bf7)
+
+
 <hr>
 
 ### Devamı gelecek...
