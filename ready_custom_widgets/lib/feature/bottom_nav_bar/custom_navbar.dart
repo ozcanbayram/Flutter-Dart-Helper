@@ -12,6 +12,12 @@ class _CustomNavBaBottomrState extends State<CustomBottomNavBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        toolbarHeight: 80,
+        title: const Center(
+          child: Text('Custom BottomNawBar'),
+        ),
+      ),
       bottomNavigationBar: Container(
         color: Colors.black,
         child: Padding(
@@ -26,7 +32,7 @@ class _CustomNavBaBottomrState extends State<CustomBottomNavBar> {
             tabBackgroundColor: const Color.fromARGB(255, 36, 36, 36),
             onTabChange: (value) {
               // ignore: avoid_print
-              print(value);//Tıklanan butonun indexini alır.
+              print(value); //Tıklanan butonun indexini alır.
             },
             tabs: const [
               GButton(
