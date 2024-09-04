@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:ready_custom_widgets/feature/bottom_nav_bar/custom_navbar.dart';
 import 'package:ready_custom_widgets/feature/drawer_menu/custom_drawer_menu.dart';
 import 'package:ready_custom_widgets/feature/loading_bar/custom_loading_bar.dart';
 import 'package:ready_custom_widgets/feature/register_screen/custom_login.dart';
@@ -37,6 +38,11 @@ class _WidgetsListState extends State<WidgetsList> {
               subTitle: 'Özel bekleme animasyonları',
               isVerifiy: true,
               goWidget: LoadingBar()),
+          _CustomListTile(
+              title: 'Bottom Nav Bar',
+              subTitle: 'Custom BottomNavBar with google_nav_bar package',
+              isVerifiy: true,
+              goWidget: CustomBottomNavBar()),
         ],
       ),
     );

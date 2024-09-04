@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ready_custom_widgets/feature/bottom_nav_bar/custom_navbar.dart';
 import 'package:ready_custom_widgets/widgets_list.dart';
 
 void main() {
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const CustomBottomNavBar(),
+      home: const WidgetsList(),
     );
   }
 }

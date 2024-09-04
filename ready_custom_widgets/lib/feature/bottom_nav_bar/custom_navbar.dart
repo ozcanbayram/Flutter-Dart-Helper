@@ -14,9 +14,7 @@ class _CustomNavBaBottomrState extends State<CustomBottomNavBar> {
     return Scaffold(
       appBar: AppBar(
         toolbarHeight: 80,
-        title: const Center(
-          child: Text('Custom BottomNawBar'),
-        ),
+        title: const Text('Custom BottomNawBar'),
       ),
       bottomNavigationBar: Container(
         color: Colors.black,
