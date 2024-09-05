@@ -46,14 +46,13 @@
 <details>
 <summary> <h2> 🚀 Hazır Widgetlar </h2> </summary>
 
-### 👉 Tüm widgetların listesi için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/tree/master/ready_custom_widgets/lib"> Tıkla </a> 
-
-![Group 3](https://github.com/user-attachments/assets/cab17ce5-fd23-46ff-82b7-d2ca6f89c81f)
 
 <hr>
 
 ### 👉 Drawer Menu için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/ready_custom_widgets/lib/feature/drawer_menu"> Tıkla </a> 
-![customDrawer](https://github.com/user-attachments/assets/6f82cc24-224a-4505-92f5-1fc374103705)
+
+![drawerGIF](https://github.com/user-attachments/assets/dfa46919-da33-44f2-8695-887ca75079cd)
+
 <hr>
 
 
