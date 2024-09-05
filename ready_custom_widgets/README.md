@@ -1,32 +1,23 @@
- <h2> 🚀 Hazır Widgetlar </h2> 
-
-
-### 👉 Drawer Menu için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/ready_custom_widgets/lib/feature/drawer_menu"> Tıkla </a> 
-
-![customDrawer](https://github.com/user-attachments/assets/6f82cc24-224a-4505-92f5-1fc374103705)
+<h2> 🚀 Hazır Widgetlar </h2>
 
 <hr>
 
+### 👉 Drawer Menu için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/ready_custom_widgets/lib/feature/drawer_menu"> Tıkla </a> 
+![drawerGIF](https://github.com/user-attachments/assets/dfa46919-da33-44f2-8695-887ca75079cd)
+<hr>
+
+
 ### 👉 Login Screen için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/ready_custom_widgets/lib/feature/register_screen"> Tıkla </a> 
-
-![Group 2](https://github.com/user-attachments/assets/20fc209f-cee8-4d72-8c81-e21acba8b8ec)
-
+![loginGIF](https://github.com/user-attachments/assets/0afdb564-83c6-4045-815f-89d401db09b7)
 <hr>
 
 ### 👉 Loading Bar için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/tree/master/ready_custom_widgets/lib/feature/loading_bar"> Tıkla </a> 
-
-![gif](https://github.com/user-attachments/assets/c498e311-9f88-4a3c-b281-92177eaa62b1)
-
-
+![loadingGIF](https://github.com/user-attachments/assets/41f3f207-aa9e-4f1c-962e-9787c60aa81a)
 <hr>
 
-
-
 ### 👉 Bottom Nav Bar için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/ready_custom_widgets/lib/feature/bottom_nav_bar/custom_navbar.dart"> Tıkla </a> 
-
 ![bottomnavbar](https://github.com/user-attachments/assets/ef62fdc3-884a-47f4-a020-a1e9e3b59bf7)
-
-
 <hr>
 
 ### Devamı gelecek...
+<hr>
