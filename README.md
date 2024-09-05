@@ -25,6 +25,7 @@
 ### 👉 Enums için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/lesson4/enums.dart"> Tıkla </a> 
 ### 👉 Gelişmiş Sınıf Yapısı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/class_advance.dart"> Tıkla </a> 
 ### 👉 Custom Operator Yazmak için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/class_advance.dart"> Tıkla </a> 
+### 👉 Mixin için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/class_advance.dart"> Tıkla </a> 
 
 
 ### Devamı gelecek...
