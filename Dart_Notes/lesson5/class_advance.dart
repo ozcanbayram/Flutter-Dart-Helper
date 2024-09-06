@@ -45,6 +45,13 @@ void main(List<String> args) {
   //? Örnek olarak parası aynı olanlar aynı kişi olmalıdır sorusunu yaparken:
   print(mone1.id == mone2.id); //! sonucu false döner. Oysa ki paraları eşittir.
   //! Bank sınıfında bir operator daha yazalım.
+
+  //? Musterinin parasina 10 tl ekle ve ekrana yazdir, ismini ali yap: (Cascade Notation kullanarak)
+  mone1.money += 10;
+  print(mone1.money);
+  //! Cascade Notation kullanımı: (..)
+  //* tek satırda birden fazla nesneyi daha kolay geri döndürmek için kullanılır.
+  mone1..money += 10..name = 'Ali';
 }
 
 class _User {
@@ -69,13 +76,18 @@ class _User {
 
 class Bank with BankMixin {
   //? Burada aşağıda yazdığımız mixin'i kullanıyoruz.
-  final int money;
+  int money;
   final String id;
+  String? name;
 
   Bank(
     this.money,
     this.id,
   );
+
+  void updateName(String name) {
+    this.name = name;
+  }
 
   //? Burada yukarıdaki toplama işlemini yapabilmek için bir operator yazalım.
   //* (Bank sınıfından türetilmiş iki nesneyi toplayabilmek için)
