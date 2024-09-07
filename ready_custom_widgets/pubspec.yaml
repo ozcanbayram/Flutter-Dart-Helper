@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.8
   flutter_spinkit: ^5.2.1
   google_nav_bar: ^5.0.6
+  hidden_drawer_menu: ^3.0.1
 
 dev_dependencies:
   flutter_test:
