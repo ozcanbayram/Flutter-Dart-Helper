@@ -75,6 +75,12 @@
 
 <hr>
 
+### 👉 Hidden Drawer Menu için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/tree/master/ready_custom_widgets/lib/feature/hidden_drawer_menu"> Tıkla </a> 
+
+![hidden_drawer](https://github.com/user-attachments/assets/895ef0b3-5794-4018-a21a-b98aba4acda9)
+
+<hr>
+
 ### Devamı gelecek...
 <hr>
 </details>
