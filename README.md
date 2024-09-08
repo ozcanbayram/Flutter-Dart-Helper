@@ -1,5 +1,4 @@
-# Flutter & Dart Learning
-
+# Flutter & Dart Learning and Development Companion
 `Bu repoyu geliştirmeye devam ediyorum. Sen de katkıda bulunabilirsin. Faydalı pull requestlerini beklyiorum.`
 
 
