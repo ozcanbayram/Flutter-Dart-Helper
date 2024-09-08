@@ -26,6 +26,7 @@
 ### 👉 Gelişmiş Sınıf Yapısı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/class_advance.dart"> Tıkla </a> 
 ### 👉 Custom Operator Yazmak için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/class_advance.dart"> Tıkla </a> 
 ### 👉 Mixin için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/class_advance.dart"> Tıkla </a> 
+### 👉 Singleton için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/class_singleton.dart"> Tıkla </a> 
 
 
 ### Devamı gelecek...
