@@ -1,3 +1,4 @@
+// ignore_for_file: public_member_api_docs, sort_constructors_first
 void main(List<String> args) {
   //! Singleton: Bİr tane özellik, instance ya da herhangi bir şey. Eğer uygulamanın bir çok yerinde
   //! ve sürekli aynı şey kullanılacak ise, singleton dediğimiz yapıyı kullanırız.
@@ -8,6 +9,25 @@ void main(List<String> args) {
   //* Burada direkt olarak Product sınıfındaki nesneye eriştik.
   //* Yani bu nesneye erişebilmek için öncesinde bir obje oluşturmamıza gerek kalmadı.
   //* Örneğin final userMoney = Product ... şeklinde yeni bit nesne oluşturmadan eriştik.
+
+  //? Factory Construcor:
+
+  //* Örneğin User sınıfını kullanarak product yapalım:
+  final user1 = User('Vedat', 'bcdef');
+  // final newProduct = Product(user1.product);
+  //! Factory Constructordan sonra aşağıdaki gibi yazabiliriz:
+  final newProduct1 = Product.fromUser(user1);
+  print(newProduct1);
+
+  //!aşağıdaki
+  //! "
+  //  //? Factory Constructor start
+  //?Product(this.name) {}
+  //?Product.ali([this.name = 'Ali']); //* Burada default parametre atadık.
+  //? Factory Constructor finish
+  //!"  Kısmında yaptığımız işlemi kullanalım.
+  Product
+      .ali(); //* Product.ali şeklinde Product sınıfında yazdığımız Factory Constructor'u kullanarak bir ürün oluşturabiliriz.
 }
 
 //? Mesela bir fonksiyonda bu Product sınıfındaki money'e erişmek için aşağıdaki gibi yapabiliriz:
@@ -30,6 +50,19 @@ void calculateMoney() {
 
 class Product {
   static int money = 10;
+  String name;
+
+  //? Factory Constructor start
+  Product(this.name) {}
+  Product.ali([this.name = 'Ali']); //* Burada default parametre atadık.
+
+  //! Bir constructor geriye değer döndürmez. Fakat dönmesini istiyorsak Factory Constructor kullanabiliriz.
+  //* Örneğin:
+  factory Product.fromUser(User user) {
+    return Product(user.name);
+  }
+
+  //? Factory Constructor finish
 
   static void incrementMoney(int newMoney) {
     money += newMoney;
@@ -40,6 +73,15 @@ class Product {
   //! daha büyük projelerde kullanımı riskli olabilir ve hatalara yol açabilir.
   //? Peki bu durumu engellemek için ne yapabiliriz?
   //* Statik tanımlamamızı örneğin static const companyName = 'MY COMPANY';
-  //* şeklinde yaparsak değer daha sonradan değiştirilemez ve her zaman statik kalarak 
-  //* beklenmeyen hataların önüne geçer. 
+  //* şeklinde yaparsak değer daha sonradan değiştirilemez ve her zaman statik kalarak
+  //* beklenmeyen hataların önüne geçer.
+}
+
+//* Factory Constructor
+
+class User {
+  final String name;
+  final String product;
+
+  User(this.name, this.product);
 }
