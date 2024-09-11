@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import 'model/product_config_model.dart';
+
 void main(List<String> args) {
   //! Singleton: Bİr tane özellik, instance ya da herhangi bir şey. Eğer uygulamanın bir çok yerinde
   //! ve sürekli aynı şey kullanılacak ise, singleton dediğimiz yapıyı kullanırız.
@@ -28,6 +30,10 @@ void main(List<String> args) {
   //!"  Kısmında yaptığımız işlemi kullanalım.
   Product
       .ali(); //* Product.ali şeklinde Product sınıfında yazdığımız Factory Constructor'u kullanarak bir ürün oluşturabiliriz.
+
+  //? apiKey neydi?:
+  ProductConfig.instance.apiKey; //? sadece bunu yapanlar görebilir.
+  print(ProductConfig.instance.apiKey);
 }
 
 //? Mesela bir fonksiyonda bu Product sınıfındaki money'e erişmek için aşağıdaki gibi yapabiliriz:
@@ -62,6 +68,16 @@ class Product {
     return Product(user.name);
   }
 
+  //? Dart'ta nesne oluşturmanın esnek bir yoludur.
+  //? Normal constructorlar her çağrıldıklarında yeni bir
+  //? nesne örneği oluştururken, factory constructorlar isteğe
+  //? bağlı olarak yeni bir nesne oluşturabilir veya önceden oluşturulmuş
+  //? bir nesneyi döndürebilir.
+
+  //* Factory constructorlar `new` anahtar kelimesi ile çağrılmaz.
+  //* Factory constructorların dönüş tipi, sınıfın kendisidir veya alt sınıflarından biri olabilir.
+  //* Factory constructorlar, normal constructorlardan farklı olarak `this` anahtar kelimesini kullanamazlar.
+
   //? Factory Constructor finish
 
   static void incrementMoney(int newMoney) {
@@ -78,12 +94,6 @@ class Product {
 }
 
 //* Factory Constructor
-
-//? Dart'ta nesne oluşturmanın esnek bir yoludur. 
-//? Normal constructorlar her çağrıldıklarında yeni bir 
-//? nesne örneği oluştururken, factory constructorlar isteğe
-//? bağlı olarak yeni bir nesne oluşturabilir veya önceden oluşturulmuş 
-//? bir nesneyi döndürebilir.
 
 class User {
   final String name;
