@@ -79,6 +79,12 @@ class Product {
 
 //* Factory Constructor
 
+//? Dart'ta nesne oluşturmanın esnek bir yoludur. 
+//? Normal constructorlar her çağrıldıklarında yeni bir 
+//? nesne örneği oluştururken, factory constructorlar isteğe
+//? bağlı olarak yeni bir nesne oluşturabilir veya önceden oluşturulmuş 
+//? bir nesneyi döndürebilir.
+
 class User {
   final String name;
   final String product;
