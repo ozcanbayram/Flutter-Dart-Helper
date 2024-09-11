@@ -34,6 +34,9 @@ void main(List<String> args) {
   //? apiKey neydi?:
   ProductConfig.instance.apiKey; //? sadece bunu yapanlar görebilir.
   print(ProductConfig.instance.apiKey);
+
+  ProductLazySingleton.instance; //? Lazy Singleton
+  print(ProductLazySingleton.instance);
 }
 
 //? Mesela bir fonksiyonda bu Product sınıfındaki money'e erişmek için aşağıdaki gibi yapabiliriz:
