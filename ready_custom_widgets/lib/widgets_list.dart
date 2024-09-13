@@ -4,6 +4,7 @@ import 'package:ready_custom_widgets/feature/drawer_menu/custom_drawer_menu.dart
 import 'package:ready_custom_widgets/feature/hidden_drawer_menu/hidden_drawer.dart';
 import 'package:ready_custom_widgets/feature/loading_bar/custom_loading_bar.dart';
 import 'package:ready_custom_widgets/feature/register_screen/custom_login.dart';
+import 'package:ready_custom_widgets/feature/second_bottom_nav_bar/custom_bottom_nav_bar.dart';
 
 class WidgetsList extends StatefulWidget {
   const WidgetsList({super.key});
@@ -48,7 +49,12 @@ class _WidgetsListState extends State<WidgetsList> {
               title: 'Hidden Drawer Menu',
               subTitle: 'Gizlenebilir özel menü tasarımı.',
               isVerifiy: true,
-              goWidget: HiddenDrawer())
+              goWidget: HiddenDrawer()),
+          _CustomListTile(
+              title: 'Bottom Nav Bar (Basic) ',
+              subTitle: 'İndex mantığı ile. Basit alt menü. ',
+              isVerifiy: true,
+              goWidget: CustomBottomNavBarSecond())
         ],
       ),
     );

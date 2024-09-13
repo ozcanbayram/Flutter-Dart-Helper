@@ -1,11 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 void main(List<String> args) {
-  final model = CarModel(
-    category: CarModels.kia,
-    name: 'Sportage',
-    money: 100000,
-  );
-
+  //? arabaları tutan carItems listesi:
   final carItems = [
     CarModel(
         category: CarModels.kia,
@@ -61,8 +56,7 @@ class CarModel {
     required this.money,
     this.city,
     this.isSecondHand = true,
-  });
-}
+  }); }
 
 enum CarModels {
   bmw,
