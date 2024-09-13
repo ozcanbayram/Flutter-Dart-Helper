@@ -84,6 +84,13 @@
 
 <hr>
 
+### 👉 Bottom NavBar (selected index) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/ready_custom_widgets/lib/feature/second_bottom_nav_bar/custom_bottom_nav_bar.dart"> Tıkla </a> 
+
+![bottom](https://github.com/user-attachments/assets/cf7d272b-aa42-43ca-a54c-c8712e72c439)
+
+<hr>
+
+
 ### Devamı gelecek...
 <hr>
 </details>
