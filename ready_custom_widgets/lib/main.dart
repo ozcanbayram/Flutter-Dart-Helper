@@ -7,6 +7,9 @@ void main() {
 
   //? Status bar rengini dark yapmak için:
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark);
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.dark.copyWith(
+    statusBarColor: Colors.transparent,
+  ));
 }
 
 class MyApp extends StatelessWidget {

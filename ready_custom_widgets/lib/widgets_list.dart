@@ -17,11 +17,17 @@ class _WidgetsListState extends State<WidgetsList> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: const Color(0xffFFD7C4),
+      backgroundColor: const Color(0xffF7F7F7),
       appBar: AppBar(
         toolbarHeight: 75,
-        title: const Center(child: Text('All Custom Widgets')),
-        backgroundColor: const Color(0xff7695FF),
+        title: const Center(
+            child: Text(
+          'All Custom Widgets',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        )),
+        // backgroundColor: const Color(0xff7695FF),
+        backgroundColor: Colors.transparent,
+        elevation: 0,
       ),
       body: const Column(
         children: [
@@ -79,7 +85,7 @@ class _CustomListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 8.0),
+      padding: const EdgeInsets.only(top: 24.0),
       child: ListTile(
         title: Text(title,
             style: const TextStyle(fontSize: 20, fontWeight: FontWeight.bold)),
@@ -88,7 +94,8 @@ class _CustomListTile extends StatelessWidget {
         leading: Icon(
             isVerifiy ? Icons.verified : Icons.contact_support_outlined,
             size: 35,
-            color: isVerifiy ? const Color(0xff7695FF) : Colors.red),
+            color:
+                isVerifiy ? const Color(0xff007AFF) : const Color(0xffFF3B30)),
         trailing: const Icon(Icons.arrow_forward_ios_outlined),
         onTap: () {
           Navigator.push(
