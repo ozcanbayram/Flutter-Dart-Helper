@@ -35,6 +35,40 @@ void main(List<String> args) {
       carItems.where((element) => element.isSecondHand == true).length;
   //!Bu kod listedeki isSecondHand == true sayısını döndürür.
   print(resultCount);
+
+  //* Yeni bir araba geldi, bizde var mı kontrol edelim.
+
+  //? Yeni bir araba ekleyelim
+  final newCar = CarModel(
+    category: CarModels.mercedes,
+    name: 'S450 d',
+    money: 400000,
+  );
+
+  final isHaveCar = carItems.contains(newCar);
+  //! carItems içinde newCar'ın aynısından var mı?
+  //! Fakat doğru sonuç için CarModel sınıfının equality'sini oluşturmamız gerekir.
+  //! Bunu bir sınıf propertysi üzerinde ctrl/command + . ile yapabiliriz.
+
+  if (isHaveCar) {
+    print('Elimizde var');
+  } else {
+    print('Elimizde yok.');
+  }
+
+  //* Markası bmw olan money'i 20 den bürük olan arabaların modelini yazdır:
+
+  final resultBmwMore20 = carItems.where((element) {
+    return element.category == CarModels.bmw && element.money > 20;
+  }).join(); //? Join ile tostring'e çevirmiş oluruz. 
+  //! CarModel sınıfında ise tostring için override işlemini aşağıdaki ginbi yaparak, 
+  //! model ve fiyatın dönmesini sağlarız:
+  //  @override
+  // String toString() {
+  //   return '$name - $money';
+  // }
+
+  print(resultBmwMore20);
 }
 //* Bir arabalar sınıfı olacak .
 //* Arabaların modeli, ismi, fiyatı kesin olacak, şehri zorunlu olmayacak, ikinci ek durumu belirtilmezse
@@ -56,7 +90,33 @@ class CarModel {
     required this.money,
     this.city,
     this.isSecondHand = true,
-  }); }
+  });
+
+  @override
+  bool operator ==(covariant CarModel other) {
+    if (identical(this, other)) return true;
+
+    return other.category == category &&
+        other.name == name &&
+        other.money == money &&
+        other.city == city &&
+        other.isSecondHand == isSecondHand;
+  }
+
+  @override
+  int get hashCode {
+    return category.hashCode ^
+        name.hashCode ^
+        money.hashCode ^
+        city.hashCode ^
+        isSecondHand.hashCode;
+  }
+
+  @override
+  String toString() {
+    return '$name - $money';
+  }
+}
 
 enum CarModels {
   bmw,
