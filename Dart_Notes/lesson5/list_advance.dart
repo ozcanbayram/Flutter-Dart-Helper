@@ -36,6 +36,11 @@ void main(List<String> args) {
   //!Bu kod listedeki isSecondHand == true sayısını döndürür.
   print(resultCount);
 
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+
   //* Yeni bir araba geldi, bizde var mı kontrol edelim.
 
   //? Yeni bir araba ekleyelim
@@ -56,12 +61,18 @@ void main(List<String> args) {
     print('Elimizde yok.');
   }
 
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+
   //* Markası bmw olan money'i 20 den bürük olan arabaların modelini yazdır:
 
   final resultBmwMore20 = carItems.where((element) {
     return element.category == CarModels.bmw && element.money > 20;
-  }).join(); //? Join ile tostring'e çevirmiş oluruz. 
-  //! CarModel sınıfında ise tostring için override işlemini aşağıdaki ginbi yaparak, 
+  }).join();
+  //? Join ile tostring'e çevirmiş oluruz.
+  //! CarModel sınıfında ise tostring için override işlemini aşağıdaki ginbi yaparak,
   //! model ve fiyatın dönmesini sağlarız:
   //  @override
   // String toString() {
@@ -69,6 +80,43 @@ void main(List<String> args) {
   // }
 
   print(resultBmwMore20);
+
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+
+  //* Sadece isimleri yan yana göstereim.
+
+  //? map yapmak bundan yeni bir obje üretmek anlamına gelir.
+  final carNames = carItems.map((e) => e.name).join(' - ');
+  //! Burada map ile yeni bir obje oluşturduk ve join ile bunları toString'e çevirerek ekranda araç isimlerini yazdırdık.
+  print(carNames);
+
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+
+  //* Elimizde mercedes var mı kontrol edelim:
+  //? Bunun için where ve singleWhere kullanabiliriz.
+  //! Where -> elimizde olanları kontrol eder.
+  //! singleWhere -> elimizde olanları kontrol eder fakat 1 tane olması yeterlidir.
+  try {
+    final mercedesCar = carItems
+        .singleWhere((element) => element.category == CarModels.mercedes);
+    print('Elimizde Mercedes var. ( Mercedes $mercedesCar )');
+  } catch (e) {
+    print('Elimizde bu araç yok.');
+  }
+
+  //! Şimdi elimizde mercedes araç olmaması durumunda hata alacağız.
+  //! Bu tür hatalar için try catch kullanmamız gereklidir.
+
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
 }
 //* Bir arabalar sınıfı olacak .
 //* Arabaların modeli, ismi, fiyatı kesin olacak, şehri zorunlu olmayacak, ikinci ek durumu belirtilmezse
@@ -77,6 +125,8 @@ void main(List<String> args) {
 //* 5 Tane araba olacak.
 
 //* Bu arabaların kac tanesi 2. el?
+
+//* Sadece isimleri yan yana göstereim.
 
 class CarModel {
   final CarModels category;
