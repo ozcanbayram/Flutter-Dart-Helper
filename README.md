@@ -29,6 +29,8 @@
 ### 👉 Factory Constructor için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/class_singleton.dart"> Tıkla </a> 
 ### 👉 Eager Singleton için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/model/product_config_model.dart"> Tıkla </a> 
 ### 👉 Lazy Singleton için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/model/product_config_model.dart"> Tıkla </a> 
+### 👉 Any - where - contains örnekleri için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
+
 
 
 ### Devamı gelecek...
