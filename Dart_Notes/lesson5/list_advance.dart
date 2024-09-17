@@ -108,6 +108,9 @@ void main(List<String> args) {
     print('Elimizde Mercedes var. ( Mercedes $mercedesCar )');
   } catch (e) {
     print('Elimizde bu araç yok.');
+  } finally {
+    //? try catch'ten sonra çalışır.
+    print('Bu islem tamamlandı (Finally)');
   }
 
   //! Şimdi elimizde mercedes araç olmaması durumunda hata alacağız.
@@ -117,16 +120,33 @@ void main(List<String> args) {
   //? *************************************************************************
   //? *************************************************************************
   //? *************************************************************************
+
+  //*Yeni gelen bir arabanın kaçıncı sırada olduğunu bulmak için:
+  final index = carItems.indexOf(newCar);
+  print(index); //! bize arabanın index numarasını verir.
+
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+
+//* yeni arabayı eklemek:
+
+  carItems
+      .add(CarModel(category: CarModels.audi, name: 'rs6', money: 50000000));
+
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+
+//* Arabalari küçükten büyüğe sıralama:
+  carItems.sort((first, second) => first.money.compareTo(second.money));
+  //! burada first ve second belirlenir. bunlar birbiri arasında kıyaslanır (compareTo).
+  print(carItems);
 }
-//* Bir arabalar sınıfı olacak .
-//* Arabaların modeli, ismi, fiyatı kesin olacak, şehri zorunlu olmayacak, ikinci ek durumu belirtilmezse
-//* ikinci el olarak kabul edilecek
 
-//* 5 Tane araba olacak.
-
-//* Bu arabaların kac tanesi 2. el?
-
-//* Sadece isimleri yan yana göstereim.
+//! Model Sınıfı:
 
 class CarModel {
   final CarModels category;
