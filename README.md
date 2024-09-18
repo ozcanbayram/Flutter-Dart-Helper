@@ -32,6 +32,10 @@
 ### 👉 Any - where - contains örnekleri için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
 ### 👉 Join - Map  - singleWhere örnekleri için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
 
+### 👉 try catch finally için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
+### 👉 indexOf - add - sort - compareTo için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
+
+
 
 
 ### Devamı gelecek...
