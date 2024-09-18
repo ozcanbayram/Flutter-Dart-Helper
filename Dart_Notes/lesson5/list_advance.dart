@@ -7,21 +7,13 @@ void main(List<String> args) {
         name: 'Sportage',
         money: 100000,
         isSecondHand: false),
-    CarModel(
-      category: CarModels.mercedes,
-      name: 'S450 d',
-      money: 400000,
-    ),
+    CarModel(category: CarModels.mercedes, name: 'S450 d', money: 400000), 
     CarModel(
         category: CarModels.bmw,
         name: '320',
         money: 200000,
         isSecondHand: false),
-    CarModel(
-      category: CarModels.audi,
-      name: 'Q8',
-      money: 500000,
-    ),
+    CarModel(category: CarModels.audi, name: 'Q8', money: 500000),
     CarModel(
         category: CarModels.kia,
         name: 'Stonic',

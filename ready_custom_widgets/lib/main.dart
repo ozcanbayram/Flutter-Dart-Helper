@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.deepOrange),
-      home: const WidgetsList(),
+      home: const WidgetsList(), //* widget listesinin oldugu ekran
     );
   }
 }
