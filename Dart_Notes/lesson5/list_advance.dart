@@ -1,4 +1,6 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
+import '../lesson4/class_extends.dart';
+
 void main(List<String> args) {
   //? arabaları tutan carItems listesi:
   final carItems = [
@@ -7,7 +9,7 @@ void main(List<String> args) {
         name: 'Sportage',
         money: 100000,
         isSecondHand: false),
-    CarModel(category: CarModels.mercedes, name: 'S450 d', money: 400000), 
+    CarModel(category: CarModels.mercedes, name: 'S450 d', money: 400000),
     CarModel(
         category: CarModels.bmw,
         name: '320',
@@ -136,6 +138,17 @@ void main(List<String> args) {
   carItems.sort((first, second) => first.money.compareTo(second.money));
   //! burada first ve second belirlenir. bunlar birbiri arasında kıyaslanır (compareTo).
   print(carItems);
+
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+
+  //* Bütün arabalari user listesinden yapalim: (Expand: buradaki işlevi iki listeyi biribirine ekleyip kullanma)
+
+  final users = carItems.expand((element) => element.users).toList();
+  //? burada carItems'i users'a expand ettik. artık user türünde
+  print(users);
 }
 
 //! Model Sınıfı:
@@ -146,13 +159,15 @@ class CarModel {
   final double money;
   String? city;
   bool isSecondHand;
-  CarModel({
-    required this.category,
-    required this.name,
-    required this.money,
-    this.city,
-    this.isSecondHand = true,
-  });
+
+  List<User> users;
+  CarModel(
+      {required this.category,
+      required this.name,
+      required this.money,
+      this.city,
+      this.isSecondHand = true,
+      this.users = const []});
 
   @override
   bool operator ==(covariant CarModel other) {
