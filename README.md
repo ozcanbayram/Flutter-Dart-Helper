@@ -97,6 +97,12 @@
 
 <hr>
 
+### 👉 Slidable Widget (Kaydırılabilir liste) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/ready_custom_widgets/lib/feature/slidable_widget/slidable_widget.dart"> Tıkla </a> 
+
+![Adsız tasarım](https://github.com/user-attachments/assets/78e86234-808c-4923-99de-4fe7fd9a3faa)
+
+
+<hr>
 
 ### Devamı gelecek...
 <hr>
