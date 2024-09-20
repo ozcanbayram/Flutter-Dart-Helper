@@ -5,6 +5,7 @@ import 'package:ready_custom_widgets/feature/hidden_drawer_menu/hidden_drawer.da
 import 'package:ready_custom_widgets/feature/loading_bar/custom_loading_bar.dart';
 import 'package:ready_custom_widgets/feature/register_screen/custom_login.dart';
 import 'package:ready_custom_widgets/feature/second_bottom_nav_bar/custom_bottom_nav_bar.dart';
+import 'package:ready_custom_widgets/feature/slidable_widget/slidable_widget.dart';
 
 class WidgetsList extends StatefulWidget {
   const WidgetsList({super.key});
@@ -29,39 +30,46 @@ class _WidgetsListState extends State<WidgetsList> {
         backgroundColor: Colors.transparent,
         elevation: 0,
       ),
-      body: const Column(
-        children: [
-          _CustomListTile(
-              title: 'Drawer Menu',
-              subTitle: 'Gradiyan renk geçişli menü',
-              isVerifiy: true,
-              goWidget: DrawerMenuScreen()),
-          _CustomListTile(
-              title: 'Login Screen',
-              subTitle: 'Kişiselleştirmeye hazır giriş yapma ekranı',
-              isVerifiy: true,
-              goWidget: CustomLoginView()),
-          _CustomListTile(
-              title: 'Loading Bar Widget',
-              subTitle: 'Özel bekleme animasyonları',
-              isVerifiy: true,
-              goWidget: LoadingBar()),
-          _CustomListTile(
-              title: 'Bottom Nav Bar',
-              subTitle: 'Custom BottomNavBar with google_nav_bar package',
-              isVerifiy: true,
-              goWidget: CustomBottomNavBar()),
-          _CustomListTile(
-              title: 'Hidden Drawer Menu',
-              subTitle: 'Gizlenebilir özel menü tasarımı.',
-              isVerifiy: true,
-              goWidget: HiddenDrawer()),
-          _CustomListTile(
-              title: 'Bottom Nav Bar (Basic) ',
-              subTitle: 'İndex mantığı ile. Basit alt menü. ',
-              isVerifiy: true,
-              goWidget: CustomBottomNavBarSecond())
-        ],
+      body: const SingleChildScrollView(
+        child: Column(
+          children: [
+            _CustomListTile(
+                title: 'Drawer Menu',
+                subTitle: 'Gradiyan renk geçişli menü',
+                isVerifiy: true,
+                goWidget: DrawerMenuScreen()),
+            _CustomListTile(
+                title: 'Login Screen',
+                subTitle: 'Kişiselleştirmeye hazır giriş yapma ekranı',
+                isVerifiy: true,
+                goWidget: CustomLoginView()),
+            _CustomListTile(
+                title: 'Loading Bar Widget',
+                subTitle: 'Özel bekleme animasyonları',
+                isVerifiy: true,
+                goWidget: LoadingBar()),
+            _CustomListTile(
+                title: 'Bottom Nav Bar',
+                subTitle: 'Custom BottomNavBar with google_nav_bar package',
+                isVerifiy: true,
+                goWidget: CustomBottomNavBar()),
+            _CustomListTile(
+                title: 'Hidden Drawer Menu',
+                subTitle: 'Gizlenebilir özel menü tasarımı.',
+                isVerifiy: true,
+                goWidget: HiddenDrawer()),
+            _CustomListTile(
+                title: 'Bottom Nav Bar (Basic) ',
+                subTitle: 'İndex mantığı ile. Basit alt menü. ',
+                isVerifiy: true,
+                goWidget: CustomBottomNavBarSecond()),
+            _CustomListTile(
+                title: 'Slidable Widget',
+                subTitle: 'Kaydırılabilir ve özelleştirilebilir liste',
+                isVerifiy: true,
+                goWidget: CustomSlidabeWidget())
+          ],
+        ),
       ),
     );
   }

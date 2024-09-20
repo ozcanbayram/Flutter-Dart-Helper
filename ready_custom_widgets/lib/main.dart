@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:ready_custom_widgets/feature/slidable_widget/slidable_widget.dart';
 import 'package:ready_custom_widgets/widgets_list.dart';
 
 void main() {
@@ -22,7 +21,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(primarySwatch: Colors.deepOrange),
-      home: const CustomSlidabeWidget(),
+      home: const WidgetsList(), 
     );
   }
 }
