@@ -1,6 +1,6 @@
 name: ready_custom_widgets
 description: "A new Flutter project."
-publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+publish_to: "none" # Remove this line if you wish to publish to pub.dev
 
 version: 1.0.0+1
 
@@ -11,12 +11,12 @@ dependencies:
   flutter:
     sdk: flutter
 
-
   cupertino_icons: ^1.0.8
   flutter_spinkit: ^5.2.1
   google_nav_bar: ^5.0.6
   hidden_drawer_menu: ^3.0.1
   flutter_slidable: ^3.1.1
+  lottie: ^3.1.2
 
 dev_dependencies:
   flutter_test:
@@ -25,7 +25,4 @@ dev_dependencies:
   flutter_lints: ^4.0.0
 
 flutter:
-
   uses-material-design: true
-
-

@@ -3,6 +3,7 @@ import 'package:ready_custom_widgets/feature/bottom_nav_bar/custom_navbar.dart';
 import 'package:ready_custom_widgets/feature/drawer_menu/custom_drawer_menu.dart';
 import 'package:ready_custom_widgets/feature/hidden_drawer_menu/hidden_drawer.dart';
 import 'package:ready_custom_widgets/feature/loading_bar/custom_loading_bar.dart';
+import 'package:ready_custom_widgets/feature/lottie_animations/lottie_animations.dart';
 import 'package:ready_custom_widgets/feature/register_screen/custom_login.dart';
 import 'package:ready_custom_widgets/feature/second_bottom_nav_bar/custom_bottom_nav_bar.dart';
 import 'package:ready_custom_widgets/feature/slidable_widget/slidable_widget.dart';
@@ -67,7 +68,12 @@ class _WidgetsListState extends State<WidgetsList> {
                 title: 'Slidable Widget',
                 subTitle: 'Kaydırılabilir ve özelleştirilebilir liste',
                 isVerifiy: true,
-                goWidget: CustomSlidabeWidget())
+                goWidget: CustomSlidabeWidget()),
+            _CustomListTile(
+                title: 'Animation',
+                subTitle: 'Lottie hazır animasyon.',
+                isVerifiy: false,
+                goWidget: LottieAnimationView())
           ],
         ),
       ),
