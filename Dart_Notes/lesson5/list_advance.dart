@@ -149,6 +149,18 @@ void main(List<String> args) {
   final users = carItems.expand((element) => element.users).toList();
   //? burada carItems'i users'a expand ettik. artık user türünde
   print(users);
+
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+
+  //* Son ekleneni silme  (removeLast  metodu ile yapilir)
+  //* bmw olan ve 30 dan düşük olanları silme
+  carItems.removeWhere(
+    (element) => element.category == CarModels.bmw || element.money < 30,
+  );
+  print(carItems);
 }
 
 //! Model Sınıfı:
