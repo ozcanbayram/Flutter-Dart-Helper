@@ -157,16 +157,44 @@ void main(List<String> args) {
 
   //* Son ekleneni silme  (removeLast  metodu ile yapilir)
   //* bmw olan ve 30 dan düşük olanları silme
-  carItems.removeWhere(
-    (element) => element.category == CarModels.bmw || element.money < 30,
-  );
-  print(carItems);
+  // carItems.removeWhere(
+  //   (element) => element.category == CarModels.bmw || element.money < 30,
+  // );
+  // print(carItems);
+
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+  //? *************************************************************************
+
+  print(carItems); //* metottan önce
+  calculateToUser([...carItems]); //* ayrı bir liste yapar
+  print(carItems); //* metottan sonra
+  //! calculateToUser metodundan sonra bmw markalar yamaha ile degisir.
+}
+
+//* İtemleri düzelt bmw olanları yamaha yap, tüm ikinci elleri false yap
+//* itemlerin core değeri üzerinde degisiklik yapar
+
+void calculateToUser(List<CarModel> items) {
+  final newItems = items.map((CarModel e) {
+    if (e.category == CarModels.bmw) {
+      e.category = CarModels.yamaha;
+    }
+
+    if (e.isSecondHand) {
+      e.isSecondHand = false;
+    }
+    return e;
+  }).toList();
+  print('***************');
+  print(newItems);
 }
 
 //! Model Sınıfı:
 
 class CarModel {
-  final CarModels category;
+  CarModels category;
   final String name;
   final double money;
   String? city;
@@ -212,5 +240,6 @@ enum CarModels {
   mercedes,
   audi,
   kia,
-  toyota;
+  toyota,
+  yamaha;
 }
