@@ -31,7 +31,6 @@
 ### 👉 Lazy Singleton için <a href="https://github.com/ozcanbayram/Flutter-Dart-Notes-Widgets/blob/master/Dart_Notes/lesson5/model/product_config_model.dart"> Tıkla </a> 
 ### 👉 Any - where - contains örnekleri için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
 ### 👉 Join - Map  - singleWhere örnekleri için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
-
 ### 👉 try catch finally için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
 ### 👉 indexOf - add - sort - compareTo için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
 
@@ -101,6 +100,12 @@
 
 ![Adsız tasarım](https://github.com/user-attachments/assets/78e86234-808c-4923-99de-4fe7fd9a3faa)
 
+
+<hr>
+
+### 👉 Özel Loading Animasyonu için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/ready_custom_widgets/lib/feature/lottie_animations/lottie_animations.dart"> Tıkla </a> 
+
+![Adsız tasarım](https://github.com/user-attachments/assets/f59f8251-bcae-4b44-8179-dd9c0df82773)
 
 <hr>
 
