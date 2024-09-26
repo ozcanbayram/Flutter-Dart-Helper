@@ -17,7 +17,7 @@ abstract class IUser {
   void sayName();
 }
 
-class Turk implements IUser {
+class Turk implements IUser { //! Ana sınıfı implement ederek özelliklerini override edelim
   @override
   String get name => 'Ozcan';
 
