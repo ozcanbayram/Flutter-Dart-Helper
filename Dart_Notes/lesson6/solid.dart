@@ -31,3 +31,23 @@ class UserLocalization {
   }
 }
 //? Her iki sınıf için de UserManager sınıfının özelliklerini kullanmış olduk.
+
+//! ***********************************
+//! ***********************************
+//! ***********************************
+//! ***********************************
+
+//* Open Closed Princible (OCP) - Açık kapalılık kuralı
+//* Core classlar kendi içerisinde değiştirilememeli, ama kendisinden büyüyenler ile büyüyebilmelidir.
+class Product {
+  final String name;
+  final String money;
+
+  Product(this.name, this.money);
+}
+
+//? Bu classa özellik kazandırmak için:
+class ProductCategories extends Product {
+  ProductCategories(super.name, super.money);
+  final String category = 'x category';
+}
