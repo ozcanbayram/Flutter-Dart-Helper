@@ -1,6 +1,12 @@
 // ignore_for_file: public_member_api_docs, sort_constructors_first
 //* SOLID kavrami? Single Responsibility Principle (SRP)
-void main(List<String> args) {}
+void main(List<String> args) {
+  IDatabase database = SQL();
+  //Burada veriler SQL'den gelir fakat istediğimiz  zaman aşağıdaki gibi kolayca değiştirebiliriz.
+
+  database = Mongo();// Burada kolaylıkla mongodan veri alabilriz.
+  database.write();
+}
 
 //* her sınıf kendi işini yapmalıdır.
 //* UserManager sınıfında localization şlemi yapmak yerine onu ayrı bir sınıf içierisinde yapabiliriz.
@@ -50,4 +56,26 @@ class Product {
 class ProductCategories extends Product {
   ProductCategories(super.name, super.money);
   final String category = 'x category';
+}
+
+//! ***********************************
+//! ***********************************
+//! ***********************************
+//! ***********************************
+
+//? Liskov Substitution Principle (LSP)
+//* Farklı databaseleri kullanmak için alt dallar üretebiliriz.
+
+abstract class IDatabase {
+  void write();
+}
+
+class SQL extends IDatabase {
+  @override
+  void write() {}
+}
+
+class Mongo extends IDatabase {
+  @override
+  void write() {}
 }
