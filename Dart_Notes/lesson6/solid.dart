@@ -4,7 +4,7 @@ void main(List<String> args) {
   IDatabase database = SQL();
   //Burada veriler SQL'den gelir fakat istediğimiz  zaman aşağıdaki gibi kolayca değiştirebiliriz.
 
-  database = Mongo();// Burada kolaylıkla mongodan veri alabilriz.
+  database = Mongo(); // Burada kolaylıkla mongodan veri alabilriz.
   database.write();
 }
 
@@ -78,4 +78,27 @@ class SQL extends IDatabase {
 class Mongo extends IDatabase {
   @override
   void write() {}
+}
+
+//! ***********************************
+//! ***********************************
+//! ***********************************
+//! ***********************************
+
+//?  Interface Segregation Principle (ISP)
+abstract class IUserOperation implements IUserLocation, ILanguage {
+  // void location();
+  // asagida baska bir abstract sınıf içerisinde yazmak daha dogru bir kullanimdir.
+  void write();
+  void read();
+  void delete();
+  // void language();
+}
+
+abstract class IUserLocation {
+  void location();
+}
+
+abstract class ILanguage {
+  void language();
 }
