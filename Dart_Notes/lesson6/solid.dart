@@ -102,3 +102,37 @@ abstract class IUserLocation {
 abstract class ILanguage {
   void language();
 }
+
+//! ***********************************
+//! ***********************************
+//! ***********************************
+//! ***********************************
+
+//? Dependency Inversion Principle (DIP)
+//* üst sınıfa karışmadan sınıfları bağlayarak kullanmak.
+
+abstract class ICameraManager {
+  //! Ana sınıf
+  void readQR();
+}
+
+class DeviceCameraManager extends ICameraManager {
+  //! Burada ana sınıfı ekleyerek IPhoneCameraManager sınıfına erişeceğiz.
+
+  //*IPhoneCameraManager sınıfına erişecek nesneyi oluşturalım:
+  final IPhoneCameraManager iPhoneCameraManager;
+
+  DeviceCameraManager(this.iPhoneCameraManager);
+
+  @override
+  void readQR() {
+    // implement readQR
+  }
+}
+
+class IPhoneCameraManager extends ICameraManager {
+  @override
+  void readQR() {
+    // implement readQR
+  }
+}
