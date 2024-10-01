@@ -58,6 +58,7 @@
 ### 👉 Call Back Method için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/call_back_method.dart"> Tıkla </a> 
 ### 👉 Typedef için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/typedef.dart"> Tıkla </a> 
 
+### 👉 Generic için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/generic.dart"> Tıkla </a> 
 
 
 
@@ -66,12 +67,6 @@
 
 
 
-
-
-
-
-
-### Devamı gelecek...
 <hr>
 </details>
 
