@@ -54,6 +54,13 @@
 ### 👉 Asenkron işlemler (sync stream - while - yield) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/sync.dart"> Tıkla </a> 
 
 
+### 👉 Exception için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/excepetion.dart"> Tıkla </a> 
+### 👉 Call Back Method için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/call_back_method.dart"> Tıkla </a> 
+### 👉 Typedef için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/typedef.dart"> Tıkla </a> 
+
+
+
+
 
 
 
