@@ -34,44 +34,30 @@
 ### 👉 try catch finally için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
 ### 👉 indexOf - add - sort - compareTo için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
 ### 👉 Polymorphism için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/polymorphism.dart"> Tıkla </a> 
-
 ### 👉 Single Responsibility Principle (SRP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
-
 ### 👉 Open Closed Principle (OSP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
-
 ### 👉 Liskov Substitution Principle (LSP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
-
 ### 👉 Interface Segregation Principle (ISP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
-
 ### 👉 Dependency Inversion Principle (DIP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
-
-
-
-
-
 ### 👉 Asenkron işlemler (async - future- await) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/async.dart"> Tıkla </a> 
-
 ### 👉 Asenkron işlemler (sync stream - while - yield) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/sync.dart"> Tıkla </a> 
-
-
 ### 👉 Exception için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/excepetion.dart"> Tıkla </a> 
 ### 👉 Call Back Method için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/call_back_method.dart"> Tıkla </a> 
 ### 👉 Typedef için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/typedef.dart"> Tıkla </a> 
-
 ### 👉 Generic için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/generic.dart"> Tıkla </a> 
-
-
-
-
-
-
-
 
 <hr>
 </details>
 
 <details>
 <summary> <h2> ⭐ Flutter Notları </h2> </summary>
+
+### Hazırlanıyor...
+<hr>
+</details>
+
+<details>
+<summary> <h2> 📦 Flutter İçerikleri </h2> </summary>
   
 ### 👉 Flutter notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/learning_flutter"> Tıkla </a> 
 ### 👉 Temel widget kullanımları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/learning_flutter/lib/101"> Tıkla </a>
