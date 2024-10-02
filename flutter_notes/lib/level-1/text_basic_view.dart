@@ -35,4 +35,4 @@ class TextView extends StatelessWidget {
 
 // Bu sayfada bir text'e sitil verirken direkt olarak text içeirisnde sititllendirme yaptık fakat projenin her yerine bu şekilde 
 // widgetların görünümlerini tek tek kontrol etmek zor olacaktır. Bunun için tema içerisinde ya da custom bir text widgeti içerisinde 
-// sitil gibi özelliklerin tek bir yerden kontrol edilmesi daha iyi olacaktır.
+// sitil gibi özelliklerin tek bir yerden kontrol edilmesi daha iyi olacaktır. İncelemek için text_advence.dart sayfasına gidin.
