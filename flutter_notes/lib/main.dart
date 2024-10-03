@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notes/level-1/text_advence_view.dart';
+import 'package:flutter_notes/level-1/sized_box_container.dart';
 
 void main() {
   runApp(const MyApp());
@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       //   useMaterial3: true,
       // ),
       theme: ThemeData.dark(),
-      home: TextAdvenceView(),
+      home: const SizedBoxView(),
     );
   }
 }
