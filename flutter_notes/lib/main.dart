@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notes/level-1/button_learn.dart';
-import 'package:flutter_notes/level-1/scaffold_learn.dart';
+import 'package:flutter/services.dart';
+import 'package:flutter_notes/level-1/appbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -14,12 +14,27 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Notes',
       debugShowCheckedModeBanner: false,
+
       // theme: ThemeData(
       //   colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
       //   useMaterial3: true,
       // ),
-      theme: ThemeData.dark(),
-      home: const ButtonView(),
+
+      theme: ThemeData.dark().copyWith(
+        //Burada dark için temaları belirleyebiliriz.
+
+        //* Mesela app bar için projenin tamamında geçerli olacak olan temaı belirleyelim:
+
+        appBarTheme: const AppBarTheme(
+          //Tüm projenin appBar'ı için geçerlidir.
+          backgroundColor: Colors.transparent,
+          elevation: 0,
+          systemOverlayStyle: SystemUiOverlayStyle.light,
+        ),
+      ),
+
+      //Home:
+      home: const AppBarView(),
     );
   }
 }
