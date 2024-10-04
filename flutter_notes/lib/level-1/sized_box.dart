@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 class SizedBoxView extends StatelessWidget {
   const SizedBoxView({super.key});
 
-  //Sized boc genellikle belirli bir alanı kaplamak için ayarlanır ve kullanılır.
-  //Kendine verilen değer kadar yer kaplar.
+  //? Sized boc genellikle belirli bir alanı kaplamak için ayarlanır ve kullanılır.
+  //? Kendine verilen değer kadar yer kaplar.
 
   @override
   Widget build(BuildContext context) {
@@ -12,10 +12,11 @@ class SizedBoxView extends StatelessWidget {
       appBar: AppBar(
         toolbarHeight: 80,
         title: const Center(
-            child: Text(
-          'SizedBox',
-          style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
-        )),
+          child: Text(
+            'SizedBox',
+            style: TextStyle(fontSize: 24, fontWeight: FontWeight.w600),
+          ),
+        ),
       ),
       body: SingleChildScrollView(
         child: Center(

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notes/level-1/button_learn.dart';
 import 'package:flutter_notes/level-1/scaffold_learn.dart';
 
 void main() {
@@ -18,7 +19,7 @@ class MyApp extends StatelessWidget {
       //   useMaterial3: true,
       // ),
       theme: ThemeData.dark(),
-      home: const ScaffoldLearnView(),
+      home: const ButtonView(),
     );
   }
 }
