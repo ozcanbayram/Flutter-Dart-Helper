@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_notes/level-1/appbar.dart';
+import 'package:flutter_notes/level-1/color_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,6 +23,9 @@ class MyApp extends StatelessWidget {
       theme: ThemeData.dark().copyWith(
         //Burada dark için temaları belirleyebiliriz.
 
+        primaryColor: ColorItems().sulu,
+        //? örnek olarak bu sistem tarafından verilen renkleri de ayarlayabiliriz.
+
         //* Mesela app bar için projenin tamamında geçerli olacak olan temaı belirleyelim:
 
         appBarTheme: const AppBarTheme(
@@ -30,11 +33,12 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.transparent,
           elevation: 0,
           systemOverlayStyle: SystemUiOverlayStyle.light,
+          centerTitle: true,
         ),
       ),
 
       //Home:
-      home: const AppBarView(),
+      home: const ColorLearn(),
     );
   }
 }
