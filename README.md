@@ -34,11 +34,14 @@
 ### 👉 try catch finally için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
 ### 👉 indexOf - add - sort - compareTo için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
 ### 👉 Polymorphism için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/polymorphism.dart"> Tıkla </a> 
-### 👉 Single Responsibility Principle (SRP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
-### 👉 Open Closed Principle (OSP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
-### 👉 Liskov Substitution Principle (LSP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
-### 👉 Interface Segregation Principle (ISP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
-### 👉 Dependency Inversion Principle (DIP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
+
+### 👉 SOLID kaynağı için <a href="https://medium.com/@ozzcanbayram/solid-prensipleri-e90a4729e384"> Tıkla </a> 
+
+### 👉 SOLID - Single Responsibility Principle (SRP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
+### 👉 SOLID - Open Closed Principle (OSP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
+### 👉 SOLID - Liskov Substitution Principle (LSP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
+### 👉 SOLID - Interface Segregation Principle (ISP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
+### 👉 SOLID - Dependency Inversion Principle (DIP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
 ### 👉 Asenkron işlemler (async - future- await) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/async.dart"> Tıkla </a> 
 ### 👉 Asenkron işlemler (sync stream - while - yield) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/sync.dart"> Tıkla </a> 
 ### 👉 Exception için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/excepetion.dart"> Tıkla </a> 
