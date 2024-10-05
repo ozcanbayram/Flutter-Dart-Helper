@@ -35,7 +35,7 @@
 ### 👉 indexOf - add - sort - compareTo için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson5/list_advance.dart"> Tıkla </a> 
 ### 👉 Polymorphism için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/polymorphism.dart"> Tıkla </a> 
 
-### 👉 SOLID kaynağı için <a href="https://medium.com/@ozzcanbayram/solid-prensipleri-e90a4729e384"> Tıkla </a> 
+### 👉 SOLID kaynağı için <a href="https://medium.com/@ozzcanbayram/solid-prensipleri-e90a4729e384"> Tıkla Medium </a> 
 
 ### 👉 SOLID - Single Responsibility Principle (SRP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
 ### 👉 SOLID - Open Closed Principle (OSP) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/lesson6/solid.dart"> Tıkla </a> 
