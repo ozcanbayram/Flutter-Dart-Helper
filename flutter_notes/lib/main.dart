@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_notes/level-1/card.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
 import 'package:flutter_notes/level-1/padding.dart';
 
@@ -39,7 +40,7 @@ class MyApp extends StatelessWidget {
       ),
 
       //Home:
-      home: const PaddingLearnView(),
+      home: const CardLearn(),
     );
   }
 }
