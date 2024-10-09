@@ -6,51 +6,69 @@ class CardLearn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
-      body: Column(children: [
-        Card(
-          margin: ProjectMargins.cardMargin,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          child: const SizedBox(
-            height: 100,
-            width: 300,
-            child: Center(child: Text('Card 1')),
-          ),
-        ),
-        Card(
-          margin: ProjectMargins.cardMargin,
-          shape:
-              RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-          child: const SizedBox(
-            height: 100,
-            width: 300,
-            child: Center(child: Text('Card 2')),
-          ),
-        ),
-        const Padding(
-          padding: EdgeInsets.symmetric(horizontal: 10.0),
-          child: Card(
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                ListTile(
-                  leading: Icon(Icons.album),
-                  title: Text('The Enchanted Nightingale'),
-                  subtitle:
-                      Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
-                ),
-                // _CustomCard(
-                //     child: const SizedBox(
-                //   height: 100,
-                //   width: 300,
-                //   child: Center(child: Text('Card 3')),
-                // )),
-              ],
+      appBar: AppBar(
+        title: const Text('Card'),
+      ),
+      body: Column(
+        children: [
+          //Aşağıdaki bazı card widgetlarını inceleyin.
+
+          Card(
+            // Card - 1
+            margin: ProjectMargins.cardMargin,
+            //Aşağıdaki sınıfta hazırlanan margin değeri
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            //shape için stadiumBorder, circleBorder... değerleri de verilebilir.
+            child: const SizedBox(
+              height: 100,
+              width: 300,
+              child: Center(child: Text('Card 1')),
             ),
           ),
-        )
-      ]),
+
+          Card(
+            // Card - 2
+            margin: ProjectMargins.cardMargin,
+            shape:
+                RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+            child: const SizedBox(
+              height: 100,
+              width: 300,
+              child: Center(child: Text('Card 2')),
+            ),
+          ),
+
+          _CustomCard(
+            // extract widget olarak ayrılmış card tasarımı
+            // Card - 3
+            child: const SizedBox(
+              height: 100,
+              width: 300,
+              child: Center(child: Text('Card 3')),
+            ),
+          ),
+
+          const Padding(
+            // card  - 4
+            padding: EdgeInsets.symmetric(horizontal: 10.0),
+            child: Card(
+              //ListTile ile kullanılan card
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  ListTile(
+                    leading: Icon(Icons.album),
+                    title: Text('The Enchanted Nightingale'),
+                    subtitle:
+                        Text('Music by Julie Gable. Lyrics by Sidney Stein.'),
+                  ),
+                ],
+              ),
+            ),
+          )
+        ],
+      ),
     );
   }
 }
@@ -62,7 +80,7 @@ class ProjectMargins {
 }
 
 class _CustomCard extends StatelessWidget {
-  _CustomCard({super.key, required this.child});
+  _CustomCard({required this.child});
   final Widget child;
   final roundedRectangleBorder =
       RoundedRectangleBorder(borderRadius: BorderRadius.circular(20));
