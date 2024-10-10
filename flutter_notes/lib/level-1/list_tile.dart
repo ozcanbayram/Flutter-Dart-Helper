@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notes/core/random_image.dart';
 
 class ListTileWidget extends StatelessWidget {
   const ListTileWidget({super.key});
-
-  final imageUrl = 'https://picsum.photos/200/300';
 
   @override
   Widget build(BuildContext context) {
@@ -25,7 +24,7 @@ class ListTileWidget extends StatelessWidget {
             // dense: true, //kendi paddinglerini kaldırır.
             title: const Text('The Music Name'),
             subtitle: const Text('The musics description is here...'),
-            leading: Image.network(imageUrl),
+            leading: const RandomImage(),
             trailing: const Icon(Icons.chevron_right),
             onTap: () {},
           ),
@@ -34,14 +33,14 @@ class ListTileWidget extends StatelessWidget {
               // dense: true, //kendi paddinglerini kaldırır. (Sıkıştırma)
               title: const Text('The Music Name'),
               subtitle: const Text('The musics description is here...'),
-              leading: Image.network(imageUrl),
+              leading: const RandomImage(),
               trailing: const Icon(Icons.chevron_right),
               onTap: () {},
               // minVerticalPadding: 0,
             ),
           ),
           ListTile(
-            title: Image.network(imageUrl),
+            title: const RandomImage(),
             // subtitle: const Text('The musics description is here...'),
             leading: const Icon(Icons.chevron_left),
             trailing: const Icon(Icons.chevron_right),
