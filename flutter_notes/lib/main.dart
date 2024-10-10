@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_notes/demos/note_app_demo.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
-import 'package:flutter_notes/level-1/custom_widgets.dart';
+import 'package:flutter_notes/level-1/indicator.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,24 +22,25 @@ class MyApp extends StatelessWidget {
       // ),
 
       theme: ThemeData.dark().copyWith(
-        //Burada dark için temaları belirleyebiliriz.
+          //Burada dark için temaları belirleyebiliriz.
 
-        primaryColor: ColorItems().sulu,
-        //? örnek olarak bu sistem tarafından verilen renkleri de ayarlayabiliriz.
+          primaryColor: ColorItems().sulu,
+          //? örnek olarak bu sistem tarafından verilen renkleri de ayarlayabiliriz.
 
-        //* Mesela app bar için projenin tamamında geçerli olacak olan temaı belirleyelim:
+          //* Mesela app bar için projenin tamamında geçerli olacak olan temaı belirleyelim:
 
-        appBarTheme: const AppBarTheme(
-          //Tüm projenin appBar'ı için geçerlidir.
-          backgroundColor: Colors.transparent,
-          elevation: 0,
-          systemOverlayStyle: SystemUiOverlayStyle.light,
-          centerTitle: true,
-        ),
-      ),
+          appBarTheme: const AppBarTheme(
+            //Tüm projenin appBar'ı için geçerlidir.
+            backgroundColor: Colors.transparent,
+            elevation: 0,
+            systemOverlayStyle: SystemUiOverlayStyle.light,
+            centerTitle: true,
+          ),
+          progressIndicatorTheme:
+              const ProgressIndicatorThemeData(color: Colors.amber)),
 
       //Home:
-      home:  CustomWidget(),
+      home: const IndicatorLearn(),
     );
   }
 }
