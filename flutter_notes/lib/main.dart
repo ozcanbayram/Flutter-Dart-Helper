@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
-import 'package:flutter_notes/level-1/indicator.dart';
+import 'package:flutter_notes/level-1/list_tile.dart';
 
 void main() {
   runApp(const MyApp());
@@ -32,6 +32,7 @@ class MyApp extends StatelessWidget {
           appBarTheme: const AppBarTheme(
             //Tüm projenin appBar'ı için geçerlidir.
             backgroundColor: Colors.transparent,
+            toolbarHeight: 100,
             elevation: 0,
             systemOverlayStyle: SystemUiOverlayStyle.light,
             centerTitle: true,
@@ -40,7 +41,7 @@ class MyApp extends StatelessWidget {
               const ProgressIndicatorThemeData(color: Colors.amber)),
 
       //Home:
-      home: const IndicatorLearn(),
+      home: const ListTileWidget(),
     );
   }
 }

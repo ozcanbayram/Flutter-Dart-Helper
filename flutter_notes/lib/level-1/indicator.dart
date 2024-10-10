@@ -7,7 +7,6 @@ class IndicatorLearn extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 100,
         actions: const [
           Padding(
             padding: EdgeInsets.all(8.0),
