@@ -47,7 +47,6 @@ class NoteAppDemoScreen extends StatelessWidget {
 
 class _ImportTextButtonWidget extends StatelessWidget {
   const _ImportTextButtonWidget({
-    super.key,
     required String importNote,
   }) : _importNote = importNote;
 
