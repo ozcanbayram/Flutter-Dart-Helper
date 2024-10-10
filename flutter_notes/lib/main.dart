@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
-import 'package:flutter_notes/level-1/list_tile.dart';
+import 'package:flutter_notes/level-1/column_row_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
               const ProgressIndicatorThemeData(color: Colors.amber)),
 
       //Home:
-      home: const ListTileWidget(),
+      home: const ColumnRowWidgets(),
     );
   }
 }
