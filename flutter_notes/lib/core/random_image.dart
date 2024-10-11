@@ -8,6 +8,10 @@ class RandomImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Image.network(imageUrl);
+    return Image.network(
+      imageUrl,
+      height: height,
+      // width: MediaQuery.of(context).size.width,
+    );
   }
 }
