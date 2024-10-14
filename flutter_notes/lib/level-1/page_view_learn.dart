@@ -11,6 +11,14 @@ class PageViewLearn extends StatefulWidget {
 class _PageViewLearnState extends State<PageViewLearn> {
   final _pageController = PageController(viewportFraction: 1);
 
+//sayfa inndex sayısını almak: 
+  int _currentPageIndex = 0;
+  void _updatePageIndex(int value) {
+    setState(() {
+      _currentPageIndex = value;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -21,6 +29,8 @@ class _PageViewLearnState extends State<PageViewLearn> {
         // kaydırılabilir widgetlar yapmamıza yarar.
 
         controller: _pageController,
+        onPageChanged: _updatePageIndex,
+        // ekran indexi degistikce _currentPageIndex değerini günceller.
         // controller: PageController(viewportFraction: 0.7),
         // padEnds: false, // ortadan ya da başlangıçtan balama durumu
         children: [
@@ -33,6 +43,11 @@ class _PageViewLearnState extends State<PageViewLearn> {
       floatingActionButton: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 32.0),
+            child: Text(_currentPageIndex.toString()),
+          ),
+          const Spacer(),
           FloatingActionButton(
             onPressed: () {
               _pageController.previousPage(
@@ -47,7 +62,7 @@ class _PageViewLearnState extends State<PageViewLearn> {
             onPressed: () {
               _pageController.nextPage(
                   duration: const Duration(seconds: 1),
-                  curve: Curves.easeInCirc );
+                  curve: Curves.easeInCirc);
             },
             child: const Icon(Icons.chevron_right_outlined),
           ),
