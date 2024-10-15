@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
 import 'package:flutter_notes/level-1/page_view_learn.dart';
+import 'package:flutter_notes/level-1/scaffold_life_cycle.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +24,13 @@ class MyApp extends StatelessWidget {
 
       theme: ThemeData.dark().copyWith(
           //Burada dark için temaları belirleyebiliriz.
-
+          elevatedButtonTheme: const ElevatedButtonThemeData(
+              style: ButtonStyle(
+                  backgroundColor: WidgetStatePropertyAll(
+                    Colors.blueAccent,
+                  ),
+                  shape: WidgetStatePropertyAll(RoundedRectangleBorder(
+                      borderRadius: BorderRadius.all(Radius.circular(8)))))),
           primaryColor: ColorItems().sulu,
           //? örnek olarak bu sistem tarafından verilen renkleri de ayarlayabiliriz.
 
@@ -41,7 +48,9 @@ class MyApp extends StatelessWidget {
               const ProgressIndicatorThemeData(color: Colors.amber)),
 
       //Home:
-      home: PageViewLearn(),
+      home: const StatefullLifeCycleLearn(
+        message: 'Ozcan',
+      ),
     );
   }
 }
