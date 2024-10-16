@@ -15,6 +15,40 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
   String _message = '';
   late final bool _isOdd;
   //! late ile init state / constroctor anında değer geleceğini belirtiriz.
+
+  //*didChangeDependencies:
+  @override
+  void didChangeDependencies() {
+    //? initState'den sonra çalışır.
+    //? ekran çizilmeden önce çalışır.
+    super.didChangeDependencies();
+    print('didChangeDependencies');
+  }
+
+  //* didUpdateWidget:
+  @override
+  void didUpdateWidget(covariant StatefullLifeCycleLearn oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    //? üst sınıftan gelen değişikliği bize döndürür.
+    //? widgette degisiklik olunca calisir.
+    if (oldWidget.message != widget.message) {
+      print('didUpdateWidget');
+      _message = widget.message;
+      _computeName();
+      setState(() {});
+    }
+  }
+
+  //* Dispose:
+  @override
+  void dispose() {
+    //? sayfasan çıkılınca (sayfa ölünce) cagrilir.
+    //? sayfadaki iş bitince kullanılabilir.
+    super.dispose();
+    print('dispose');
+  }
+
+  //* initState:
   @override
   void initState() {
     //! initState -> Widget çizilmeye başlamadan önce çalışır ve bittikten sonra ekran çizilir.
@@ -25,6 +59,7 @@ class _StatefullLifeCycleLearnState extends State<StatefullLifeCycleLearn> {
     _isOdd = widget.message.length.isOdd;
 
     _computeName();
+    print('initState');
   }
 
   void _computeName() {

@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
 
       //Home:
       home: const StatefullLifeCycleLearn(
-        message: 'Ozcan',
+        message: 'Ozcsaan',
       ),
     );
   }
