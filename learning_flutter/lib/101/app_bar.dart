@@ -16,16 +16,16 @@ class AppBarLearnView extends StatelessWidget {
         systemOverlayStyle: SystemUiOverlayStyle
             .light, // saat, wifi gibi sistem görünürlerini light/darl olarak ayarlar
         //actionsIconTheme: IconThemeData.(color: Colors.red), // ikon rengi
-        toolbarTextStyle: TextStyle(color: Colors.amber),
+        toolbarTextStyle: const TextStyle(color: Colors.amber),
         automaticallyImplyLeading:
             false, // Default olarak backButtonu gelmesin demek
         leadingWidth: 23,
-        leading: Icon(Icons.chevron_left), // geri butonu
+        leading: const Icon(Icons.chevron_left), // geri butonu
         actions: [
           //sağda menü butonu
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.menu),
+            icon: const Icon(Icons.menu),
           ),
           //Center(child: CircularProgressIndicator()) //bekleme ekranlarındaki dönen yuvarlak
         ],

@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
-import 'package:flutter_notes/level-1/page_view_learn.dart';
 import 'package:flutter_notes/level-1/scaffold_life_cycle.dart';
 
 void main() {
