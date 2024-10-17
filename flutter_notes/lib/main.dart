@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
-import 'package:flutter_notes/level-1/scaffold_life_cycle.dart';
+import 'package:flutter_notes/level-1/text_field_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -47,9 +47,7 @@ class MyApp extends StatelessWidget {
               const ProgressIndicatorThemeData(color: Colors.amber)),
 
       //Home:
-      home: const StatefullLifeCycleLearn(
-        message: 'Ozcsaan',
-      ),
+      home: const TextFieldLearn(),
     );
   }
 }
