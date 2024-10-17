@@ -9,9 +9,6 @@ class TextFieldLearn extends StatefulWidget {
 }
 
 class _TextFieldLearnState extends State<TextFieldLearn> {
-  FocusNode focusNoteTextFieldOne = FocusNode();
-  FocusNode focusNoteTextFieldTwo = FocusNode();
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,11 +42,9 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
               // hintText: 'Mail',
               border: OutlineInputBorder(),
               prefixIcon: Icon(Icons.mail),
-              filled: true,
-              fillColor: Color.fromARGB(255, 60, 60, 60),
+              // filled: true,
+              // fillColor: Color.fromARGB(255, 60, 60, 60),
             ),
-
-            focusNode: focusNoteTextFieldOne,
 
             //* Kendi cutom logiclerimizi, özelliklerimizi yazabiliriz. mesela klavyede a tuşuna basılmasını istemiyorsak:
             //* Ayrı bir sınıfta yazılabilir.
@@ -65,7 +60,9 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
             ],
           ),
           TextField(
-            focusNode: focusNoteTextFieldTwo,
+            minLines: 1,
+            maxLines: 5,
+            decoration: _InputDecorator().adresInput,
           ),
         ],
       ),
@@ -80,4 +77,15 @@ class _TextFieldLearnState extends State<TextFieldLearn> {
       duration: const Duration(milliseconds: 500),
     );
   }
+}
+
+class _InputDecorator {
+  final adresInput = const InputDecoration(
+    labelText: 'Adres',
+    // hintText: 'Mail',
+    border: OutlineInputBorder(),
+    prefixIcon: Icon(Icons.mail),
+    // filled: true,
+    // fillColor: Color.fromARGB(255, 60, 60, 60),
+  );
 }

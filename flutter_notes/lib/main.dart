@@ -34,7 +34,23 @@ class MyApp extends StatelessWidget {
           //? örnek olarak bu sistem tarafından verilen renkleri de ayarlayabiliriz.
 
           //* Mesela app bar için projenin tamamında geçerli olacak olan temaı belirleyelim:
+          inputDecorationTheme: const InputDecorationTheme(
+            filled: true,
+            fillColor: Color.fromARGB(255, 0, 0, 0),
+            iconColor: Color.fromARGB(255, 0, 0, 0),
+            border: OutlineInputBorder(),
+            labelStyle: TextStyle(color: Colors.white),
+            floatingLabelStyle: TextStyle(color: Colors.amber),
+          ),
 
+          //input yazsınıa stil vermek için: temayı nereden aldığını bulup degistirebiliriz.
+          // textTheme:const TextTheme(titleMedium: TextStyle(color: Colors.amber)),
+
+          //selection theme
+          textSelectionTheme: const TextSelectionThemeData(
+              cursorColor: Colors.amber, selectionColor: Colors.green),
+
+          //
           appBarTheme: const AppBarTheme(
             //Tüm projenin appBar'ı için geçerlidir.
             backgroundColor: Colors.transparent,
