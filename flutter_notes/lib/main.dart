@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_notes/demos/color_demos_view.dart';
 import 'package:flutter_notes/demos/color_life_cycle_demo.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
 

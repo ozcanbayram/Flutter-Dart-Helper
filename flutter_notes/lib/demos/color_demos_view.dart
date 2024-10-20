@@ -5,19 +5,44 @@
 import 'package:flutter/material.dart';
 
 class ColorDemos extends StatefulWidget {
-  const ColorDemos({super.key});
+  const ColorDemos({super.key, required this.initialColor});
+
+  final Color? initialColor; //! sayfada görünecek default renk değeri
 
   @override
   State<ColorDemos> createState() => _ColorDemosState();
 }
 
 class _ColorDemosState extends State<ColorDemos> {
-  Color? _backgroundColor = Colors.transparent;
+  Color? _backgroundColor;
 
   void changeBackgrountColors(Color color) {
     setState(() {
       _backgroundColor = color;
     });
+  }
+
+  @override
+  void initState() {
+    super.initState();
+    _backgroundColor = widget.initialColor ?? Colors.transparent;
+    //! sayfada görünecek default renk değeri eşitlenir eğer null gelirse transparan değerini alır.
+  }
+
+  //! bu sayfadan giden haberler ve parametreler diğer sayfada çalışır ve ColorDemos componentini değiştirir. ama action'daki clear'a basınca renk değişmesi için
+  //! o sayfadan bu sayfaya bir haber gelmesi gerekir. Bu tür durumlarda yani alt widget ile üst widget iletişim durumlarında başka lifeCycle yöntemleri kullanırız.
+  //! mesela didUpdateWidget:
+
+  @override
+  void didUpdateWidget(covariant ColorDemos oldWidget) {
+    super.didUpdateWidget(oldWidget);
+    //? oldWidget -> Widget'in bir önceki durumudur. Şu anki değişmemiş olan widget oalrak da düşünebiliriz.
+    // print(oldWidget.initialColor != _backgroundColor); //-> debugg yöntemi. true-false döner.
+    // inspect(widget);  // -> debugg yöntemi
+    if (widget.initialColor != _backgroundColor && widget.initialColor != null) {
+      //Eğer widget'in eski durumu ile şimdiki durumu aynı değil ise (değişmiştir) ve null değilse, aşağıdaki işlemi yap:
+      changeBackgrountColors(widget.initialColor!);
+    }
   }
 
   @override
