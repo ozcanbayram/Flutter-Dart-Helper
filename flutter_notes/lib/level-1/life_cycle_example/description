@@ -1,0 +1,4 @@
+Bu örnekte example_main.dart sayfasında bir seçenek yönetimi olacak. Kendi içierisinde seçenekleri yönetecek ve initState 
+kullanılacak.
+example_advence.dart sayfasında ise bu example_main.dart sayfasını ekleyerek advence sayfasındaki bir buton ile
+example_main.dart sayfasında değişiklik yapabilmek için yaşam döngüsünü kullanacağız.

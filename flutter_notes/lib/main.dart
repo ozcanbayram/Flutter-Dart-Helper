@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_notes/demos/color_life_cycle_demo.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
+import 'package:flutter_notes/level-1/life_cycle_example/example_advence.dart';
 
 void main() {
   runApp(const MyApp());
@@ -63,7 +63,7 @@ class MyApp extends StatelessWidget {
               const ProgressIndicatorThemeData(color: Colors.amber)),
 
       //Home:
-      home: const ColorLifeCycleView(),
+      home: const ExampleAdvence(),
     );
   }
 }
