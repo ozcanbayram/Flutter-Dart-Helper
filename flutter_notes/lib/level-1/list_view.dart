@@ -75,7 +75,7 @@ class _ListViewLearnState extends State<ListViewLearn> {
 }
 
 class _ListViewDemo extends StatefulWidget {
-  const _ListViewDemo({super.key});
+  const _ListViewDemo();
 
   @override
   State<_ListViewDemo> createState() => __ListViewDemoState();
@@ -85,12 +85,14 @@ class __ListViewDemoState extends State<_ListViewDemo> {
   @override
   void initState() {
     super.initState();
+    // ignore: avoid_print
     print('Demo sayfası göründü');
   }
 
   @override
   void dispose() {
     super.dispose();
+    // ignore: avoid_print
     print('Demo sayfasından çıkıldı');
   }
 
