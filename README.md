@@ -55,6 +55,18 @@
 <details>
 <summary> <h2> ⭐ Flutter Notları </h2> </summary>
 
+### 👉 Basit text için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/text_basic_view.dart"> Tıkla </a> 
+### 👉 Gelişmiş text için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/text_advence_view.dart"> Tıkla </a> 
+### 👉 SizedBox için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/sized_box.dart"> Tıkla </a> 
+### 👉 Container için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/container.dart"> Tıkla </a> 
+### 👉 Scaffold için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/scaffold_learn.dart"> Tıkla </a> 
+### 👉 Button için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/button_learn.dart"> Tıkla </a> 
+### 👉 Color sınıfı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/color_learn.dart"> Tıkla </a> 
+
+ <!-- statless - padding - card - image -->
+
+
+
 ### Hazırlanıyor...
 <hr>
 </details>
