@@ -5,17 +5,36 @@
 
 ## Repodaki değişiklikleri sosyal medya hesaplarımdan takip etmek için tıkla:
 
+
+<table>
+
+<tr>
+<td> 
+
 <a href="https://x.com/ozcanbayram0"> 
   
 ![Langs](https://skillicons.dev/icons?i=twitter,")
 
 </a>
+</td>
+  <td>
+
 
 <a href="https://www.instagram.com/ozcan0">
 
 ![Langs](https://skillicons.dev/icons?i=instagram,")
 
 </a>
+    
+  </td>
+  
+</tr>
+  
+</table>
+
+
+
+
 
 <hr>
 
