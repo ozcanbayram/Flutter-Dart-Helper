@@ -1,6 +1,24 @@
 # Flutter & Dart Learning and Development Companion
 `Bu repoyu geliştirmeye devam ediyorum. Sen de katkıda bulunabilirsin. Faydalı pull requestlerini beklyiorum.`
 
+<hr>
+
+## Repodaki değişiklikleri sosyal medya hesaplarımdan takip etmek için tıkla:
+
+<a href="https://x.com/ozcanbayram0"> 
+  
+![Langs](https://skillicons.dev/icons?i=twitter,")
+
+</a>
+
+<a href="https://www.instagram.com/ozcan0">
+
+![Langs](https://skillicons.dev/icons?i=instagram,")
+
+</a>
+
+<hr>
+
 
 #### ❗Bu repoyu Flutter ve Dart'ı yeni öğrenecek olan ve farklı widget tasarımları görmek isteyen kişiler ile paylaşmak için hazrılıyorum. Temel notları anlaşılır ve basit örneklerle açıklayarak yazıyorum. Daha sonra gelişmiş widgetlar hazırlayarak da geliştirmelere devam edeceğim. Repoyu Flutter öğrenmek isteyenler için faydalı bir kayndak haline getirmeye çalışıyorum. Kullanıma hazır widgetlar yazarak pr atabilir ve repoya katkıda bulunabilirsiniz.
 
