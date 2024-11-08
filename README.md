@@ -100,11 +100,20 @@
 ### 👉 Button için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/button_learn.dart"> Tıkla </a> 
 ### 👉 Color sınıfı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/color_learn.dart"> Tıkla </a> 
 
- <!-- statless - padding - card - image -->
+
+### 👉 Statless Widget için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/statless_learn.dart"> Tıkla </a> 
+### 👉 Padding kullanımı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/padding.dart"> Tıkla </a> 
+### 👉 Card kullanımı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/card.dart"> Tıkla </a> 
+### 👉 Temel Image kullanımı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/image_learn.dart"> Tıkla </a> 
+### 👉 Statefull Widget için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/statefull.dart"> Tıkla </a> 
+### 👉 Yaşam döngüsü (Life Cycle) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/tree/master/flutter_notes/lib/level-1/life_cycle_example"> Tıkla </a> 
+### 👉 PageVeiw için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/page_view_learn.dart"> Tıkla </a> 
+### 👉 Text Field için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/text_field_learn.dart"> Tıkla </a> 
+### 👉 Temel ListView için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/list_view.dart"> Tıkla </a> 
+### 👉 ListView Builder için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-1/list_view_builder.dart"> Tıkla </a> 
 
 
-
-### Hazırlanıyor...
+### Devamı Hazırlanıyor...
 <hr>
 </details>
 
