@@ -60,7 +60,7 @@ flutter:
   assets:
     - assets/book_apple.png
     - assets/png/ # bu klasörü tanımladık ve içerisindekileri buraya eklemeden kullabiliriz.
-
+    - assets/images
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images
