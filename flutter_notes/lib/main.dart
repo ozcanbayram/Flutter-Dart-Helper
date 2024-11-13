@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
-import 'package:flutter_notes/level-1/navigation_learn.dart';
+import 'package:flutter_notes/level-1/navigation/navigation_learn.dart';
 
 void main() {
   runApp(const MyApp());
