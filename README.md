@@ -1,43 +1,14 @@
 # Flutter & Dart Learning and Development Companion
 `Bu repoyu geliştirmeye devam ediyorum. Sen de katkıda bulunabilirsin. Faydalı pull requestlerini beklyiorum.`
 
-<hr>
 
-## Repodaki değişiklikleri sosyal medya hesaplarımdan takip etmek için tıkla:
-
-
-<table>
-
-<tr>
-<td> 
-
-<a href="https://x.com/ozcanbayram0"> 
-  
-![Langs](https://skillicons.dev/icons?i=twitter,")
-
-</a>
-</td>
-  <td>
-
-
-<a href="https://www.instagram.com/ozcan0">
-
-![Langs](https://skillicons.dev/icons?i=instagram,")
-
-</a>
-    
-  </td>
-  
-</tr>
-  
-</table>
-
-
-
-
+[![Twitter Follow](https://img.shields.io/twitter/follow/misteranmol?label=ozcanbayram0)](https://x.com/ozcanbayram0)
+[![Medium Badge](https://img.shields.io/badge/-medium(@ozcan)-000000?style=flat-square&labelColor=000000&logo=Medium&link=https://medium.com/@ozzcanbayram/)](https://medium.com/@ozzcanbayram)
+[![Instagram Badge](https://img.shields.io/badge/-ozcan0-blue?style=flat-square&logo=instagram&logoColor=white&link=https://www.instagram.com/ozcan0/)](https://www.instagram.com/ozcan0)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
+<a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/stargazers"><img src="https://img.shields.io/github/stars/ozcanbayram/Flutter-Dart-Helper" alt="Stars Badge"/></a>
 
 <hr>
-
 
 #### ❗Bu repoyu Flutter ve Dart'ı yeni öğrenecek olan ve farklı widget tasarımları görmek isteyen kişiler ile paylaşmak için hazrılıyorum. Temel notları anlaşılır ve basit örneklerle açıklayarak yazıyorum. Daha sonra gelişmiş widgetlar hazırlayarak da geliştirmelere devam edeceğim. Repoyu Flutter öğrenmek isteyenler için faydalı bir kayndak haline getirmeye çalışıyorum. Kullanıma hazır widgetlar yazarak pr atabilir ve repoya katkıda bulunabilirsiniz.
 
