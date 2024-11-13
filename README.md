@@ -3,7 +3,7 @@
 
 
 [![Twitter Follow](https://img.shields.io/twitter/follow/misteranmol?label=ozcanbayram0)](https://x.com/ozcanbayram0)
-[![Medium Badge](https://img.shields.io/badge/-medium(@ozcan)-000000?style=flat-square&labelColor=000000&logo=Medium&link=https://medium.com/@ozzcanbayram/)](https://medium.com/@ozzcanbayram)
+[![Medium Badge](https://img.shields.io/badge/-medium(@ozcan)-0f9058?style=flat-square&labelColor=000000&logo=Medium&link=https://medium.com/@ozzcanbayram/)](https://medium.com/@ozzcanbayram)
 [![Instagram Badge](https://img.shields.io/badge/-ozcan0-blue?style=flat-square&logo=instagram&logoColor=white&link=https://www.instagram.com/ozcan0/)](https://www.instagram.com/ozcan0)
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/)
 <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/stargazers"><img src="https://img.shields.io/github/stars/ozcanbayram/Flutter-Dart-Helper" alt="Stars Badge"/></a>
