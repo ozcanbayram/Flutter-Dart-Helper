@@ -23,6 +23,15 @@ class MyApp extends StatelessWidget {
 
       theme: ThemeData.dark().copyWith(
           //Burada dark için temaları belirleyebiliriz.
+
+          //tabbar için tema
+          tabBarTheme: const TabBarTheme(
+            labelColor: Colors.white,
+            unselectedLabelColor: Colors.red,
+          ),
+          bottomAppBarTheme: const BottomAppBarTheme(
+            shape: CircularNotchedRectangle(),
+          ),
           elevatedButtonTheme: const ElevatedButtonThemeData(
               style: ButtonStyle(
                   backgroundColor: WidgetStatePropertyAll(
