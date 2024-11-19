@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_notes/demos/my_collection_demo.dart';
+import 'package:flutter_notes/level-1/text_field_learn.dart';
 
 class TabLearn extends StatefulWidget {
   const TabLearn({super.key});
@@ -7,36 +9,46 @@ class TabLearn extends StatefulWidget {
   State<TabLearn> createState() => _TabLearnState();
 }
 
-class _TabLearnState extends State<TabLearn> {
+class _TabLearnState extends State<TabLearn>
+    with SingleTickerProviderStateMixin {
+  late final TabController _tabController;
+
+  @override
+  void initState() {
+    super.initState();
+    _tabController =
+        TabController(length: _MyTabViews.values.length, vsync: this);
+  }
+
+  void changePage() {
+    _tabController.animateTo(_MyTabViews.home.index);
+  }
+
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 2,
+      length: _MyTabViews.values.length,
       child: Scaffold(
         appBar: AppBar(
           title: const Text('Tab Learn'),
           //ust nav bar
-          bottom: const TabBar(tabs: [
-            Tab(text: 'page 1'),
-            Tab(text: 'page 2'),
-          ]),
+          // bottom: TabBar(
+          //   tabs: _MyTabViews.values.map((e) => Tab(text: e.name)).toList(),
+          // ),
         ),
-        body: TabBarView(children: [
+        body: const TabBarView(children: [
           //! tab barlar ile gecilecek sayfa veya widgetları burada ayarlarız
-          Container(
-            color: Colors.red,
-          ),
-          Container(
-            color: Colors.green,
-          ),
+          MyCollectionDemo(),
+          TextFieldLearn(),
+          MyCollectionDemo(),
         ]),
         //
         extendBody: true, // floataction button ile bottomnavbar arasını açar.
 
         //alt navbar
-        bottomNavigationBar: const BottomAppBar(
+        bottomNavigationBar: BottomAppBar(
           notchMargin: 10,
-          shape: CircularNotchedRectangle(),
+          shape: const CircularNotchedRectangle(),
           child: TabBar(
               //* diğer bazı özellikler:
               // indicatorColor: ,
@@ -45,17 +57,17 @@ class _TabLearnState extends State<TabLearn> {
               // unselectedLabelColor: ,
               // padding: ,
               // onTap: (value) {},
-              
-              // controller: _tabController, şeklinde controller atanarak başka işlemler de yapılabilir.
+
+              // controller: _tabController,
+              //şeklinde controller atanarak başka işlemler de yapılabilir.
               //örneğin floataction Buttona basınca controller kullnarak bir sayfaya geri dönmek gibi.
-              tabs: [
-                Tab(text: 'page 1'),
-                Tab(text: 'page 2'),
-              ]),
+              tabs: _MyTabViews.values.map((e) => Tab(text: e.name)).toList()),
         ),
 
         floatingActionButton: FloatingActionButton(
-          onPressed: () {},
+          onPressed: () {
+            // changePage;
+          },
           backgroundColor: Colors.blueAccent,
         ),
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
@@ -64,3 +76,5 @@ class _TabLearnState extends State<TabLearn> {
     );
   }
 }
+
+enum _MyTabViews { home, login, lists }
