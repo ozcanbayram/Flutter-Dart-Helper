@@ -94,6 +94,11 @@
 
 ### 👉 Tab Bar Advence için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/tab_learn.dart"> Tıkla </a> 
 
+### 👉 Model Örnekleri ve Kullanımı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/tree/master/flutter_notes/lib/level-2/model_example"> Tıkla </a> 
+### 👉 Model Çeşitleri (Basit-Gelişmiş) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/model_example/model_learn.dart"> Tıkla </a> 
+### 👉 Model Kullanımı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/model_example/model_learn_view.dart"> Tıkla </a> 
+
+
 
 
 
