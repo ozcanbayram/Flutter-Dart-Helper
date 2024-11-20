@@ -141,11 +141,35 @@ class PostModel7 {
 class PostModel8 {
   //! Veriler servisten geliyor ise önerilen model budur.
   //* burada veriler internetten bir servisten gelecek ise nullable olarakt tanımlarız.
-   final int? userId;
-   final int? id;
-   final String? title;
-   final String? body;
+  final int? userId;
+  final int? id;
+  final String? title;
+  String? body; // degistirileceği için final değil
 
   PostModel8({this.userId, this.id, this.title, this.body});
-}
 
+  //TODO: body değerini kontrollü bir şekilde değiştiren metot:
+  void changeBody(String? value) {
+    if (value != null && value.isNotEmpty) {
+      body = value;
+    }
+  }
+
+  //* copyWith:
+  //* verdiğimiz değişkenlerde değişenleri kopyalıyor değiştiriyor gibi düşünebiliriz.
+  //* kullanımı -> userExapmle1.copyWith(title: 'copyWith ile değişti')
+  //* freez gibi paketler de bu işe yarar
+  PostModel8 copyWith({
+    int? userId,
+    int? id,
+    String? title,
+    String? body,
+  }) {
+    return PostModel8(
+      userId: userId ?? this.userId,
+      id: id ?? this.id,
+      title: title ?? this.title,
+      body: body ?? this.body,
+    );
+  }
+}
