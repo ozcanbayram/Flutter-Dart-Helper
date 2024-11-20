@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_notes/level-1/color_learn.dart';
-import 'package:flutter_notes/level-2/tab_learn.dart';
+import 'package:flutter_notes/level-2/model_example/model_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -72,7 +72,7 @@ class MyApp extends StatelessWidget {
               const ProgressIndicatorThemeData(color: Colors.amber)),
 
       //Home:
-      home: const TabLearn(),
+      home: const ModelLearnView(),
     );
   }
 }
