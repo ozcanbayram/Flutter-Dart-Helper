@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs, sort_constructors_first
+// ignore_for_file: public_member_api_docs, sort_constructors_first, must_be_immutable
 // servisten gelecek olan verileri modellememiz gerekir.
 // örneğin post modeldeki servisten gelen veri aşağıdaki gibi olsun:
 /*
@@ -19,6 +19,9 @@
 //? }
 
 //TODO ----------------------------------------------------------------------------------------------------->
+
+import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 
 class PostModel1 {
   //* Bu modelde değişkenlerin null gelebileceğini belirttik.
@@ -138,7 +141,7 @@ class PostModel7 {
   }
 }
 
-class PostModel8 {
+class PostModel8 extends Equatable {
   //! Veriler servisten geliyor ise önerilen model budur.
   //* burada veriler internetten bir servisten gelecek ise nullable olarakt tanımlarız.
   final int? userId;
@@ -172,4 +175,45 @@ class PostModel8 {
       body: body ?? this.body,
     );
   }
+
+  //! Equatable için gerekli olan props getter'ı:
+
+  @override
+  List<Object?> get props => [userId, id, title, body];
+
+
+  //! Equatable:
+  //? Equatable, Dart'ta nesnelerin eşitlik kontrolünü kolaylaştırmak için kullanılan bir pakettir.
+  // kullanmak için  equatable paketini ekleriz ve classa extend ederiz
+
+  //! NOT:
+  /*
+  Equatable'ın Faydaları:
+  Eşitlik kontrolu kolayligi saglar: Equatable ile nesneleri doğrudan içeriklerine göre karsilastirabiliriz.
+  props sadece belirtilen alanlari kontrol eder. gereksiz bellek karşılaştırmaları önler.
+  bunu başka türlü paket kullanmamak için == operatorune override yapabilirdik. Bu konuyu Dart notlarında bulabilirsiniz.(Custom Operator)
+  
+  *kullanım kolaylıgı örneği:
+  final post1 = PostModel8(userId: 1, id: 1, title: 'Hello', body: 'World');
+  final post2 = PostModel8(userId: 1, id: 1, title: 'Hello', body: 'World');
+  print(post1 == post2); // true (Equatable olmadan false olurdu)
+  */
+
+  //! Immutable model yapmak:
+  //? Bir sınıfı immutable (değiştirilemez) yapmak, oluşturulduktan sonra nesnenin durumunun değiştirilememesi anlamına gelir.
+  //? bunun için tüm alanları final tanımlarız
+  //? Sınıfın özelliklerini yalnızca (constructor) ile belirleriz.
+  //? opsiyonel olarak sınıfın başına @immutable ekleriz. sınıfı daha okunaklı hale getirir ve immutable olması gerektiğini belirtir.
+  //! Bu örnekte immutable yapmamamın sebebi örneklerde body değerini değiştirmemdir.
+  //! immutable ile de body değerini değiştirebilirdik fakat yeni bir nesne üretmemiz gerekirdi. Çünkü immutable olursa değerler değişmez.
+  //? Nasıl yapardık:
+  //* Yeni bir nesne döndüren changeBody metodu
+  /*
+  PostModel8 changeBody(String? value) {
+    if (value != null && value.isNotEmpty) {
+      return copyWith(body: value);
+    }
+    return this; // Geçerli nesneyi döndür, değişiklik yok.
+  }
+  */
 }
