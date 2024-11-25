@@ -98,6 +98,9 @@
 ### 👉 Model Çeşitleri (Basit-Gelişmiş) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/model_example/model_learn.dart"> Tıkla </a> 
 ### 👉 Model Kullanımı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/model_example/model_learn_view.dart"> Tıkla </a> 
 
+### 👉 Önerilen Model Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/model_example/immutable_model_example.dart"> Tıkla </a> 
+
+
 
 
 
