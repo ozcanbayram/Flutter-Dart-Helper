@@ -101,31 +101,14 @@
 ### 👉 Önerilen Model Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/model_example/immutable_model_example.dart"> Tıkla </a> 
 
 
-
-
-
-
-
 ### Devamı Hazırlanıyor...
 <hr>
 </details>
 
-<details>
-<summary> <h2> 📦 Flutter İçerikleri </h2> </summary>
-  
-### 👉 Flutter notları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/learning_flutter"> Tıkla </a> 
-### 👉 Temel widget kullanımları için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/learning_flutter/lib/101"> Tıkla </a>
-### 👉 Servis kullanma örnek uygulamasını incelemek için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/service_example"> Tıkla </a> 
-### 👉 Demo ekranlar için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/learning_flutter/lib/demos"> Tıkla </a> 
-
-### Devamı gelecek...
-<hr>
-</details>
 
 <details>
 <summary> <h2> 🚀 Hazır Widgetlar </h2> </summary>
-
-
+  
 <hr>
 
 ### 👉 Drawer Menu için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/ready_custom_widgets/lib/feature/drawer_menu"> Tıkla </a> 
