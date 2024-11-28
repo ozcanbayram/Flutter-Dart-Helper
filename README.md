@@ -100,6 +100,9 @@
 
 ### 👉 Önerilen Model Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/model_example/immutable_model_example.dart"> Tıkla </a> 
 
+### 👉 Servis Modeli Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/service/post_model.dart"> Tıkla </a> 
+
+
 
 ### Devamı Hazırlanıyor...
 <hr>
