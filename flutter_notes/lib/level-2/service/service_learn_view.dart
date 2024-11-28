@@ -72,11 +72,36 @@ class ServiceLearnState extends State<ServiceLearn> {
         ],
       ),
       body: ListView.builder(
+        padding: const EdgeInsets.all(8),
         itemCount: _items?.length ?? 0,
         //* PostModelden gelecek olan ?items kadar uzunluk, eğer null ise 0 uzunluk.
         itemBuilder: (context, index) {
-          return const Text('data');
+          return _PostCard(model: _items?[index]);
         },
+      ),
+    );
+  }
+}
+
+class _PostCard extends StatelessWidget {
+  const _PostCard({
+    super.key,
+    required PostModel? model,
+  }) : _model = model;
+
+  final PostModel? _model;
+
+  @override
+  Widget build(BuildContext context) {
+    return Card(
+      margin: const EdgeInsets.only(bottom: 10),
+      child: ListTile(
+        title: Text(_model?.title ?? 'veri yok'),
+        subtitle: Text(
+          _model?.body ?? 'veri yok',
+          maxLines: 2,
+          overflow: TextOverflow.ellipsis,
+        ),
       ),
     );
   }
