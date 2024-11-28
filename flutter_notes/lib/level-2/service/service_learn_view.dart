@@ -18,6 +18,9 @@ class ServiceLearnState extends State<ServiceLearn> {
   // Loading bar için bool:
   bool _isLoading = false;
 
+  late final Dio _dio;
+  final _baseUrl = 'https://jsonplaceholder.typicode.com/posts';
+
   void _changeIsLoading() {
     setState(() {
       _isLoading = !_isLoading;
@@ -27,6 +30,7 @@ class ServiceLearnState extends State<ServiceLearn> {
   @override
   void initState() {
     super.initState();
+    _dio = Dio(BaseOptions(baseUrl: _baseUrl));
     //* uygulamanın init state anında verileri çekmek için fonksyonu burada çalıştırırız.
     fetchPostItems();
   }
@@ -35,13 +39,9 @@ class ServiceLearnState extends State<ServiceLearn> {
   //* asenkron olmalıdır.
   Future<void> fetchPostItems() async {
     _changeIsLoading();
-
-    final response =
-        await Dio().get('https://jsonplaceholder.typicode.com/posts');
-
+    final response = await Dio().get('https://jsonplaceholder.typicode.com/');
     if (response.statusCode == HttpStatus.ok) {
       //! Eğer servisten verilerin gelmesi başarılıysa:
-
       //? _datas adında bir değişken oluştur ve servisten gelen response'nin datasına eşitle
       final datas = response.data;
 
@@ -53,7 +53,27 @@ class ServiceLearnState extends State<ServiceLearn> {
         });
       }
     }
+    _changeIsLoading();
+  }
 
+  //* Yukarıdaki fetcPostItem metodunun daha gelişmiş halini yazalım:
+  //* burada servisi globalde tanımlayarak, her istek için yeni bir dio oluşturmak yerine bir yerden kullandık sadece yolunu belirliyoruz. (posts gibi)
+  Future<void> fetchPostItemsAdvence() async {
+    _changeIsLoading();
+    final response = await _dio.get('posts');
+    if (response.statusCode == HttpStatus.ok) {
+      //! Eğer servisten verilerin gelmesi başarılıysa:
+      //? _datas adında bir değişken oluştur ve servisten gelen response'nin datasına eşitle
+      final datas = response.data;
+
+      if (datas is List) {
+        //* Eğer _datas bir listeyse, bu listeyi maple
+        //* yani PostModel modelinden gelen _items listesini bu servisten gelen _datas listesi ile değiştir.
+        setState(() {
+          _items = datas.map((e) => PostModel.fromJson(e)).toList();
+        });
+      }
+    }
     _changeIsLoading();
   }
 
