@@ -39,7 +39,8 @@ class ServiceLearnState extends State<ServiceLearn> {
   //* asenkron olmalıdır.
   Future<void> fetchPostItems() async {
     _changeIsLoading();
-    final response = await Dio().get('https://jsonplaceholder.typicode.com/');
+    final response =
+        await Dio().get('https://jsonplaceholder.typicode.com/posts');
     if (response.statusCode == HttpStatus.ok) {
       //! Eğer servisten verilerin gelmesi başarılıysa:
       //? _datas adında bir değişken oluştur ve servisten gelen response'nin datasına eşitle
