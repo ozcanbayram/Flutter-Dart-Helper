@@ -22,6 +22,7 @@ class _ServiceExamplesMainState extends State<ServiceExamplesMain>
       ),
       body: Center(
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
             NavigatorButton(
                 buttonTitle: fetchButton,
