@@ -3,6 +3,7 @@ import 'dart:io';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_notes/level-2/service/post_model.dart';
+import 'package:flutter_notes/level-2/service/post_service.dart';
 
 class ServiceLearn extends StatefulWidget {
   const ServiceLearn({super.key});
@@ -18,6 +19,8 @@ class ServiceLearnState extends State<ServiceLearn> {
   // Loading bar için bool:
   bool _isLoading = false;
 
+  late final PostService _postService;
+
   late final Dio _dio;
   final _baseUrl = 'https://jsonplaceholder.typicode.com/posts';
 
@@ -32,7 +35,9 @@ class ServiceLearnState extends State<ServiceLearn> {
     super.initState();
     _dio = Dio(BaseOptions(baseUrl: _baseUrl));
     //* uygulamanın init state anında verileri çekmek için fonksyonu burada çalıştırırız.
-    fetchPostItems();
+    _postService = PostService();
+    // fetchPostItems();
+    fetchPostItemsAdvence();
   }
 
   //* Dio ile intnernetteki servise erişelim:(Bu kullanım doğru bir kullanım değildir. her şeyi bir arada görebilmek için burada yazıyorum.)
@@ -61,20 +66,7 @@ class ServiceLearnState extends State<ServiceLearn> {
   //* burada servisi globalde tanımlayarak, her istek için yeni bir dio oluşturmak yerine bir yerden kullandık sadece yolunu belirliyoruz. (posts gibi)
   Future<void> fetchPostItemsAdvence() async {
     _changeIsLoading();
-    final response = await _dio.get('posts');
-    if (response.statusCode == HttpStatus.ok) {
-      //! Eğer servisten verilerin gelmesi başarılıysa:
-      //? _datas adında bir değişken oluştur ve servisten gelen response'nin datasına eşitle
-      final datas = response.data;
-
-      if (datas is List) {
-        //* Eğer _datas bir listeyse, bu listeyi maple
-        //* yani PostModel modelinden gelen _items listesini bu servisten gelen _datas listesi ile değiştir.
-        setState(() {
-          _items = datas.map((e) => PostModel.fromJson(e)).toList();
-        });
-      }
-    }
+    _items = await _postService.fetchPostItemsAdvence();
     _changeIsLoading();
   }
 
@@ -92,14 +84,16 @@ class ServiceLearnState extends State<ServiceLearn> {
               : const SizedBox.shrink()
         ],
       ),
-      body: ListView.builder(
-        padding: const EdgeInsets.all(8),
-        itemCount: _items?.length ?? 0,
-        //* PostModelden gelecek olan ?items kadar uzunluk, eğer null ise 0 uzunluk.
-        itemBuilder: (context, index) {
-          return _PostCard(model: _items?[index]);
-        },
-      ),
+      body: _items == null
+          ? const Center(child: Text('Veriler yükleniyor'))
+          : ListView.builder(
+              padding: const EdgeInsets.all(8),
+              itemCount: _items?.length ?? 0,
+              //* PostModelden gelecek olan ?items kadar uzunluk, eğer null ise 0 uzunluk.
+              itemBuilder: (context, index) {
+                return _PostCard(model: _items?[index]);
+              },
+            ),
     );
   }
 }
