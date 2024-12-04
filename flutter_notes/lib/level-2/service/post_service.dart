@@ -41,6 +41,29 @@ class PostService {
       return false;
     }
   }
+
+  Future<bool> putItemToService(PostModel postModel, int id) async {
+    try {
+      final response =
+          await _dio.post('${ServicePaths.posts.name}/$id', data: postModel);
+      return response.statusCode == HttpStatus.ok;
+    } on DioException catch (exception) {
+      ShowDioErrorMessages.showDioError(exception);
+      return false;
+    }
+  }
+
+  Future<bool> deleteItemToService(int id) async {
+    try {
+      final response = await _dio.post(
+        '${ServicePaths.posts.name}/$id',
+      );
+      return response.statusCode == HttpStatus.ok;
+    } on DioException catch (exception) {
+      ShowDioErrorMessages.showDioError(exception);
+      return false;
+    }
+  }
 }
 
 enum ServicePaths { posts, comments }
