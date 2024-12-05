@@ -19,7 +19,8 @@ class ServiceLearnState extends State<ServiceLearn> {
   // Loading bar için bool:
   bool _isLoading = false;
 
-  late final PostService _postService;
+  //! Abstract class'tan çağırarak TEST EDİLEBİLİR kod yazmış oluruz.
+  late final IPostService _postService;
 
   late final Dio _dio;
   final _baseUrl = 'https://jsonplaceholder.typicode.com/posts';
