@@ -35,7 +35,7 @@ class PostService implements IPostService {
         }
       }
     } on DioException catch (exception) {
-      ShowDioErrorMessages.showDioError(exception);
+      ShowDioErrorMessages.showDioError(exception, this);
       return null;
     }
     return null;
@@ -48,7 +48,7 @@ class PostService implements IPostService {
           await _dio.post(ServicePaths.posts.name, data: postModel);
       return response.statusCode == HttpStatus.created;
     } on DioException catch (exception) {
-      ShowDioErrorMessages.showDioError(exception);
+      ShowDioErrorMessages.showDioError(exception, this);
       return false;
     }
   }
@@ -60,7 +60,7 @@ class PostService implements IPostService {
           await _dio.put('${ServicePaths.posts.name}/$id', data: postModel);
       return response.statusCode == HttpStatus.ok;
     } on DioException catch (exception) {
-      ShowDioErrorMessages.showDioError(exception);
+      ShowDioErrorMessages.showDioError(exception, this);
       return false;
     }
   }
@@ -73,7 +73,7 @@ class PostService implements IPostService {
       );
       return response.statusCode == HttpStatus.ok;
     } on DioException catch (exception) {
-      ShowDioErrorMessages.showDioError(exception);
+      ShowDioErrorMessages.showDioError(exception, this);
       return false;
     }
   }
@@ -95,7 +95,7 @@ class PostService implements IPostService {
         }
       }
     } on DioException catch (exception) {
-      ShowDioErrorMessages.showDioError(exception);
+      ShowDioErrorMessages.showDioError(exception, this);
     }
     return null;
   }
@@ -106,9 +106,13 @@ enum ServicePaths { posts, comments }
 enum PostQueryPaths { postId }
 
 class ShowDioErrorMessages {
-  static void showDioError(error) {
+  static void showDioError<T>(error, T type) {
     if (kDebugMode) {
       print(' Hata burada *******  ${error.message}');
+      print('--------');
+      //hatayı daha detaylı enreden geldigini görebilmek için
+      print('Type: $type');
+      print('--------');
     }
   }
 }
