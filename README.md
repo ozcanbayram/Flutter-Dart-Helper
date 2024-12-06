@@ -105,6 +105,7 @@
 ### 👉 Servis Modeli Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/service/post_model.dart"> Tıkla </a> 
 ### 👉 Servisten Veri Çekme (Fetch) Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/service/service_learn_view.dart"> Tıkla </a> 
 ### 👉 Servise Veri Gönderme (Post) Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/service/service_post_learn.dart"> Tıkla </a> 
+### 👉 Servise Örneği (Yorumları listeleme) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/service/comment_view.dart"> Tıkla </a> 
 
 
 
