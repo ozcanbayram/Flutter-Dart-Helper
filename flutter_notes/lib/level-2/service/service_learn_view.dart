@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_notes/level-2/service/comment_view.dart';
 import 'package:flutter_notes/level-2/service/post_model.dart';
 import 'package:flutter_notes/level-2/service/post_service.dart';
 
@@ -112,6 +113,11 @@ class _PostCard extends StatelessWidget {
     return Card(
       margin: const EdgeInsets.only(bottom: 10),
       child: ListTile(
+        onTap: () {
+          Navigator.of(context).push(MaterialPageRoute(
+            builder: (context) => CommentVeiw(postId: _model?.id),
+          ));
+        },
         title: Text(_model?.title ?? 'veri yok'),
         subtitle: Text(
           _model?.body ?? 'veri yok',
