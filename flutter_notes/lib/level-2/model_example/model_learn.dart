@@ -18,10 +18,10 @@
 //   //! bir sınıf içindeki değişkenleri initilaze etmeliyiz. Aşağıdaki örneklerde initilaze etme yöntemlerini inceleyelim:
 //? }
 
-//TODO ----------------------------------------------------------------------------------------------------->
+// ----------------------------------------------------------------------------------------------------->
 
 import 'package:equatable/equatable.dart';
-import 'package:flutter/material.dart';
+// import 'package:flutter/material.dart';
 
 class PostModel1 {
   //* Bu modelde değişkenlerin null gelebileceğini belirttik.
@@ -79,8 +79,11 @@ class PostModel4 {
 class PostModel5 {
   //* Bu modelde degiskenleri private tanımladık (_userId) ve daha sonra gelecek olan değerler ile eşitledik.
   final int _userId;
+  // ignore: unused_field
   final int _id;
+  // ignore: unused_field
   final String _title;
+  // ignore: unused_field
   final String _body;
 
   // bu model kullanılınca private tanımlandığı için buradaki bir nesneye erişilemez.
@@ -103,9 +106,13 @@ class PostModel6 {
   //* Bu modelde degiskenleri private tanımladık (_userId) ve daha sonra gelecek olan değerler farklı bir yöntem ile eşitledik. AMA:
   //* late kullanarak, değerlerin daha sonra geleceğini belirttik
   //? late -> değer sonradan gelecek.   late final -> değer constructor anında sonradan gelecek.
+  // ignore: unused_field
   late final int _userId;
+  // ignore: unused_field
   late final int _id;
+  // ignore: unused_field
   late final String _title;
+  // ignore: unused_field
   late final String _body;
 
   PostModel6(
@@ -123,9 +130,13 @@ class PostModel6 {
 class PostModel7 {
   //* Bu modelde required vermek yeinde değişkenlere default değer atıyoruz.
   //* bir değer gelmemesi durumunda verilen değerler geçerli olacaktır.
+  // ignore: unused_field
   late final int _userId;
+  // ignore: unused_field
   late final int _id;
+  // ignore: unused_field
   late final String _title;
+  // ignore: unused_field
   late final String _body;
 
   PostModel7({
@@ -151,7 +162,7 @@ class PostModel8 extends Equatable {
 
   PostModel8({this.userId, this.id, this.title, this.body});
 
-  //TODO: body değerini kontrollü bir şekilde değiştiren metot:
+  //: body değerini kontrollü bir şekilde değiştiren metot:
   void changeBody(String? value) {
     if (value != null && value.isNotEmpty) {
       body = value;
@@ -180,7 +191,6 @@ class PostModel8 extends Equatable {
 
   @override
   List<Object?> get props => [userId, id, title, body];
-
 
   //! Equatable:
   //? Equatable, Dart'ta nesnelerin eşitlik kontrolünü kolaylaştırmak için kullanılan bir pakettir.
