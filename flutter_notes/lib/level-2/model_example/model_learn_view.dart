@@ -30,12 +30,14 @@ class _ModelLearnViewState extends State<ModelLearnView> {
 
     //* PostModel2:
     //doğrudan değişkenler için değerleri tanımlamamızı ister.
+    // ignore: unused_local_variable
     final user2 =
         PostModel2(2, 2, 'PostModel2 için baslik', 'PostModel2 için içerik');
 
     //* PostModel3:
     //doğrudan değişkenler için değerleri tanımlamamızı ister.
     //! ama burada verilen değeri daha sonra değiştiremeyiz. (final)
+    // ignore: unused_local_variable
     final user3 =
         PostModel3(3, 3, 'PostModel3 için baslik', 'PostModel3 için içerik');
     // user3.body = 'aslkd'; --> hata verir.
@@ -43,6 +45,7 @@ class _ModelLearnViewState extends State<ModelLearnView> {
     //* PostModel4:
     //burada değişkenler named paramatre olarak gelir. PostModel3'e göre daha okunaklıdır.
     //final oalrak tanımlandıkalrı için değerleri sonradan değiştirilemez.
+    // ignore: unused_local_variable
     final user4 = PostModel4(
         userId: 4,
         id: 4,
@@ -53,6 +56,7 @@ class _ModelLearnViewState extends State<ModelLearnView> {
     // burada da değişkenler named parametre olarak gelir.
     // model içerisinde private olarak tanımlandıkları için buradan tekrar erişilemez.
     // erişilmesi için model sınıfında encapsulation işleminin yapılması gerekir.  (int get userId => _userId;)
+    // ignore: unused_local_variable
     final user5 = PostModel5(
         userId: 5,
         id: 5,
@@ -61,6 +65,7 @@ class _ModelLearnViewState extends State<ModelLearnView> {
 
     //* PostModel6:
     // Bu model de PostModel5 gibidir sadece farklı bir şekilde yazılmıştır model_learn.dart üzerinden inceleyebilrisiniz.
+    // ignore: unused_local_variable
     final user6 = PostModel6(
         userId: 6,
         id: 6,
@@ -70,11 +75,13 @@ class _ModelLearnViewState extends State<ModelLearnView> {
     //* PostModel7:
     // Bu modelde değer vermediğimiz durumda default değerlerini alarak ekranda görünür.
     // yine burada da private olduğu için encapsule edilmeden erişilemez.
+    // ignore: unused_local_variable
     final user7 = PostModel7();
 
     //* PostModel8:
     //! Veriler servisten geliyor ise önerilen model budur.
     //burada hepsi nullable tanımlanmıştır ve isteğeğ göre değer de verilebilir.
+    // ignore: unused_local_variable
     final user8 = PostModel8(userId: 8, body: 'PostModel8 içeriği');
   }
 

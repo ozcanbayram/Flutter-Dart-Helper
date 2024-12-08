@@ -23,7 +23,9 @@ class ServiceLearnState extends State<ServiceLearn> {
   //! Abstract class'tan çağırarak TEST EDİLEBİLİR kod yazmış oluruz.
   late final IPostService _postService;
 
+  // ignore: unused_field
   late final Dio _dio;
+
   final _baseUrl = 'https://jsonplaceholder.typicode.com/posts';
 
   void _changeIsLoading() {
