@@ -16,6 +16,7 @@ class _PackageExampleViewState extends State<PackageExampleView> {
         title: const Text('Spinkit Package'),
       ),
       body: const LoadingBarSpinkit(),
+      floatingActionButton: FloatingActionButton(onPressed: () {}),
     );
   }
 }

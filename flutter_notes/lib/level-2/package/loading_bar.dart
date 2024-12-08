@@ -10,7 +10,7 @@ class LoadingBarSpinkit extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SpinKitRotatingCircle(
-      color: Colors.white,
+      color: Colors.red,
       size: size ?? _defaultSize,
     );
   }
