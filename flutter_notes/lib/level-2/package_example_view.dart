@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_spinkit/flutter_spinkit.dart';
+import 'package:flutter_notes/level-2/package/loading_bar.dart';
 
 class PackageExampleView extends StatefulWidget {
   const PackageExampleView({super.key});
@@ -15,10 +15,7 @@ class _PackageExampleViewState extends State<PackageExampleView> {
       appBar: AppBar(
         title: const Text('Spinkit Package'),
       ),
-      body: const SpinKitRotatingCircle(
-        color: Colors.white,
-        size: 50.0,
-      ),
+      body: const LoadingBarSpinkit(),
     );
   }
 }
