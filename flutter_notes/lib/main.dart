@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notes/level-2/package_example_view.dart';
 import 'package:flutter_notes/level-2/theme/light_theme.dart';
+import 'package:flutter_notes/level-2/theme_learn_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -72,7 +72,7 @@ class MyApp extends StatelessWidget {
       //     const ProgressIndicatorThemeData(color: Colors.amber)),
 
       //Home:
-      home: const PackageExampleView(),
+      home: const ThemeLearnView(),
     );
   }
 }
