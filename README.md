@@ -113,6 +113,9 @@
 ### 👉 Theme Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/theme/light_theme.dart"> Tıkla </a> 
 ### 👉 Temel Theme Kullanım Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/package_example_view.dart"> Tıkla </a> 
 
+### 👉 Enum Kullanım Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/widget_size_enum_example.dart"> Tıkla </a> 
+
+
 
 
 
