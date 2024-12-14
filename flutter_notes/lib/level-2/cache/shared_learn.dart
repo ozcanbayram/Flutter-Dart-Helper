@@ -2,90 +2,126 @@
 
 //! Basit bir Shared Preferences ile kaydetme yöntemi. Paket yüklenip native tarafta gerekenler yapıldıktan sonra çalışacaktır.
 
-// import 'package:flutter/material.dart';
-// import 'package:shared_preferences/shared_preferences.dart';
 
-// class SharedLearnView extends StatefulWidget {
-//   const SharedLearnView({super.key});
+/*
+import 'package:flutter/material.dart';
+import 'shared_manager.dart';
+import 'user_model.dart';
 
-//   @override
-//   State<SharedLearnView> createState() => _SharedLearnViewState();
-// }
+class SharedLearn extends StatefulWidget {
+  const SharedLearn({Key? key}) : super(key: key);
 
-// class _SharedLearnViewState extends LoadingStateful<SharedLearnView> {
-//   //asagida yazdigimiz LoadingStateful abstract class'ını burada bu şekilde sınıfımıza atayabilriz.
-//   int _currentValue = 0;
+  @override
+  State<SharedLearn> createState() => _SharedLearnState();
+}
 
-//   void _onChangeValue(String value) {
-//     final value0 = int.tryParse(value);
-//     setState(() {
-//       if (value0 != null) {
-//         _currentValue = value0;
-//       }
-//       });
+class _SharedLearnState extends LoadingStatefull<SharedLearn> {
+  int _currentValue = 0;
+  late final SharedManager _manager;
 
+  late final List<User> userItems;
+  @override
+  void initState() {
+    super.initState();
+    _manager = SharedManager();
+    userItems = UserItems().users;
+    _initialze();
+  }
 
-//   @override
-//   void initState() {
-//     super.initState();
-//     getSavedData();
-//   }
+  Future<void> _initialze() async {
+    changeLoading();
+    await _manager.init();
+    changeLoading();
 
-//   Future<void> getSavedData() async {
-//     final SharedPreferences prefs = await SharedPreferences.getInstance();
-//     final int? counter = prefs.getInt('counter');
-//     _onChangeValue(counter.toString());
-//   }
+    getDefaultValues();
+  }
 
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: Text(_currentValue.toString()),
-//         actions: [
-//           isLoading
-//               ? Padding(
-//                   padding: const EdgeInsets.all(16.0),
-//                   child: Center(
-//                     child: CircularProgressIndicator(
-//                       color: Theme.of(context).primaryColor,
-//                     ),
-//                   ),
-//                 )
-//               : const SizedBox.shrink()
-//         ],
-//       ),
-//       floatingActionButton: FloatingActionButton(
-//         onPressed: () async {
-//           changeLoading();
-//           final SharedPreferences prefs = await SharedPreferences.getInstance();
-//           await prefs.setInt('counter', _currentValue);
-//           changeLoading();
-//         },
-//         child: const Icon(Icons.save),
-//       ),
-//       body: Center(
-//         child: Padding(
-//           padding: const EdgeInsets.all(32.0),
-//           child: TextField(
-//             onChanged: (value) {
-//               _onChangeValue(value);
-//             },
-//           ),
-//         ),
-//       ),
-//     );
-//   }
-// }
+  Future<void> getDefaultValues() async {
+    _onChangeValue(_manager.getString(SharedKeys.counter) ?? '');
+  }
 
-// // her yerde bir loading animasyonu yapmak yerine bir sınıfta bunu yapabiliriz:
-// // burada statefıl widgetlara bu özelliği kazandırdı.
-// // generic => T
-// abstract class LoadingStateful<T extends StatefulWidget> extends State<T> {
-//   bool isLoading = false;
-//   void changeLoading() {
-//     setState(() {
-//       isLoading = !isLoading;
-//     });
-//   }
-// }
+  void _onChangeValue(String value) {
+    final _value = int.tryParse(value);
+    if (_value != null) {
+      setState(() {
+        _currentValue = _value;
+      });
+    }
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(_currentValue.toString()),
+        actions: [_loading(context)],
+      ),
+      floatingActionButton: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [_saveValueButton(), _removeValueButton()],
+      ),
+      body: Column(
+        children: [
+          TextField(
+            onChanged: (value) {
+              _onChangeValue(value);
+            },
+          ),
+        ],
+      ),
+    );
+  }
+
+  SingleChildRenderObjectWidget _loading(BuildContext context) {
+    return isLoading
+        ? Center(
+            child: CircularProgressIndicator(
+              color: Theme.of(context).scaffoldBackgroundColor,
+            ),
+          )
+        : const SizedBox.shrink();
+  }
+
+  FloatingActionButton _saveValueButton() {
+    return FloatingActionButton(
+        child: const Icon(Icons.save),
+        onPressed: (() async {
+          changeLoading();
+          await _manager.saveString(SharedKeys.counter, _currentValue.toString());
+          changeLoading();
+        }));
+  }
+
+  FloatingActionButton _removeValueButton() {
+    return FloatingActionButton(
+        child: const Icon(Icons.remove),
+        onPressed: (() async {
+          changeLoading();
+          await _manager.removeItem(SharedKeys.counter);
+          changeLoading();
+        }));
+  }
+}
+
+class UserItems {
+  late final List<User> users;
+  UserItems() {
+    users = [
+      User('vb', '10', 'vb10.dev'),
+      User('vb2', '102', 'vb10.dev'),
+      User('vb3', '103', 'vb10.dev'),
+    ];
+  }
+}
+
+//Generic
+abstract class LoadingStatefull<T extends StatefulWidget> extends State<T> {
+  bool isLoading = false;
+
+  void changeLoading() {
+    setState(() {
+      isLoading = !isLoading;
+    });
+  }
+}
+*/
