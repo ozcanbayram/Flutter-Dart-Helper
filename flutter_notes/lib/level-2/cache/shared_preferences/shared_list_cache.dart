@@ -1,124 +1,123 @@
-/*
 
-import 'package:flutter/material.dart';
-import 'shared_manager.dart';
-import 'user_model.dart';
 
-class SharedLearn extends StatefulWidget {
-  const SharedLearn({Key? key}) : super(key: key);
+// import 'package:flutter/material.dart';
+// import 'shared_manager.dart';
+// import 'user_model.dart';
 
-  @override
-  State<SharedLearn> createState() => _SharedLearnState();
-}
+// class SharedLearn extends StatefulWidget {
+//   const SharedLearn({Key? key}) : super(key: key);
 
-class _SharedLearnState extends LoadingStatefull<SharedLearn> {
-  int _currentValue = 0;
-  late final SharedManager _manager;
+//   @override
+//   State<SharedLearn> createState() => _SharedLearnState();
+// }
 
-  late final List<User> userItems;
-  @override
-  void initState() {
-    super.initState();
-    _manager = SharedManager();
-    userItems = UserItems().users;
-    _initialze();
-  }
+// class _SharedLearnState extends LoadingStatefull<SharedLearn> {
+//   int _currentValue = 0;
+//   late final SharedManager _manager;
 
-  Future<void> _initialze() async {
-    changeLoading();
-    await _manager.init();
-    changeLoading();
+//   late final List<User> userItems;
+//   @override
+//   void initState() {
+//     super.initState();
+//     _manager = SharedManager();
+//     userItems = UserItems().users;
+//     _initialze();
+//   }
 
-    getDefaultValues();
-  }
+//   Future<void> _initialze() async {
+//     changeLoading();
+//     await _manager.init();
+//     changeLoading();
 
-  Future<void> getDefaultValues() async {
-    _onChangeValue(_manager.getString(SharedKeys.counter) ?? '');
-  }
+//     getDefaultValues();
+//   }
 
-  void _onChangeValue(String value) {
-    final _value = int.tryParse(value);
-    if (_value != null) {
-      setState(() {
-        _currentValue = _value;
-      });
-    }
-  }
+//   Future<void> getDefaultValues() async {
+//     _onChangeValue(_manager.getString(SharedKeys.counter) ?? '');
+//   }
 
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text(_currentValue.toString()),
-        actions: [_loading(context)],
-      ),
-      floatingActionButton: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: [_saveValueButton(), _removeValueButton()],
-      ),
-      body: Column(
-        children: [
-          TextField(
-            onChanged: (value) {
-              _onChangeValue(value);
-            },
-          ),
-        ],
-      ),
-    );
-  }
+//   void _onChangeValue(String value) {
+//     final _value = int.tryParse(value);
+//     if (_value != null) {
+//       setState(() {
+//         _currentValue = _value;
+//       });
+//     }
+//   }
 
-  SingleChildRenderObjectWidget _loading(BuildContext context) {
-    return isLoading
-        ? Center(
-            child: CircularProgressIndicator(
-              color: Theme.of(context).scaffoldBackgroundColor,
-            ),
-          )
-        : const SizedBox.shrink();
-  }
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text(_currentValue.toString()),
+//         actions: [_loading(context)],
+//       ),
+//       floatingActionButton: Row(
+//         mainAxisSize: MainAxisSize.min,
+//         children: [_saveValueButton(), _removeValueButton()],
+//       ),
+//       body: Column(
+//         children: [
+//           TextField(
+//             onChanged: (value) {
+//               _onChangeValue(value);
+//             },
+//           ),
+//         ],
+//       ),
+//     );
+//   }
 
-  FloatingActionButton _saveValueButton() {
-    return FloatingActionButton(
-        child: const Icon(Icons.save),
-        onPressed: (() async {
-          changeLoading();
-          await _manager.saveString(SharedKeys.counter, _currentValue.toString());
-          changeLoading();
-        }));
-  }
+//   SingleChildRenderObjectWidget _loading(BuildContext context) {
+//     return isLoading
+//         ? Center(
+//             child: CircularProgressIndicator(
+//               color: Theme.of(context).scaffoldBackgroundColor,
+//             ),
+//           )
+//         : const SizedBox.shrink();
+//   }
 
-  FloatingActionButton _removeValueButton() {
-    return FloatingActionButton(
-        child: const Icon(Icons.remove),
-        onPressed: (() async {
-          changeLoading();
-          await _manager.removeItem(SharedKeys.counter);
-          changeLoading();
-        }));
-  }
-}
+//   FloatingActionButton _saveValueButton() {
+//     return FloatingActionButton(
+//         child: const Icon(Icons.save),
+//         onPressed: (() async {
+//           changeLoading();
+//           await _manager.saveString(SharedKeys.counter, _currentValue.toString());
+//           changeLoading();
+//         }));
+//   }
 
-class UserItems {
-  late final List<User> users;
-  UserItems() {
-    users = [
-      User('vb', '10', 'vb10.dev'),
-      User('vb2', '102', 'vb10.dev'),
-      User('vb3', '103', 'vb10.dev'),
-    ];
-  }
-}
+//   FloatingActionButton _removeValueButton() {
+//     return FloatingActionButton(
+//         child: const Icon(Icons.remove),
+//         onPressed: (() async {
+//           changeLoading();
+//           await _manager.removeItem(SharedKeys.counter);
+//           changeLoading();
+//         }));
+//   }
+// }
 
-//Generic
-abstract class LoadingStatefull<T extends StatefulWidget> extends State<T> {
-  bool isLoading = false;
+// class UserItems {
+//   late final List<User> users;
+//   UserItems() {
+//     users = [
+//       User('vb', '10', 'vb10.dev'),
+//       User('vb2', '102', 'vb10.dev'),
+//       User('vb3', '103', 'vb10.dev'),
+//     ];
+//   }
+// }
 
-  void changeLoading() {
-    setState(() {
-      isLoading = !isLoading;
-    });
-  }
-}
+// //Generic
+// abstract class LoadingStatefull<T extends StatefulWidget> extends State<T> {
+//   bool isLoading = false;
 
-*/
+//   void changeLoading() {
+//     setState(() {
+//       isLoading = !isLoading;
+//     });
+//   }
+// }
+
