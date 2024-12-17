@@ -202,6 +202,12 @@
 ### 👉 Tüm algoritma soruları ve çözümleri için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/algorithm_questions"> Tıkla </a> 
 ### 👉 Sayının tek çift kontrolü örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/algorithm_questions/odd_or_even.dart"> Tıkla </a> 
 
+### 👉 Liste uzunluğu döngüsü örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/list_length.dart"> Tıkla </a>
+
+### 👉 Polindrom Sayı örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/polindrom_number.dart"> Tıkla </a> 
+### 👉 İkili Toplama örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/two_sum.dart"> Tıkla </a> 
+
+
 ### Devamı gelecek (Açıklamalı gelişmiş algoritma örnekleri)...
 <hr>
 </details>
