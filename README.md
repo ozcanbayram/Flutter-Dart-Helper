@@ -206,6 +206,7 @@
 
 ### 👉 Polindrom Sayı örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/polindrom_number.dart"> Tıkla </a> 
 ### 👉 İkili Toplama örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/two_sum.dart"> Tıkla </a> 
+### 👉 En uzun Ortak Başlangıç Metni Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/longest_common_prefix.dart"> Tıkla </a> 
 
 
 ### Devamı gelecek (Açıklamalı gelişmiş algoritma örnekleri)...
