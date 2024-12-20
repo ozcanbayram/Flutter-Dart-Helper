@@ -200,12 +200,11 @@
 <summary> <h2> ⚡ Algoritma Örnekleri </h2> </summary>
   
 ### 👉 Tüm algoritma soruları ve çözümleri için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/tree/master/Dart_Notes/algorithm_questions"> Tıkla </a> 
-### 👉 Sayının tek çift kontrolü örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/algorithm_questions/odd_or_even.dart"> Tıkla </a> 
-
-### 👉 Liste uzunluğu döngüsü örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/list_length.dart"> Tıkla </a>
-
-### 👉 Polindrom Sayı örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/polindrom_number.dart"> Tıkla </a> 
+### 👉 Sayının tek çift kontrolü örneği için (Temel) <a href="https://github.com/ozcanbayram/Flutter-Dart-Learning-Notes/blob/master/Dart_Notes/algorithm_questions/odd_or_even.dart"> Tıkla </a> 
+### 👉 Liste uzunluğu döngüsü örneği için (Temel) <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/list_length.dart"> Tıkla </a>
 ### 👉 İkili Toplama örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/two_sum.dart"> Tıkla </a> 
+### 👉 Polindrom Sayı örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/polindrom_number.dart"> Tıkla </a> 
+### 👉 Romen Rakamından Int'e Çevirme Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/roman_to_int.dart"> Tıkla </a> 
 ### 👉 En uzun Ortak Başlangıç Metni Örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/longest_common_prefix.dart"> Tıkla </a> 
 
 
