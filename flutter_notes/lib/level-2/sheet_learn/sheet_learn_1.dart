@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class SheetLearn extends StatefulWidget {
@@ -20,6 +22,8 @@ class _SheetLearnState extends State<SheetLearn> {
       floatingActionButton: FloatingActionButton(
         child: const Icon(Icons.open_in_browser_rounded),
         onPressed: () async {
+          //* burasi açilinca asenkron çalisan bir kontrol yapılacak.
+          //* if ile result kontrolü
           final result = await showModalBottomSheet(
             backgroundColor: Colors.white,
             isScrollControlled: true,
@@ -31,6 +35,7 @@ class _SheetLearnState extends State<SheetLearn> {
               return _CustomSheet(backgroundColor: _backgroundColor);
             },
           );
+          inspect(result);
           if (result is bool) {
             setState(() {
               _backgroundColor = Colors.deepOrangeAccent;
@@ -67,7 +72,7 @@ class _CustomSheetState extends State<_CustomSheet> {
               padding: const EdgeInsets.all(32.0),
               child: Column(
                 children: [
-                  const Text('Bottom Sheet'),
+                  const Text('Bottom Sheet 1'),
                   Image.network(
                     'https://picsum.photos/200/300',
                     height: 250,
@@ -77,6 +82,7 @@ class _CustomSheetState extends State<_CustomSheet> {
                         setState(() {
                           _backgroundColor = Colors.pinkAccent;
                         });
+                        //* bottomSheet bu şekilde geriye (gittiği sayfaya) değer döndürebilir.
                         Navigator.of(context).pop<bool>(true);
                       },
                       child: const Text('Change Color'))
