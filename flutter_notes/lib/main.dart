@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notes/level-2/sheet_learn/sheet_learn_2.dart';
+import 'package:flutter_notes/level-2/alert_learn.dart';
 import 'package:flutter_notes/level-2/theme/light_theme.dart';
 
 void main() {
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Notes',
       debugShowCheckedModeBanner: false,
       theme: LightTheme().theme,
-      home: const SheetLearn1(),
+      home: const AlertLearn(),
     );
   }
 }
