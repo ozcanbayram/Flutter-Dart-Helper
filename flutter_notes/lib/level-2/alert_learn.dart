@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class AlertLearn extends StatefulWidget {
@@ -62,31 +64,46 @@ class _AlertLearnState extends State<AlertLearn> {
             ),
             //* Show AlertDialog
             TextButton(
-              onPressed: () {
-                showDialog(
+              onPressed: () async {
+                final response = await showDialog(
                     context: context,
+                    barrierDismissible: false,
                     builder: (context) {
-                      return AlertDialog(
-                        title: const Text('Opened AlertDialog'),
-                        actions: [
-                          ElevatedButton(
-                            onPressed: () {},
-                            child: const Text('Update Version'),
-                          ),
-                          TextButton(
-                              onPressed: () {
-                                Navigator.pop(context);
-                              },
-                              child: const Text('Close'))
-                        ],
-                      );
+                      return const UpdateDialog();
                     });
+                inspect(response);
               },
               child: const Text('Custom AlertDialog'),
             ),
           ],
         ),
       ),
+    );
+  }
+}
+
+class UpdateDialog extends StatelessWidget {
+  const UpdateDialog({
+    super.key,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: const Text('Opened AlertDialog'),
+      actions: [
+        ElevatedButton(
+          onPressed: () {
+            Navigator.pop(context, true);
+          },
+          child: const Text('Update Version'),
+        ),
+        TextButton(
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            child: const Text('Close'))
+      ],
     );
   }
 }
