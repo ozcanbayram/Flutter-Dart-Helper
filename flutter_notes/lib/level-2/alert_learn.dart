@@ -69,7 +69,7 @@ class _AlertLearnState extends State<AlertLearn> {
                     context: context,
                     barrierDismissible: false,
                     builder: (context) {
-                      return const UpdateDialog();
+                      return PerformanceUpdateDialog(context: context);
                     });
                 inspect(response);
               },
@@ -106,4 +106,25 @@ class UpdateDialog extends StatelessWidget {
       ],
     );
   }
+}
+
+//! Daha performanslı çalışır. Inherit gücünü kullanır. Alert dialogun  özelliklerini kullanır. Statless yaratmak yerine AlertDialog'un kopyasını kullanır.
+class PerformanceUpdateDialog extends AlertDialog {
+  PerformanceUpdateDialog({super.key, required BuildContext context})
+      : super(
+          title: const Text('Opened AlertDialog'),
+          actions: [
+            ElevatedButton(
+              onPressed: () {
+                Navigator.pop(context, true);
+              },
+              child: const Text('Update Version'),
+            ),
+            TextButton(
+                onPressed: () {
+                  Navigator.pop(context);
+                },
+                child: const Text('Close'))
+          ],
+        );
 }
