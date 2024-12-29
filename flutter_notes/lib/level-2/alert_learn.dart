@@ -75,6 +75,18 @@ class _AlertLearnState extends State<AlertLearn> {
               },
               child: const Text('Custom AlertDialog'),
             ),
+            //* Image Dialog
+            TextButton(
+              onPressed: () async {
+                final response = await showDialog(
+                    context: context,
+                    builder: (context) {
+                      return const ImageZoomDialog();
+                    });
+                inspect(response);
+              },
+              child: const Text('Image Zoom Dialog'),
+            ),
           ],
         ),
       ),
@@ -127,4 +139,27 @@ class PerformanceUpdateDialog extends AlertDialog {
                 child: const Text('Close'))
           ],
         );
+}
+
+class ImageZoomDialog extends StatelessWidget {
+  const ImageZoomDialog({
+    super.key,
+  });
+
+  final String imageURl = 'https://picsum.photos/200';
+
+  @override
+  Widget build(BuildContext context) {
+    return Dialog(
+      insetPadding: EdgeInsets.zero,
+      child: InteractiveViewer(
+        child: Image.network(
+          imageURl,
+          fit: BoxFit.cover,
+          height: MediaQuery.of(context).size.height * 0.5,
+          width: MediaQuery.of(context).size.width * 0.9,
+        ),
+      ),
+    );
+  }
 }
