@@ -129,6 +129,9 @@
 
 ### 👉 Alert Dialog Çeşitleri için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-2/alert_learn.dart"> Tıkla </a> 
 
+### 👉 Generic (Temel) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/generic/generic_basic_learn.dart"> Tıkla </a> 
+
+
 
 
 
