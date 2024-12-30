@@ -221,7 +221,7 @@
 
 ### 👉 Parantez Eşleşmesi Örneğ için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/valid_parantheses.dart"> Tıkla </a> 
 
-### 👉 İki Listeyi Birleştirme Örneğ (LinkedList) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/merge_two_list.dart"> Tıkla </a> 
+### 👉 İki Listeyi Birleştirme Örneğ (Linked Lists) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/Dart_Notes/algorithm_questions/merge_two_list.dart"> Tıkla </a> 
 
 
 
