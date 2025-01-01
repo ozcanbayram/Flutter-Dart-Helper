@@ -228,6 +228,19 @@
 
 ### Devamı gelecek (Açıklamalı gelişmiş algoritma örnekleri)...
 <hr>
+
+</details>
+
+
+</details>
+
+<details>
+<summary> <h2> 📝 Medium Yazıları </h2> </summary>
+  
+### 👉 Solid Prensipleri için <a href="https://medium.com/@ozzcanbayram/solid-prensipleri-e90a4729e384"> Tıkla </a> 
+
+### Devamı gelecek...
+<hr>
 </details>
 
 
