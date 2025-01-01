@@ -155,5 +155,25 @@ class Extender extends SomeBaseClass {
   Eğer SomeBaseClass yerine başka bir sınıf belirlemek istersek, şu şekilde yaparız:
   class Foo<T extends BaşkaBirSınıf> {} Bu sınıf String olabilir, int olabilir, Object olabilir...
    */
+}
 
+//! * * * * * 5 * * * * *
+
+//! Generic metotlarını kullanma:
+//* Generic metotlar, genel bir türü kullanarak bir metot tanımlamak için kullanılır.
+//* Bu, metot çağrıldığında, belirli bir türle çalışacak şekilde yapılandırılabilir.
+//* Örneğin:
+class GenericMethod {
+  T identity<T>(T value) => value;
+  //* Bu metot, T türünde bir argüman alır ve aynı türde bir değer döndürür.
+  //* Bu metot, çağrıldığında belirli bir türle çalışacak şekilde yapılandırılabilir.
+  //* Örneğin:
+  void genericMethodExample() {
+    var result = identity<int>(1);
+    print(result); //* 1
+    //* Bu şekilde metot çağrıldığında, T türü int olarak belirlenir.
+    //* Bu nedenle metot int türünde bir değer döndürür.
+    //* Yani T' nin buradaki görevi metot çağrıldığında belirli bir türle çalışacak şekilde yapılandırılmasını sağlamaktır.
+    //* T, bir değer belirlenene kadar her değeri alabileceğini belirtir.
+  }
 }
