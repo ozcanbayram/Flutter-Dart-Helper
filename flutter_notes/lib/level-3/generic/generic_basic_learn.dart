@@ -101,4 +101,59 @@ class CollectionGenerics {
 }
 
 //! * * * * * 4 * * * * *
-//Parametreli türün kısıtlanması
+
+//? Parametreli türün kısıtlanması
+
+//* Generic sınıfların ve metodların parametreli türlerini kısıtlayabiliriz.
+//* Genel bir tür uygularken,
+//* argüman olarak sağlanabilecek türleri sınırlamak isteyebilirsiniz,
+//* böylece argüman belirli bir türün alt türü olmalıdır.
+//* Bunu extends kullanarak yapabilirsiniz.
+
+class SomeBaseClass {}
+
+//? class Foo<T extends Object> {
+//* Bu şekilde Foo sınıfı oluşturulduğunda,
+//* T türü Object türünden bir alt tür olmalıdır.
+//* Foo'ya T için sağlanan herhangi bir tip null edilemez olmalıdır.
+//* Bu, T'nin Object türünden bir alt tür olmasını sağlar.
+//? }
+
+//* Object dışındaki diğer tiplerle de extends kullanabilirsiniz.
+//* İşte SomeBaseClass'ı genişletmenin bir örneği,
+//* böylece SomeBaseClass üyeleri T tipindeki nesnelerde çağrılabilir:
+class Foo<T extends SomeBaseClass> {
+  //* Bu şekilde Foo sınıfı oluşturulduğunda,
+  //* T türü SomeBaseClass türünden bir alt tür olmalıdır.
+  //* Foo'ya T için sağlanan herhangi bir tip SomeBaseClass
+  //* türünden bir alt tür olmalıdır.
+  @override
+  String toString() => 'Instance of "foo<$T>"';
+}
+
+class Extender extends SomeBaseClass {
+  //* SomeBaseClass'ı veya alt türlerinden herhangi birini genel
+  //* argüman olarak kullanmakta bir sakınca yoktur:
+  var someBaseClassFoo = Foo<SomeBaseClass>();
+  var extenderFoo = Foo<Extender>();
+  //* Hiçbir genel argüman belirtmemeniz de sorun değil:
+  var foo = Foo();
+  //?print(foo); --> Instance of 'Foo<SomeBaseClass>'
+
+  //!SomeBaseClass dışındaki herhangi bir türün belirtilmesi bir hatayla sonuçlanır:
+  //* var foo = Foo<Object>();
+
+  //? Bu, Object türünün SomeBaseClass türünden bir alt tür olmadığı anlamına gelir.
+  //? Bu nedenle, Foo<Object> türü Foo sınıfının T tür parametresi için geçerli bir argüman değildir.
+
+  /*
+  Özetle, Foo sınıfı, T türü SomeBaseClass türünden bir alt tür olmalıdır.
+  Bu, Foo sınıfının SomeBaseClass türünden bir alt türü olan Extender sınıfı için geçerlidir.
+  Eğer T türü SomeBaseClass türünden bir alt tür değilse, bir hata alırsınız.
+  Foo sınıfının T türü SomeBaseClas türünden olmasını bu şekilde belirleriz: 
+  class Foo<T extends SomeBaseClass> {}
+  Eğer SomeBaseClass yerine başka bir sınıf belirlemek istersek, şu şekilde yaparız:
+  class Foo<T extends BaşkaBirSınıf> {} Bu sınıf String olabilir, int olabilir, Object olabilir...
+   */
+
+}
