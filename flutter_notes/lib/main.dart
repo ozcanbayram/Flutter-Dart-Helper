@@ -19,5 +19,3 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-
-//Projenin ana ayarları bu sayfada belirlenir. Bu sayfaya extra bir görünüm yükü ya da MaterialApp verilmemelidir.
