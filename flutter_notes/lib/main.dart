@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notes/level-2/alert_learn.dart';
 import 'package:flutter_notes/level-2/theme/light_theme.dart';
+import 'package:flutter_notes/level-3/part/part_of_learn.dart';
 
 void main() {
   runApp(const MyApp());
@@ -15,7 +15,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Notes',
       debugShowCheckedModeBanner: false,
       theme: LightTheme().theme,
-      home: const AlertLearn(),
+      home: const PartOfLearn(),
     );
   }
 }

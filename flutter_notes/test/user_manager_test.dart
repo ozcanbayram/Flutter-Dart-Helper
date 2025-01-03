@@ -12,6 +12,7 @@ void main() {
         UserManagement(const AdminUser('vadmin', '1', 15, 1));
     final result = userManagement.calculateMoney(users);
 
+    // ignore: unused_local_variable
     final response = userManagement.showNames<String>(users);
 
     expect(result, 55);
