@@ -131,6 +131,11 @@
 
 ### 👉 Generic (Temel) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/generic/generic_basic_learn.dart"> Tıkla </a> 
 
+### 👉Part - Part of yöntemi için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/tree/master/flutter_notes/lib/level-3/part"> Tıkla </a> 
+
+
+
+
 
 
 
