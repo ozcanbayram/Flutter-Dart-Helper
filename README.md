@@ -141,6 +141,12 @@
 
 
 
+### 👉 Gelişmiş Tab Bar (Feed Screen ile) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/tabbar_advence.dart"> Tıkla </a> 
+### 👉 Gelişmiş Feed Screeen (AutomaticKeepAliveClientMixin) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/feed_view.dart"> Tıkla </a> 
+
+
+
+
 
 
 
