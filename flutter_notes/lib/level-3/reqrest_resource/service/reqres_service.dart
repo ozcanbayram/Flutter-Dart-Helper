@@ -7,8 +7,7 @@ abstract class IReqresService {
   IReqresService(this.dio); //url'i disaridan alacagiz. UI den gelecek
   final Dio dio;
 
-  Future<List<ResourceModel>?>
-      fetchResourceItems(); //internete cikacak olan metot
+  Future<ResourceModel?> fetchResourceItems(); //internete cikacak olan metot
 }
 
 enum _ReqresPath { unknown }
@@ -17,14 +16,14 @@ class ReqresService extends IReqresService {
   ReqresService(super.dio);
 
   @override
-  Future<List<ResourceModel>?> fetchResourceItems() async {
+  Future<ResourceModel?> fetchResourceItems() async {
     final response = await dio.get('/${_ReqresPath.unknown.name}');
 
     if (response.statusCode == HttpStatus.ok) {
       final jsonBody = response.data;
 
-      if (jsonBody is List) {
-        return jsonBody.map((e) => ResourceModel.fromJson(e)).toList();
+      if (jsonBody is Map<String, dynamic>) {
+        return ResourceModel.fromJson(jsonBody);
       }
     }
     return null;

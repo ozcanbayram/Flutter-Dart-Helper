@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_notes/level-3/reqrest_resource/viewModel/reqres_view_model.dart';
 
@@ -12,7 +14,15 @@ class _ReqresViewState extends ReqresViewModel {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      appBar:
+          AppBar(title: isLoading ? const CircularProgressIndicator() : null),
+      body: ListView.builder(
+        itemCount: resource.length,
+        itemBuilder: (context, index) {
+          inspect(resource[index]);
+          return Card(child: Text(resource[index].name ?? ''));
+        },
+      ),
     );
   }
-} 
+}
