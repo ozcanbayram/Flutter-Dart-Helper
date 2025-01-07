@@ -1,6 +1,5 @@
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_notes/level-3/reqrest_resource/product/extension/string_extension.dart';
 import 'package:flutter_notes/level-3/reqrest_resource/viewModel/reqres_view_model.dart';
 
 class ReqresView extends StatefulWidget {
@@ -19,8 +18,10 @@ class _ReqresViewState extends ReqresViewModel {
       body: ListView.builder(
         itemCount: resource.length,
         itemBuilder: (context, index) {
-          inspect(resource[index]);
-          return Card(child: Text(resource[index].name ?? ''));
+          // inspect(resource[index]);
+          return Card(
+              color: Color(resource[index].color.colorValue ?? 0),
+              child: Text(resource[index].name ?? ''));
         },
       ),
     );
