@@ -11,6 +11,8 @@ abstract class ReqresViewModel extends Loadingstatefull<ReqresView>
   List<Data> resource = [];
 
   late final IReqresService reqresService;
+
+  ReqresViewModel(ReqresService reqresService);
   @override
   void initState() {
     super.initState();

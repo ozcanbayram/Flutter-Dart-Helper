@@ -38,6 +38,9 @@ dependencies:
   dio: ^5.7.0
   flutter_spinkit: ^5.2.1
 
+  #state managament
+  provider: ^6.1.2
+
   #cache
   # shared_preferences: ^2.3.3
 
