@@ -20,7 +20,7 @@ class _ReqresViewState extends ReqresViewModel {
         itemBuilder: (context, index) {
           // inspect(resource[index]);
           return Card(
-              color: Color(resource[index].color.colorValue ?? 0),
+              color: Color(resource[index].color.colorValue),
               child: Text(resource[index].name ?? ''));
         },
       ),
