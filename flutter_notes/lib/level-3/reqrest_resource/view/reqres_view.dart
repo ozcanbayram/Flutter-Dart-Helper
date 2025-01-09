@@ -4,6 +4,7 @@ import 'package:flutter_notes/level-3/reqrest_resource/product/extension/string_
 import 'package:flutter_notes/level-3/reqrest_resource/service/project_dio.dart';
 import 'package:flutter_notes/level-3/reqrest_resource/service/reqres_service.dart';
 import 'package:flutter_notes/level-3/reqrest_resource/viewModel/reqres_provider.dart';
+import 'package:flutter_notes/product/global/theme_notifier.dart';
 import 'package:provider/provider.dart';
 
 class ReqresView extends StatefulWidget {
@@ -28,6 +29,11 @@ class _ReqresViewState extends State<ReqresView> with ProjectDioMixin {
       builder: (context, child) {
         // eğer ekran tetiklenecek ise scaffol'un burada olması gerekiyor.
         return Scaffold(
+          floatingActionButton: FloatingActionButton(
+            onPressed: () {
+              context.read<ThemeNotifier>().changeTheme();
+            },
+          ),
           appBar: AppBar(
               title: context.watch<ReqresProvider>().isLoading
                   ? const CircularProgressIndicator(color: Colors.white)
