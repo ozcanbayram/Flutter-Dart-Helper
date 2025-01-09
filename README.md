@@ -146,6 +146,19 @@
 
 
 
+### 👉 Gelişmiş Servis ile Demo uygulama (Provider ile) için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/tree/master/flutter_notes/lib/level-3/reqrest_resource"> Tıkla </a> 
+
+### 👉 Provider mopdeli oluşturma örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/reqrest_resource/viewModel/reqres_provider.dart"> Tıkla </a> 
+
+### 👉 Provider ile tema değişikliği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/product/global/theme_notifier.dart"> Tıkla </a> 
+
+
+
+
+
+
+
+
 
 
 
