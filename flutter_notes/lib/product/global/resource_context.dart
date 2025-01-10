@@ -6,4 +6,8 @@ class ResourceContext {
   void saveModel(ResourceModel? model) {
     this.model = model;
   }
+
+  void clear() {
+    model = null;
+  }
 }

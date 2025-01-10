@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notes/level-3/reqrest_resource/model/resource_model.dart';
 import 'package:flutter_notes/level-3/reqrest_resource/service/reqres_service.dart';
+import 'package:flutter_notes/product/global/resource_context.dart';
 
 class ReqresProvider extends ChangeNotifier {
   final IReqresService reqresService;
@@ -22,6 +23,10 @@ class ReqresProvider extends ChangeNotifier {
     _changeLoading();
     resource = (await reqresService.fetchResourceItems())?.data ?? [];
     _changeLoading();
+  }
+
+  void saveToLocal(ResourceContext resourceContext) {
+    resourceContext.saveModel(ResourceModel(data: resource));
   }
 }
 
