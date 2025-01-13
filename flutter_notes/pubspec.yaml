@@ -41,6 +41,10 @@ dependencies:
   #state managament
   provider: ^6.1.2
 
+  #Google
+  json_serializable: ^6.9.0
+  json_annotation: ^4.9.0
+
   #cache
   # shared_preferences: ^2.3.3
 
@@ -48,12 +52,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
 
-  # The "flutter_lints" package below contains a set of recommended lints to
-  # encourage good coding practices. The lint set provided by the package is
-  # activated in the `analysis_options.yaml` file located at the root of your
-  # package. See that file for information about deactivating specific lint
-  # rules and activating additional ones.
+  # dev dependencises kod kısmında işe yarar ama uygulamada işe yaramazlar.
   flutter_lints: ^4.0.0
+  build_runner: ^2.4.13
+  # Build runner ne işe yarar: https://pub.dev/packages/build_runner
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec

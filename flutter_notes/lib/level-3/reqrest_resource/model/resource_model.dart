@@ -1,51 +1,77 @@
+import 'package:json_annotation/json_annotation.dart';
+
+part 'resource_model.g.dart';
+
+@JsonSerializable()
 class ResourceModel {
   List<Data>? data;
 
   ResourceModel({this.data});
 
-  ResourceModel.fromJson(Map<String, dynamic> json) {
-    if (json['data'] != null) {
-      data = <Data>[];
-      json['data'].forEach((v) {
-        data!.add(Data.fromJson(v));
-      });
-    }
+  //* Bu kodu aşağıda build runner ve json annotation kullanarak düzenleyelim::
+  factory ResourceModel.fromJson(Map<String, dynamic> json) {
+    return _$ResourceModelFromJson(json);
+    // if (json['data'] != null) {
+    //   data = <Data>[];
+    //   json['data'].forEach((v) {
+    //     data!.add(Data.fromJson(v));
+    //   });
+    // }
   }
 
+  //* Bu kodu aşağıda build runner ve json annotation kullanarak düzenleyelim::
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    if (this.data != null) {
-      data['data'] = this.data!.map((v) => v.toJson()).toList();
-    }
-    return data;
+    return _$ResourceModelToJson(this);
+    // final Map<String, dynamic> data = <String, dynamic>{};
+    // if (this.data != null) {
+    //   data['data'] = this.data!.map((v) => v.toJson()).toList();
+    // }
+    // return data;
   }
 }
 
+@JsonSerializable()
 class Data {
-  int? id;
-  String? name;
-  int? year;
-  String? color;
-  String? pantoneValue;
+  final int? id;
+  final String? name;
+  final int? year;
+  final String? color;
+  final String? pantoneValue;
+  final String? price;
 
-  Data({this.id, this.name, this.year, this.color, this.pantoneValue});
+  Data(
+      {this.id,
+      this.name,
+      this.year,
+      this.color,
+      this.pantoneValue,
+      this.price});
 
-  Data.fromJson(Map<String, dynamic> json) {
-    id = json['id'];
-    name = json['name'];
-    year = json['year'];
-    color = json['color'];
-    pantoneValue = json['pantone_value'];
+  //?aşağıdaki kodları build runner ve json annotation kullanarak yeniden yazalım:
+
+  factory Data.fromJson(Map<String, dynamic> json) {
+    return _$DataFromJson(json);
+    // id = json['id'];
+    // name = json['name'];
+    // year = json['year'];
+    // color = json['color'];
+    // pantoneValue = json['pantone_value'];
   }
 
+  //BU kodu aşağıda build runner ve json annotation kullanarak yeniden yazalım:
+  // Map<String, dynamic> toJson() {
+  //   final Map<String, dynamic> data = <String, dynamic>{};
+  //   data['id'] = id;
+  //   data['name'] = name;
+  //   data['year'] = year;
+  //   data['color'] = color;
+  //   data['pantone_value'] = pantoneValue;
+  //   return data;
+  // }
+
+  //*build runner ve json annotation kullanarak yeniden yazalım:
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['id'] = id;
-    data['name'] = name;
-    data['year'] = year;
-    data['color'] = color;
-    data['pantone_value'] = pantoneValue;
-    return data;
+    return _$DataToJson(this);
   }
 }
 
@@ -68,3 +94,13 @@ Bu sayfada neler yaptık:
 14- toJson metodu içinde data adında bir Map oluşturduk ve bu Map'in içinde id, name, year, color ve pantoneValue değişkenlerinin değerlerini atadık.
 15- Bu sayede Data sınıfı içindeki işlemleri gerçekleştirmiş olduk.
 */
+
+//Build runner ne işe yarar (https://pub.dev/packages/build_runner)
+//Build runner, projenizdeki kodları çalıştırarak, kodlarınızı derleyen ve çalıştıran bir araçtır.
+
+enum StatusCode {
+  @JsonValue(200)
+  succes,
+  @JsonValue(500)
+  weird
+}
