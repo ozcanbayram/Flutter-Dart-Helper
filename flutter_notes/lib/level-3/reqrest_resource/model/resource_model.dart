@@ -1,3 +1,4 @@
+import 'package:equatable/equatable.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'resource_model.g.dart';
@@ -31,7 +32,7 @@ class ResourceModel {
 }
 
 @JsonSerializable()
-class Data {
+class Data extends Equatable {
   final int? id;
   final String? name;
   final int? year;
@@ -39,7 +40,7 @@ class Data {
   final String? pantoneValue;
   final String? price;
 
-  Data(
+  const Data(
       {this.id,
       this.name,
       this.year,
@@ -73,6 +74,10 @@ class Data {
   Map<String, dynamic> toJson() {
     return _$DataToJson(this);
   }
+
+  @override
+  //(Equatable ile eşitlik kontrolü. Eğer aşağıdakiler aynıysa veri aynıdır)
+  List<Object?> get props => [id, name, price];
 }
 
 // Json to dart sitesinden gelen json verisi
