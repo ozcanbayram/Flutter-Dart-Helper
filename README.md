@@ -153,6 +153,7 @@
 ### 👉 Provider ile tema değişikliği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/product/global/theme_notifier.dart"> Tıkla </a> 
 
 ### 👉 Modelde JsonSerializable kullanma örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/reqrest_resource/model/resource_model.dart"> Tıkla </a> 
+### 👉 Modelde Equatable kullanma örneği için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/reqrest_resource/model/resource_model.dart"> Tıkla </a> 
 ### 👉 build_runner ile oluşturulan model için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/reqrest_resource/model/resource_model.g.dart"> Tıkla </a> 
 
 
