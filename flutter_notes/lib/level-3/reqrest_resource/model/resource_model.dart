@@ -109,3 +109,6 @@ enum StatusCode {
   @JsonValue(500)
   weird
 }
+
+// JsonSerilazable ve JsonKey kullanımı
+// JsonSerializable ve JsonKey sınıflarını kullanarak json serileştirme ve deserileştirme işlemlerini yapabiliriz.

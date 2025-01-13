@@ -35,3 +35,10 @@ Map<String, dynamic> _$DataToJson(Data instance) => <String, dynamic>{
       'pantoneValue': instance.pantoneValue,
       'price': instance.price,
     };
+
+// Bu sayfayı açıklayalım:
+// 1- Bu sayfada json annotation ile oluşturduğumuz modellerin json serileştirme ve deserileştirme işlemleri yapılmıştır.
+// 2- _$ResourceModelFromJson ve _$ResourceModelToJson fonksiyonları ResourceModel sınıfı için json serileştirme ve deserileştirme işlemlerini yapar.
+// 3- _$DataFromJson ve _$DataToJson fonksiyonları Data sınıfı için json serileştirme ve deserileştirme işlemlerini yapar.
+// 4- Bu sayfada json serileştirme ve deserileştirme işlemleri için gerekli olan kodlar otomatik olarak oluşturulmuştur.
+// 5- Bu sayfada oluşturulan kodlar json serileştirme ve deserileştirme işlemlerini yapar.
