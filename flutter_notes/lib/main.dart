@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_notes/level-3/reqrest_resource/view/reqres_view.dart';
+import 'package:flutter_notes/level-3/lottie_animation.dart';
 import 'package:flutter_notes/product/global/resource_context.dart';
 import 'package:flutter_notes/product/global/theme_notifier.dart';
 import 'package:provider/provider.dart';
@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: context.watch<ThemeNotifier>().currentTheme,
       // provider ile tema değişikliği yapılıyor.
-      home: const ReqresView(),
+      home: const LottieLearn(),
     );
   }
 }
