@@ -157,6 +157,11 @@
 ### 👉 build_runner ile oluşturulan model için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/reqrest_resource/model/resource_model.g.dart"> Tıkla </a> 
 
 
+### 👉 Lottie ile Animasyon için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/lottie_animation.dart"> Tıkla </a> 
+### 👉 Lottie ile Tema butonu için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/lottie_animation.dart"> Tıkla </a> 
+
+
+
 
 
 
