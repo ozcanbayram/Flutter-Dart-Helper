@@ -160,6 +160,9 @@
 ### 👉 Lottie ile Animasyon için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/lottie_animation.dart"> Tıkla </a> 
 ### 👉 Lottie ile Tema butonu için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/level-3/lottie_animation.dart"> Tıkla </a> 
 
+### 👉 Singleton Sınıf Yapısı için <a href="https://github.com/ozcanbayram/Flutter-Dart-Helper/blob/master/flutter_notes/lib/product/global/project_network_manager.dart"> Tıkla </a> 
+
+
 
 
 
