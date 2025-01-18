@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notes/level-3/lottie_animation.dart';
+import 'package:flutter_notes/product/constants/project_items.dart';
 import 'package:flutter_notes/product/global/resource_context.dart';
 import 'package:flutter_notes/product/global/theme_notifier.dart';
 import 'package:provider/provider.dart';
@@ -24,7 +25,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Notes',
+      title: ProjectItems.projectName,
       debugShowCheckedModeBanner: false,
       theme: context.watch<ThemeNotifier>().currentTheme,
       // provider ile tema değişikliği yapılıyor.
