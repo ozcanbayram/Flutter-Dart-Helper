@@ -1,6 +1,6 @@
-// ignore_for_file: unused_field
-
 import 'package:dio/dio.dart';
+
+//* Bu kodlar reqres_view_model.dart sayfasında kullanılmıştır.
 
 class ProjectNetworkManager {
   ProjectNetworkManager._() {
@@ -23,4 +23,13 @@ class ProjectNetworkManager {
   }
 }
 
-// Bu kodlar reqres_view_model.dart sayfasında kullanılmıştır.
+class DurationManager {
+  DurationManager._(); // dışarıdan instance almaya kapattık.
+  // Bu senaryoda bir data gelmeyebilir ama gelirse de singelton olarak gelmesini ve projede sadece bir tane olmasını istiyoruz.
+  static DurationManager? _manager;
+  static DurationManager get manager {
+    if (_manager != null) return _manager!;
+    _manager = DurationManager._();
+    return _manager!;
+  }
+}

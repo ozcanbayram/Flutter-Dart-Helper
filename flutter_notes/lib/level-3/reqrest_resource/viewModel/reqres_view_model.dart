@@ -5,7 +5,7 @@ import 'package:flutter_notes/level-3/reqrest_resource/product/loading_statefull
 import 'package:flutter_notes/level-3/reqrest_resource/service/project_dio.dart';
 import 'package:flutter_notes/level-3/reqrest_resource/service/reqres_service.dart';
 import 'package:flutter_notes/level-3/reqrest_resource/view/reqres_view.dart';
-import 'package:flutter_notes/product/global/project_network_manager.dart';
+// import 'package:flutter_notes/product/global/project_network_manager.dart';
 
 abstract class ReqresViewModel extends Loadingstatefull<ReqresView>
     with ProjectDioMixin {
@@ -17,11 +17,13 @@ abstract class ReqresViewModel extends Loadingstatefull<ReqresView>
   @override
   void initState() {
     super.initState();
-    reqresService = ReqresService(ProjectNetworkManager.instance.service);
-    ProjectNetworkManager.instance.addBaseHederToToken('User Token'); //Örnek bir token
+    //project_network_manager.dart sayfasındaki servisin kullanımı:
+    // reqresService = ReqresService(ProjectNetworkManager.instance.service);
+    // ProjectNetworkManager.instance.addBaseHederToToken('User Token'); //Örnek bir token
     // Bu sayede ReqresService sınıfından bir nesne oluşturduk ve bu nesneye ProjectNetworkManager sınıfından bir instance atadık.
     // Ve bu instance'a token ekledik. Kullanıcı login olduğunda token alır ve bu token'ı header'a ekleriz.
-    // reqresService = ReqresService(service); --> Singleton pattern kullanılmadan önceki istek
+    reqresService =
+        ReqresService(service); // Singleton pattern kullanılmadan önceki istek
     _fetch();
   }
 
