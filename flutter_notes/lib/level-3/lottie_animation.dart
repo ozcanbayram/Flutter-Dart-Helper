@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_notes/product/constants/lottie_items.dart';
 import 'package:flutter_notes/product/global/theme_notifier.dart';
+import 'package:flutter_notes/product/navigator/navigator_routes.dart';
 import 'package:lottie/lottie.dart';
 import 'package:provider/provider.dart';
 
@@ -23,6 +24,16 @@ class _LottieLearnState extends State<LottieLearn>
       vsync: this,
       duration: const Duration(seconds: 1),
     );
+    navigateToHome();
+  }
+
+  Future<void> navigateToHome() async {
+    await Future.delayed(const Duration(seconds: 1));
+    Navigator.of(context)
+        .pushReplacementNamed(NavigateRoutesEnum.home.withParaf);
+    //pushNamed belirli route'a gider
+    //popAndPushNamed belirli route'a gider ve arkadaki route'u kapatır
+    //pushReplacementNamed sayfayi degistirir - yerine getirir. back button olmaz
   }
 
   @override
