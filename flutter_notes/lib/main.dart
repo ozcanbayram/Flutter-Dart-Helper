@@ -3,6 +3,7 @@ import 'package:flutter_notes/level-3/lottie_animation.dart';
 import 'package:flutter_notes/product/constants/project_items.dart';
 import 'package:flutter_notes/product/global/resource_context.dart';
 import 'package:flutter_notes/product/global/theme_notifier.dart';
+import 'package:flutter_notes/product/navigator/navigator_custom.dart';
 import 'package:flutter_notes/product/navigator/navigator_routes.dart';
 import 'package:provider/provider.dart';
 
@@ -20,7 +21,7 @@ void main() {
   ));
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatelessWidget with NavigatorCustom {
   const MyApp({super.key});
 
   @override
@@ -35,13 +36,17 @@ class MyApp extends StatelessWidget {
 
       //tanımlanmayan bir route verilirse:
       onUnknownRoute: (settings) {
-        return MaterialPageRoute(
-          builder: (context) {
-            return const LottieLearn();
-          },
-        );
+        if (settings.name == "/home") {
+          return MaterialPageRoute(
+            builder: (context) {
+              return const LottieLearn();
+            },
+          );
+        }
+        return null;
       },
 
+      onGenerateRoute: onGenerateRoute,
       //home: const LottieLearn(), // route kullanırken home kullanılmaz.
     );
   }

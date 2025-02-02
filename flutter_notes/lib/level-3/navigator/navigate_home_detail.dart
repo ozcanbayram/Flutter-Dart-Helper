@@ -15,15 +15,20 @@ class _NavigateHomeDetailViewState extends State<NavigateHomeDetailView> {
   @override
   void initState() {
     super.initState();
-    //geldiği sayfadaki belirtilen argument'i almak için:
-    Future.microtask(
-      () {
-        final modelId = ModalRoute.of(context)?.settings.arguments;
-        setState(() {
-          _id = modelId is String ? modelId : widget.id;
-        });
-      },
-    );
+
+    _id = widget.id;
+
+    if (_id == null) {
+      //geldiği sayfadaki belirtilen argument'i almak için:
+      Future.microtask(
+        () {
+          final modelId = ModalRoute.of(context)?.settings.arguments;
+          setState(() {
+            _id = modelId is String ? modelId : widget.id;
+          });
+        },
+      );
+    }
   }
 
   @override
