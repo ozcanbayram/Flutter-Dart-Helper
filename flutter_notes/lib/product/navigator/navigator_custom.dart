@@ -4,6 +4,9 @@ import 'package:flutter_notes/level-3/navigator/navigate_home_detail.dart';
 
 // route ayarlarını mainde yapmak yerine burada yapabiliriz.
 
+// bu sayfadaki mıxin sınıfının main de kullanımı:
+// mixin sınıfıa with ile eklendikten sonra :  onGenerateRoute: onGenerateRoute,
+
 mixin NavigatorCustom on Widget {
   Route<dynamic>? onGenerateRoute(RouteSettings routeSettings) {
     if (routeSettings.name == "/") {
