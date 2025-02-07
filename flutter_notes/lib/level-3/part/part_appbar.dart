@@ -6,9 +6,7 @@ part of './part_of_learn.dart';
 // bu sayede kodumuz daha düzenli ve okunabilir olacaktır. iki dosya arasında bağlantıyı sağlamış oluruz.
 
 class _PartOfAppBar extends StatelessWidget implements PreferredSizeWidget {
-  const _PartOfAppBar({
-    super.key,
-  });
+  const _PartOfAppBar();
 
   @override
   Widget build(BuildContext context) {

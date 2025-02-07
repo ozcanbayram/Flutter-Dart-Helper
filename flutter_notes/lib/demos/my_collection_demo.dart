@@ -39,7 +39,6 @@ class _MyCollectionDemoState extends State<MyCollectionDemo> {
 
 class _CollectionCard extends StatelessWidget {
   const _CollectionCard({
-    super.key,
     required CollectionModel model,
   }) : _model = model;
 

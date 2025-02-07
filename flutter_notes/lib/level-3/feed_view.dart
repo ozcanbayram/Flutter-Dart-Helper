@@ -47,7 +47,6 @@ class _FeedViewState extends State<FeedView>
 
 class _FeedFeatureBuilder extends StatelessWidget {
   const _FeedFeatureBuilder({
-    super.key,
     required Future<List<PostModel>?> itemFuture,
   }) : _itemFuture = itemFuture;
 

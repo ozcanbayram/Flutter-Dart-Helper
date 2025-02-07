@@ -70,9 +70,7 @@ class _ReqresViewState extends State<ReqresView> with ProjectDioMixin {
 }
 
 class _SaveAndNavigateWidget extends StatelessWidget {
-  const _SaveAndNavigateWidget({
-    super.key,
-  });
+  const _SaveAndNavigateWidget();
 
   @override
   Widget build(BuildContext context) {
@@ -91,9 +89,7 @@ class _SaveAndNavigateWidget extends StatelessWidget {
 }
 
 class _TempPlaceHolder extends StatelessWidget {
-  const _TempPlaceHolder({
-    super.key,
-  });
+  const _TempPlaceHolder();
 
   @override
   Widget build(BuildContext context) {

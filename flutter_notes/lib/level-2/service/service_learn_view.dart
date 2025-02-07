@@ -104,7 +104,6 @@ class ServiceLearnState extends State<ServiceLearn> {
 
 class _PostCard extends StatelessWidget {
   const _PostCard({
-    super.key,
     required PostModel? model,
   }) : _model = model;
 

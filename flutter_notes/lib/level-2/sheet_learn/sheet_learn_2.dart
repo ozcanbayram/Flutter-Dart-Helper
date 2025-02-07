@@ -57,7 +57,6 @@ class _SheetLearnState extends State<SheetLearn1> with ProductCustomSheet {
 
 class _CustomSheet extends StatefulWidget {
   const _CustomSheet({
-    super.key,
     required Color backgroundColor,
   });
 
@@ -157,9 +156,7 @@ class CustomMainSheet extends StatelessWidget {
 }
 
 class _SheetsHeader extends StatelessWidget {
-  const _SheetsHeader({
-    Key? key,
-  }) : _griphHeiht = 30.0;
+  const _SheetsHeader() : _griphHeiht = 30.0;
 
   final double _griphHeiht;
 
