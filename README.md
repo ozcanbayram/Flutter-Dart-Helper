@@ -274,6 +274,8 @@
 
 </details>
 
+
+<!--
 <details>
 <summary> <h2> 📝 Medium Yazıları </h2> </summary>
   
@@ -282,7 +284,7 @@
 ### Devamı gelecek...
 <hr>
 </details>
-
+-->
 
 
 <hr>
