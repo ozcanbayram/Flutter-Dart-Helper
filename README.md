@@ -403,5 +403,7 @@ youtube (Bir çok kanal ve tutorial)
 ``
 mitchkoko (Youtube)
 ``<br>
-#### ❗NOT: ``Henüz bir çok içeriği eklemedim. Adım adım her gün eklemeler yaparak ilerliyorum. Sizler de katkıda bulunarak süreci daha verimli bir hale getirebilirsiniz.``
 
+<!--
+#### ❗NOT: ``Henüz bir çok içeriği eklemedim. Adım adım her gün eklemeler yaparak ilerliyorum. Sizler de katkıda bulunarak süreci daha verimli bir hale getirebilirsiniz.``
+-->
